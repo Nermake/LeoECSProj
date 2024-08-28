@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd681d53-6bd3-4c72-a426-0a8ef2bdd33b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B1FE4951-52FD-4F01-80F7-9E56E3BCCACC/8c/d5546ce2/CastHelper`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/BaseMonoProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/MonoProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/IConvertToEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsWorld.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B1FE4951-52FD-4F01-80F7-9E56E3BCCACC/d1/52faacca/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/B1FE4951-52FD-4F01-80F7-9E56E3BCCACC/f2/0f838c34/02000273.il" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/UnitType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Data/UnitDictionary.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Data/UnitData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/ISpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/IEntitySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntitySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/IBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/BaseBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/EntitySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/DirectionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ModelComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/MovableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/UnitBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/CharacterInitializeSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/FollowComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/InitializeInputControllerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInputSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForEnemySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/EAbilityStatus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/EResourceCostType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Ability.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityCastHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/T_AbilityConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/T_Ability.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/TimerType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/TimeChangingSource.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/TimeInvoker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/SyncedTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/Buff&amp;Debuff/Buff.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/T_Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/DamageType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/EffectType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/UnitResourceType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/UnitConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/DamageCalculate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/IController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/HealthController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/ManaController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/ResistController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/StatsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/Unit.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2iCfbmlYHzkk1LSiRwuISRCbJ1L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd681d53-6bd3-4c72-a426-0a8ef2bdd33b" name="Default Changelist" comment="" />
+      <created>1718999555098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718999555098</updated>
+      <workItem from="1718999562828" duration="17079000" />
+      <workItem from="1719141252181" duration="5099000" />
+      <workItem from="1719401628775" duration="20374000" />
+      <workItem from="1720650734906" duration="3509000" />
+      <workItem from="1720731774513" duration="7342000" />
+      <workItem from="1721082047572" duration="5968000" />
+      <workItem from="1721326177937" duration="25285000" />
+      <workItem from="1722033551851" duration="137000" />
+      <workItem from="1722189154779" duration="1880000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="773" y="226" key="RiderGenerateDialog" timestamp="1721331758739">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="773" y="226" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1721331758739" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1721164701621">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1721164701621" />
+  </component>
+</project>

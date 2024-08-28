@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Алексей\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Алексей\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_LeoECSProj.1965221648.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Алексей\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
+    <e p="D:\UnProj\LeoECSProj" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Data" t="Include">
+          <e p="ECS" t="Include">
+            <e p="StaticData" t="Include" />
+          </e>
+          <e p="UnitDictionary" t="Include">
+            <e p="Units" t="Include" />
+          </e>
+        </e>
+        <e p="Input" t="Include">
+          <e p="InputController.cs" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="QFSW" t="Include">
+            <e p="Quantum Console" t="Include">
+              <e p="Source" t="Include">
+                <e p="changelog.txt" t="Include" />
+                <e p="Demo Scene" t="Include">
+                  <e p="Animations" t="Include" />
+                  <e p="Materials" t="Include" />
+                  <e p="Prefabs" t="Include" />
+                  <e p="QFSW.QC.Demo.asmdef" t="Include" />
+                  <e p="Scripts" t="Include">
+                    <e p="Gate.cs" t="Include" />
+                    <e p="Robot.cs" t="Include" />
+                    <e p="RobotCollector.cs" t="Include" />
+                    <e p="RobotSpawner.cs" t="Include" />
+                  </e>
+                  <e p="Textures" t="Include" />
+                </e>
+                <e p="Extras" t="Include">
+                  <e p="ApplicationCommands.cs" t="Include" />
+                  <e p="CoroutineCommands.cs" t="Include" />
+                  <e p="EditorCommands.cs" t="Include" />
+                  <e p="exec" t="Include">
+                    <e p="CSharpCompiler" t="Include">
+                      <e p="CodeCompiler.cs" t="Include" />
+                      <e p="CustomDynamicDriver.cs" t="Include" />
+                      <e p="CustomReportPrinter.cs" t="Include" />
+                      <e p="DeferredSynchronizeInvoke.cs" t="Include" />
+                      <e p="LICENSE.txt" t="Include" />
+                      <e p="Plugins" t="Include" />
+                      <e p="ScriptBundleLoader.cs" t="Include" />
+                    </e>
+                    <e p="DynamicCodeCommands.cs" t="Include" />
+                  </e>
+                  <e p="FileCommands.cs" t="Include" />
+                  <e p="GraphicsCommands.cs" t="Include" />
+                  <e p="HttpCommands.cs" t="Include" />
+                  <e p="KeyBinderModule.cs" t="Include" />
+                  <e p="MegaCommands.cs" t="Include" />
+                  <e p="QFSW.QC.Extras.asmdef" t="Include" />
+                  <e p="SceneCommands.cs" t="Include" />
+                  <e p="ScreenCommands.cs" t="Include" />
+                  <e p="TimeCommands.cs" t="Include" />
+                  <e p="TypeCommands.cs" t="Include" />
+                  <e p="UtilCommands.cs" t="Include" />
+                </e>
+                <e p="Fonts" t="Include">
+                  <e p="LICENSE.txt" t="Include" />
+                  <e p="TMP" t="Include" />
+                </e>
+                <e p="Materials" t="Include" />
+                <e p="Prefabs" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="Actions" t="Include">
+                    <e p="Async.cs" t="Include" />
+                    <e p="Choice.cs" t="Include" />
+                    <e p="Composite.cs" t="Include" />
+                    <e p="Core" t="Include">
+                      <e p="ActionContext.cs" t="Include" />
+                      <e p="ActionExecuter.cs" t="Include" />
+                      <e p="ActionState.cs" t="Include" />
+                      <e p="ICommandAction.cs" t="Include" />
+                    </e>
+                    <e p="Custom.cs" t="Include" />
+                    <e p="GetContext.cs" t="Include" />
+                    <e p="GetKey.cs" t="Include" />
+                    <e p="RemoveLog.cs" t="Include" />
+                    <e p="Typewriter.cs" t="Include" />
+                    <e p="Value.cs" t="Include" />
+                    <e p="Wait.cs" t="Include" />
+                    <e p="WaitFrame.cs" t="Include" />
+                    <e p="WaitKey.cs" t="Include" />
+                    <e p="WaitRealtime.cs" t="Include" />
+                    <e p="WaitUntil.cs" t="Include" />
+                    <e p="WaitWhile.cs" t="Include" />
+                  </e>
+                  <e p="Attributes" t="Include">
+                    <e p="CommandAttribute.cs" t="Include" />
+                    <e p="CommandDescriptionAttribute.cs" t="Include" />
+                    <e p="CommandParameterDescriptionAttribute.cs" t="Include" />
+                    <e p="CommandPlatformAttribute.cs" t="Include" />
+                    <e p="CommandPrefixAttribute.cs" t="Include" />
+                    <e p="QcIgnoreAttribute.cs" t="Include" />
+                  </e>
+                  <e p="AutoScrollOptions.cs" t="Include" />
+                  <e p="CommandData.cs" t="Include" />
+                  <e p="Comparators" t="Include">
+                    <e p="AlphanumComparator.cs" t="Include" />
+                  </e>
+                  <e p="Containers" t="Include">
+                    <e p="ArraySingle.cs" t="Include" />
+                    <e p="StringContainer.cs" t="Include" />
+                  </e>
+                  <e p="Editor" t="Include">
+                    <e p="DataEntryPopup.cs" t="Include" />
+                    <e p="EditorHelpers.cs" t="Include" />
+                    <e p="ModifierKeyComboEditor.cs" t="Include" />
+                    <e p="QCInspectorBase.cs" t="Include" />
+                    <e p="QFSW.QC.Editor.asmdef" t="Include" />
+                    <e p="QGUI" t="Include">
+                      <e p="IGUIItem.cs" t="Include" />
+                      <e p="LayoutController.cs" t="Include" />
+                      <e p="QFSW.QC.QGUI.asmdef" t="Include" />
+                      <e p="QGUILayout.cs" t="Include" />
+                    </e>
+                    <e p="QuantumConsoleInspector.cs" t="Include" />
+                    <e p="QuantumKeyConfigInspector.cs" t="Include" />
+                    <e p="QuantumLocalizationInspector.cs" t="Include" />
+                    <e p="QuantumThemeInspector.cs" t="Include" />
+                    <e p="Tools" t="Include">
+                      <e p="PrefabUtil.cs" t="Include" />
+                      <e p="QFSW.QC.Editor.Tools.asmdef" t="Include" />
+                      <e p="SymbolEditor.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="InjectionLoader.cs" t="Include" />
+                  <e p="InputHelper.cs" t="Include" />
+                  <e p="Internal" t="Include">
+                    <e p="CustomParameter.cs" t="Include" />
+                    <e p="FieldAutoMethod.cs" t="Include" />
+                    <e p="FieldDelegateMethod.cs" t="Include" />
+                    <e p="FieldMethod.cs" t="Include" />
+                  </e>
+                  <e p="InvocationTargetFactory.cs" t="Include" />
+                  <e p="LambdaCommandData.cs" t="Include" />
+                  <e p="link.xml" t="Include" />
+                  <e p="Logging" t="Include">
+                    <e p="ILog.cs" t="Include" />
+                    <e p="ILogQueue.cs" t="Include" />
+                    <e p="ILogStorage.cs" t="Include" />
+                    <e p="Log.cs" t="Include" />
+                    <e p="LogQueue.cs" t="Include" />
+                    <e p="LogStorage.cs" t="Include" />
+                  </e>
+                  <e p="LoggingThreshold.cs" t="Include" />
+                  <e p="ModifierKeyCombo.cs" t="Include" />
+                  <e p="MonoTargetType.cs" t="Include" />
+                  <e p="Parsing" t="Include">
+                    <e p="BasicCachedQcParser.cs" t="Include" />
+                    <e p="BasicQcParser.cs" t="Include" />
+                    <e p="Exceptions" t="Include">
+                      <e p="ParserException.cs" t="Include" />
+                      <e p="ParserInputException.cs" t="Include" />
+                    </e>
+                    <e p="GenericCachedQcParser.cs" t="Include" />
+                    <e p="GenericQcParser.cs" t="Include" />
+                    <e p="Grammar" t="Include">
+                      <e p="Binary Operators" t="Include">
+                        <e p="AdditionOperatorGrammar.cs" t="Include" />
+                        <e p="BinaryAndUnaryOperatorGrammar.cs" t="Include" />
+                        <e p="BinaryOperatorData.cs" t="Include" />
+                        <e p="BinaryOperatorGrammar.cs" t="Include" />
+                        <e p="BitwiseAndOperatorGrammar.cs" t="Include" />
+                        <e p="BitwiseOrOperatorGrammar.cs" t="Include" />
+                        <e p="DivisionOperatorGrammar.cs" t="Include" />
+                        <e p="DynamicBinaryOperator.cs" t="Include" />
+                        <e p="ExclusiveOrOperatorGrammar.cs" t="Include" />
+                        <e p="IBinaryOperator.cs" t="Include" />
+                        <e p="ModulusOperatorGrammar.cs" t="Include" />
+                        <e p="MultiplyOperatorGrammar.cs" t="Include" />
+                        <e p="SubtractionOperatorGrammar.cs" t="Include" />
+                      </e>
+                      <e p="BooleanNegationGrammar.cs" t="Include" />
+                      <e p="ExpressionBodyGrammar.cs" t="Include" />
+                      <e p="QFSW.QC.Grammar.asmdef" t="Include" />
+                    </e>
+                    <e p="IQcGrammarConstruct.cs" t="Include" />
+                    <e p="IQcParser.cs" t="Include" />
+                    <e p="MassGenericQcParser.cs" t="Include" />
+                    <e p="Parsers" t="Include">
+                      <e p="ArrayParser.cs" t="Include" />
+                      <e p="BoolParser.cs" t="Include" />
+                      <e p="CollectionParser.cs" t="Include" />
+                      <e p="ColorParser.cs" t="Include" />
+                      <e p="ComponentParser.cs" t="Include" />
+                      <e p="EnumerableParser.cs" t="Include" />
+                      <e p="EnumParser.cs" t="Include" />
+                      <e p="GameObjectParser.cs" t="Include" />
+                      <e p="NullableParser.cs" t="Include" />
+                      <e p="PrimitiveParser.cs" t="Include" />
+                      <e p="QFSW.QC.Parsers.asmdef" t="Include" />
+                      <e p="QuaternionParser.cs" t="Include" />
+                      <e p="StringParser.cs" t="Include" />
+                      <e p="TupleParser.cs" t="Include" />
+                      <e p="TypeParser.cs" t="Include" />
+                      <e p="Vector2IntParser.cs" t="Include" />
+                      <e p="Vector2Parser.cs" t="Include" />
+                      <e p="Vector3IntParser.cs" t="Include" />
+                      <e p="Vector3Parser.cs" t="Include" />
+                      <e p="Vector4Parser.cs" t="Include" />
+                    </e>
+                    <e p="PolymorphicCachedQcParser.cs" t="Include" />
+                    <e p="PolymorphicQcParser.cs" t="Include" />
+                    <e p="QuantumParser.cs" t="Include" />
+                  </e>
+                  <e p="Platform.cs" t="Include" />
+                  <e p="Pooling" t="Include">
+                    <e p="ConcurrentPool.cs" t="Include" />
+                    <e p="IPool.cs" t="Include" />
+                    <e p="Pool.cs" t="Include" />
+                    <e p="StringBuilderPool.cs" t="Include" />
+                  </e>
+                  <e p="Preprocessing" t="Include">
+                    <e p="IQcPreprocessor.cs" t="Include" />
+                    <e p="QuantumPreprocessor.cs" t="Include" />
+                  </e>
+                  <e p="QFSW.QC.asmdef" t="Include" />
+                  <e p="QuantumConsole.cs" t="Include" />
+                  <e p="QuantumConsoleCommands.cs" t="Include" />
+                  <e p="QuantumConsoleProcessor.cs" t="Include" />
+                  <e p="QuantumKeyConfig.cs" t="Include" />
+                  <e p="QuantumLocalization.cs" t="Include" />
+                  <e p="QuantumMacros.cs" t="Include" />
+                  <e p="QuantumRegistry.cs" t="Include" />
+                  <e p="QuantumTheme.cs" t="Include" />
+                  <e p="Scan Rules" t="Include">
+                    <e p="IQcScanRule.cs" t="Include" />
+                    <e p="QuantumScanRuleset.cs" t="Include" />
+                    <e p="Rules" t="Include">
+                      <e p="AssemblyExclusionScanRule.cs" t="Include" />
+                      <e p="QcIgnoreScanRule.cs" t="Include" />
+                      <e p="QFSW.QC.ScanRules.asmdef" t="Include" />
+                    </e>
+                    <e p="ScanRuleResult.cs" t="Include" />
+                  </e>
+                  <e p="Serialization" t="Include">
+                    <e p="BasicQcSerializer.cs" t="Include" />
+                    <e p="GenericQcSerializer.cs" t="Include" />
+                    <e p="IQcSerializer.cs" t="Include" />
+                    <e p="PolymorphicQcSerializer.cs" t="Include" />
+                    <e p="QuantumSerializer.cs" t="Include" />
+                    <e p="Serializers" t="Include">
+                      <e p="DictionaryEntrySerializer.cs" t="Include" />
+                      <e p="IDictionarySerializer.cs" t="Include" />
+                      <e p="IEnumerableSerializer.cs" t="Include" />
+                      <e p="ITupleSerializer.cs" t="Include" />
+                      <e p="KeyValuePairSerializer.cs" t="Include" />
+                      <e p="QFSW.QC.Serializers.asmdef" t="Include" />
+                      <e p="StringSerializer.cs" t="Include" />
+                      <e p="TypeSerializer.cs" t="Include" />
+                      <e p="UnityObjectSerializer.cs" t="Include" />
+                      <e p="Vector2IntSerializer.cs" t="Include" />
+                      <e p="Vector2Serializer.cs" t="Include" />
+                      <e p="Vector3IntSerializer.cs" t="Include" />
+                      <e p="Vector3Serializer.cs" t="Include" />
+                      <e p="Vector4Serializer.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="SortOrder.cs" t="Include" />
+                  <e p="SuggestionDisplay.cs" t="Include" />
+                  <e p="Suggestions" t="Include">
+                    <e p="BasicCachedQcSuggestor.cs" t="Include" />
+                    <e p="IQcSuggestion.cs" t="Include" />
+                    <e p="IQcSuggestionFilter.cs" t="Include" />
+                    <e p="IQcSuggestor.cs" t="Include" />
+                    <e p="IQcSuggestorTag.cs" t="Include" />
+                    <e p="QuantumSuggestor.cs" t="Include" />
+                    <e p="RawSuggestion.cs" t="Include" />
+                    <e p="SuggestionContext.cs" t="Include" />
+                    <e p="SuggestionSet.cs" t="Include" />
+                    <e p="SuggestionStack.cs" t="Include" />
+                    <e p="SuggestorOptions.cs" t="Include" />
+                    <e p="Suggestors" t="Include">
+                      <e p="BoolSuggestor.cs" t="Include" />
+                      <e p="CommandNameSuggestor.cs" t="Include" />
+                      <e p="CommandSuggestion.cs" t="Include" />
+                      <e p="CommandSuggestor.cs" t="Include" />
+                      <e p="ComponentSuggestor.cs" t="Include" />
+                      <e p="EnumSuggestor.cs" t="Include" />
+                      <e p="GameObjectSuggestor.cs" t="Include" />
+                      <e p="MacroSuggestor.cs" t="Include" />
+                      <e p="QFSW.QC.Suggestors.asmdef" t="Include" />
+                      <e p="SceneNameSuggestor.cs" t="Include" />
+                    </e>
+                    <e p="SuggestorTagAttribute.cs" t="Include" />
+                    <e p="SuggestorUtilities.cs" t="Include" />
+                    <e p="Tags" t="Include">
+                      <e p="CommandNameTag.cs" t="Include" />
+                      <e p="SceneNameTag.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="SupportedState.cs" t="Include" />
+                  <e p="TypeFormatter.cs" t="Include" />
+                  <e p="UI" t="Include">
+                    <e p="BlurShaderController.cs" t="Include" />
+                    <e p="DraggableUI.cs" t="Include" />
+                    <e p="DynamicCanvasScaler.cs" t="Include" />
+                    <e p="QFSW.QC.UI.asmdef" t="Include" />
+                    <e p="ResizableUI.cs" t="Include" />
+                    <e p="ZoomUIController.cs" t="Include" />
+                  </e>
+                  <e p="Utilities" t="Include">
+                    <e p="CollectionExtensions.cs" t="Include" />
+                    <e p="ColorExtensions.cs" t="Include" />
+                    <e p="GameObjectExtensions.cs" t="Include" />
+                    <e p="LogTypeExtensions.cs" t="Include" />
+                    <e p="ReflectionExtensions.cs" t="Include" />
+                    <e p="SceneUtilities.cs" t="Include" />
+                    <e p="StringExtensions.cs" t="Include" />
+                    <e p="TextProcessing.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="Blur.shader" t="Include" />
+                </e>
+                <e p="Textures" t="Include" />
+                <e p="Third-Party Notices.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="TextMesh Pro" t="Include">
+            <e p="Documentation" t="Include" />
+            <e p="Fonts" t="Include">
+              <e p="LiberationSans - OFL.txt" t="Include" />
+            </e>
+            <e p="Resources" t="Include">
+              <e p="Fonts &amp; Materials" t="Include" />
+              <e p="LineBreaking Following Characters.txt" t="Include" />
+              <e p="LineBreaking Leading Characters.txt" t="Include" />
+              <e p="Sprite Assets" t="Include" />
+              <e p="Style Sheets" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF SSD.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Mobile.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="EmojiOne Attribution.txt" t="Include" />
+              <e p="EmojiOne.json" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Prefabs" t="Include" />
+        <e p="Scenes" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="_TestViaQFSW" t="Include">
+            <e p="ExampleSpawnerFactory.cs" t="Include" />
+          </e>
+          <e p="Ability" t="Include">
+            <e p="Ability.cs" t="Include" />
+            <e p="AbilityBuilder.cs" t="Include" />
+            <e p="AbilityCastHandler.cs" t="Include" />
+            <e p="AbilityConfig.cs" t="Include" />
+            <e p="AbilityStorage.cs" t="Include" />
+            <e p="EAbilityStatus.cs" t="Include" />
+            <e p="EResourceCostType.cs" t="Include" />
+            <e p="T_Ability.cs" t="Include" />
+            <e p="T_AbilityConfig.cs" t="Include" />
+          </e>
+          <e p="Builder" t="Include">
+            <e p="BaseBuilder.cs" t="Include" />
+            <e p="UnitBuilder.cs" t="Include" />
+          </e>
+          <e p="ECS" t="Include">
+            <e p="Components" t="Include">
+              <e p="DirectionComponent.cs" t="Include" />
+              <e p="FollowComponent.cs" t="Include" />
+              <e p="ModelComponent.cs" t="Include" />
+              <e p="MovableComponent.cs" t="Include" />
+              <e p="TestEventComponent.cs" t="Include" />
+            </e>
+            <e p="Data" t="Include">
+              <e p="RuntimeData.cs" t="Include" />
+              <e p="SceneData.cs" t="Include" />
+              <e p="StaticData.cs" t="Include" />
+            </e>
+            <e p="ECSGameStartup.cs" t="Include" />
+            <e p="EntityReference.cs" t="Include" />
+            <e p="Events" t="Include">
+              <e p="TestEvent.cs" t="Include" />
+            </e>
+            <e p="Providers" t="Include">
+              <e p="DirectionProvider.cs" t="Include" />
+              <e p="EnemyTagProvider.cs" t="Include" />
+              <e p="InitializeEntityProvider.cs" t="Include" />
+              <e p="ModelProvider.cs" t="Include" />
+              <e p="MovableProvider.cs" t="Include" />
+              <e p="PlayerTadProvider.cs" t="Include" />
+              <e p="TestEventProvider.cs" t="Include" />
+            </e>
+            <e p="Requests" t="Include">
+              <e p="InitializeEntityRequest.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="EntityInitializeSystem.cs" t="Include" />
+              <e p="FollowSystem.cs" t="Include" />
+              <e p="InitializeInputControllerSystem.cs" t="Include" />
+              <e p="MovementSystem.cs" t="Include" />
+              <e p="PlayerInputSystem.cs" t="Include" />
+              <e p="PlayerTestSendEventSystem.cs" t="Include" />
+              <e p="SetTargetForEnemySystem.cs" t="Include" />
+              <e p="TestEventSystem.cs" t="Include" />
+            </e>
+            <e p="Tags" t="Include">
+              <e p="EnemyTag.cs" t="Include" />
+              <e p="PlayerTag.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Factory" t="Include">
+            <e p="AbstractEntitySpawnerFactory.cs" t="Include" />
+            <e p="EntitySpawnerFactory.cs" t="Include" />
+          </e>
+          <e p="Game" t="Include">
+            <e p="Logic" t="Include">
+              <e p="Buff&amp;Debuff" t="Include">
+                <e p="Buff.cs" t="Include" />
+              </e>
+              <e p="DamageCalculate.cs" t="Include" />
+              <e p="HealthController.cs" t="Include" />
+              <e p="IController.cs" t="Include" />
+              <e p="ManaController.cs" t="Include" />
+              <e p="ResistController.cs" t="Include" />
+              <e p="StatsController.cs" t="Include" />
+            </e>
+          </e>
+          <e p="GameTypes" t="Include">
+            <e p="EffectType.cs" t="Include" />
+            <e p="IInteractableObject.cs" t="Include" />
+            <e p="InteractableObject.cs" t="Include" />
+            <e p="IPlayer.cs" t="Include" />
+            <e p="IUnit.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="Unit.cs" t="Include" />
+            <e p="UnitConfig.cs" t="Include" />
+            <e p="UnitResourceType.cs" t="Include" />
+            <e p="UnitType.cs" t="Include" />
+          </e>
+          <e p="Spawner" t="Include">
+            <e p="Data" t="Include">
+              <e p="UnitData.cs" t="Include" />
+              <e p="UnitDictionary.cs" t="Include" />
+            </e>
+            <e p="Spawner.cs" t="Include" />
+          </e>
+          <e p="Timer" t="Include">
+            <e p="SyncedTimer.cs" t="Include" />
+            <e p="T_Timer.cs" t="Include" />
+            <e p="TimeChangingSource.cs" t="Include" />
+            <e p="TimeInvoker.cs" t="Include" />
+            <e p="TimerType.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="LeoECSProj.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="QFSW.QC.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Demo.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Editor.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Editor.Tools.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Extras.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Grammar.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Parsers.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.QGUI.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.ScanRules.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Serializers.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.Suggestors.csproj" t="IncludeRecursive" />
+      <e p="QFSW.QC.UI.csproj" t="IncludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
