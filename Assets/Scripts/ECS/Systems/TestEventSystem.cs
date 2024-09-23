@@ -6,13 +6,13 @@ namespace ECS.Systems
 {
     public sealed class TestEventSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<PlayerTag, TestEvent> testFilter = null;
+        private readonly EcsFilter<PlayerTag, TestEvent> _testFilter = null;
         
         public void Run()
         {
-            foreach (var i in testFilter)
+            foreach (var i in _testFilter)
             {
-                ref var entity = ref testFilter.GetEntity(i);
+                ref var entity = ref _testFilter.GetEntity(i);
                 
                 
                 

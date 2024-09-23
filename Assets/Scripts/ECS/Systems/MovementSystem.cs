@@ -6,14 +6,14 @@ namespace ECS.Systems
 {
     public sealed class MovementSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<MovableComponent, DirectionComponent> movableFilter = null;
+        private readonly EcsFilter<MovableComponent, DirectionComponent> _movableFilter = null;
         
         public void Run()
         {
-            foreach (var entity in movableFilter)
+            foreach (var entity in _movableFilter)
             {
-                ref var movableComponent = ref movableFilter.Get1(entity);
-                ref var directionComponent = ref movableFilter.Get2(entity);
+                ref var movableComponent = ref _movableFilter.Get1(entity);
+                ref var directionComponent = ref _movableFilter.Get2(entity);
 
                 ref var direction = ref directionComponent.direction;
                 ref var rigidbody2D = ref movableComponent.rigidbody2D;

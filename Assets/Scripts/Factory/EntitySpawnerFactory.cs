@@ -6,24 +6,12 @@ namespace Factory
 {
     public class EntitySpawnerFactory : AbstractEntitySpawnerFactory
     {
-        public override GameObject CreateEntity(UnitBuilder builder, GameObject prefab)
+        public override GameObject CreateEntity(BaseEntityBuilder builder, GameObject prefab)
         {
-            var unit = GameObject.Instantiate(prefab);
+            var unit = Object.Instantiate(prefab);
             builder.Build(unit);
             
             return unit;
-        }
-
-        public override EcsEntity[] CreateEntity(UnitBuilder builder, GameObject prefab, int count)
-        {
-            var entities = new EcsEntity[count];
-            
-            for (var i = 0; i < count; i++)
-            {
-                
-            }
-
-            return entities;
         }
     }
 }

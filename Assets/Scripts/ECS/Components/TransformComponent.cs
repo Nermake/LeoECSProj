@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ECS.Components
 {
     [Serializable]
-    public struct ModelComponent
+    public struct TransformComponent
     {
         public Transform modelTransform;
     }

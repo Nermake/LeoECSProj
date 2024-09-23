@@ -4,7 +4,7 @@ using Voody.UniLeo;
 
 namespace Builder
 {
-    public abstract class BaseBuilder
+    public abstract class BaseEntityBuilder
     {
         private EcsWorld _world;
         protected EcsEntity entity;

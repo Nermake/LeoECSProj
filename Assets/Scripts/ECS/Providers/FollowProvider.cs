@@ -3,7 +3,7 @@ using Voody.UniLeo;
 
 namespace ECS.Providers
 {
-    public class ModelProvider : MonoProvider<ModelComponent>
+    public class FollowProvider : MonoProvider<FollowComponent>
     {
 
     }

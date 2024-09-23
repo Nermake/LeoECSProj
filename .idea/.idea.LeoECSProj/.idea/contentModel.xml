@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Алексей\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Алексей\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_LeoECSProj.1965221648.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Алексей\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
-    <e p="D:\UnProj\LeoECSProj" t="IncludeRecursive">
+    <e p="C:\Users\nekik\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\nekik\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_LeoECSProj.1709906854.00" t="ExcludeRecursive" />
+    <e p="D:\Git\LeoECSProj" t="IncludeRecursive">
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Data" t="Include">
-          <e p="ECS" t="Include">
-            <e p="StaticData" t="Include" />
-          </e>
-          <e p="UnitDictionary" t="Include">
-            <e p="Units" t="Include" />
-          </e>
-        </e>
         <e p="Input" t="Include">
           <e p="InputController.cs" t="Include" />
         </e>
@@ -25,9 +16,6 @@
               <e p="Source" t="Include">
                 <e p="changelog.txt" t="Include" />
                 <e p="Demo Scene" t="Include">
-                  <e p="Animations" t="Include" />
-                  <e p="Materials" t="Include" />
-                  <e p="Prefabs" t="Include" />
                   <e p="QFSW.QC.Demo.asmdef" t="Include" />
                   <e p="Scripts" t="Include">
                     <e p="Gate.cs" t="Include" />
@@ -35,7 +23,6 @@
                     <e p="RobotCollector.cs" t="Include" />
                     <e p="RobotSpawner.cs" t="Include" />
                   </e>
-                  <e p="Textures" t="Include" />
                 </e>
                 <e p="Extras" t="Include">
                   <e p="ApplicationCommands.cs" t="Include" />
@@ -48,7 +35,6 @@
                       <e p="CustomReportPrinter.cs" t="Include" />
                       <e p="DeferredSynchronizeInvoke.cs" t="Include" />
                       <e p="LICENSE.txt" t="Include" />
-                      <e p="Plugins" t="Include" />
                       <e p="ScriptBundleLoader.cs" t="Include" />
                     </e>
                     <e p="DynamicCodeCommands.cs" t="Include" />
@@ -67,10 +53,7 @@
                 </e>
                 <e p="Fonts" t="Include">
                   <e p="LICENSE.txt" t="Include" />
-                  <e p="TMP" t="Include" />
                 </e>
-                <e p="Materials" t="Include" />
-                <e p="Prefabs" t="Include" />
                 <e p="Scripts" t="Include">
                   <e p="Actions" t="Include">
                     <e p="Async.cs" t="Include" />
@@ -324,22 +307,17 @@
                 <e p="Shaders" t="Include">
                   <e p="Blur.shader" t="Include" />
                 </e>
-                <e p="Textures" t="Include" />
                 <e p="Third-Party Notices.txt" t="Include" />
               </e>
             </e>
           </e>
           <e p="TextMesh Pro" t="Include">
-            <e p="Documentation" t="Include" />
             <e p="Fonts" t="Include">
               <e p="LiberationSans - OFL.txt" t="Include" />
             </e>
             <e p="Resources" t="Include">
-              <e p="Fonts &amp; Materials" t="Include" />
               <e p="LineBreaking Following Characters.txt" t="Include" />
               <e p="LineBreaking Leading Characters.txt" t="Include" />
-              <e p="Sprite Assets" t="Include" />
-              <e p="Style Sheets" t="Include" />
             </e>
             <e p="Shaders" t="Include">
               <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
@@ -366,8 +344,6 @@
             </e>
           </e>
         </e>
-        <e p="Prefabs" t="Include" />
-        <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="_TestViaQFSW" t="Include">
             <e p="ExampleSpawnerFactory.cs" t="Include" />
@@ -384,16 +360,17 @@
             <e p="T_AbilityConfig.cs" t="Include" />
           </e>
           <e p="Builder" t="Include">
-            <e p="BaseBuilder.cs" t="Include" />
-            <e p="UnitBuilder.cs" t="Include" />
+            <e p="BaseEntityBuilder.cs" t="Include" />
+            <e p="EnemyEntityBuilder.cs" t="Include" />
+            <e p="PlayerEntityBuilder.cs" t="Include" />
           </e>
           <e p="ECS" t="Include">
             <e p="Components" t="Include">
               <e p="DirectionComponent.cs" t="Include" />
               <e p="FollowComponent.cs" t="Include" />
-              <e p="ModelComponent.cs" t="Include" />
               <e p="MovableComponent.cs" t="Include" />
               <e p="TestEventComponent.cs" t="Include" />
+              <e p="TransformComponent.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
               <e p="RuntimeData.cs" t="Include" />
@@ -408,16 +385,18 @@
             <e p="Providers" t="Include">
               <e p="DirectionProvider.cs" t="Include" />
               <e p="EnemyTagProvider.cs" t="Include" />
+              <e p="FollowProvider.cs" t="Include" />
               <e p="InitializeEntityProvider.cs" t="Include" />
-              <e p="ModelProvider.cs" t="Include" />
               <e p="MovableProvider.cs" t="Include" />
               <e p="PlayerTadProvider.cs" t="Include" />
               <e p="TestEventProvider.cs" t="Include" />
+              <e p="TransformProvider.cs" t="Include" />
             </e>
             <e p="Requests" t="Include">
               <e p="InitializeEntityRequest.cs" t="Include" />
             </e>
             <e p="Systems" t="Include">
+              <e p="DebugTransformEntitySystem.cs" t="Include" />
               <e p="EntityInitializeSystem.cs" t="Include" />
               <e p="FollowSystem.cs" t="Include" />
               <e p="InitializeInputControllerSystem.cs" t="Include" />
@@ -426,6 +405,7 @@
               <e p="PlayerTestSendEventSystem.cs" t="Include" />
               <e p="SetTargetForEnemySystem.cs" t="Include" />
               <e p="TestEventSystem.cs" t="Include" />
+              <e p="UpdatePositionSystem.cs" t="Include" />
             </e>
             <e p="Tags" t="Include">
               <e p="EnemyTag.cs" t="Include" />

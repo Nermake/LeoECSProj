@@ -7,16 +7,16 @@ namespace ECS.Systems
 {
     public sealed class PlayerInputSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<PlayerTag, DirectionComponent> directionFilter = null;
-        private readonly InputController inputController = null;
+        private readonly EcsFilter<PlayerTag, DirectionComponent> _directionFilter = null;
+        private readonly InputController _inputController = null;
 
         public void Run()
         {
-            var moveDirection = inputController.Game.Move.ReadValue<Vector2>();
+            var moveDirection = _inputController.Game.Move.ReadValue<Vector2>();
             
-            foreach (var entity in directionFilter)
+            foreach (var entity in _directionFilter)
             {
-                ref var directionComponent = ref directionFilter.Get2(entity);
+                ref var directionComponent = ref _directionFilter.Get2(entity);
 
                 directionComponent.direction = moveDirection;
             }

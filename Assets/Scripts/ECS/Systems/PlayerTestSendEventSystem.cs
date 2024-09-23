@@ -8,15 +8,15 @@ namespace ECS.Systems
 {
     public sealed class PlayerTestSendEventSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<PlayerTag, TestEventComponent> playerFilter = null;
+        private readonly EcsFilter<PlayerTag, TestEventComponent> _playerFilter = null;
 
         public void Run()
         {
             if (!Input.GetKeyDown(KeyCode.B)) return;
 
-            foreach (var i in playerFilter)
+            foreach (var i in _playerFilter)
             {
-                ref var entity = ref playerFilter.GetEntity(i);
+                ref var entity = ref _playerFilter.GetEntity(i);
                 entity.Get<TestEvent>();
             }
         }
