@@ -71,8 +71,8 @@ namespace ECS
                 Add(new InitializeInputControllerSystem()).
                 Add(new PlayerInputSystem()).
                 Add(new EntityInitializeSystem()).
-                Add(new SetTargetForEnemySystem()).
-                Add(new DebugTransformEntitySystem())
+                Add(new SetTargetForEnemySystem())
+                //Add(new DebugTransformEntitySystem())
                 ;
 
             _systemsForFixedUpdate.

@@ -380,6 +380,8 @@
             <e p="ECSGameStartup.cs" t="Include" />
             <e p="EntityReference.cs" t="Include" />
             <e p="Events" t="Include">
+              <e p="InitializeEnemyEvent.cs" t="Include" />
+              <e p="InitializePlayerEvent.cs" t="Include" />
               <e p="TestEvent.cs" t="Include" />
             </e>
             <e p="Providers" t="Include">

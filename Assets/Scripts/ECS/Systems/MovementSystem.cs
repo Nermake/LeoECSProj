@@ -19,7 +19,7 @@ namespace ECS.Systems
                 ref var rigidbody2D = ref movableComponent.rigidbody2D;
                 ref var speed = ref movableComponent.speed;
                 
-                rigidbody2D.MovePosition(rigidbody2D.position + direction * speed * Time.fixedDeltaTime);
+                rigidbody2D.MovePosition(rigidbody2D.position + direction * speed * Time.deltaTime);
             }
         }
     }

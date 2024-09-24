@@ -1,4 +1,6 @@
-﻿using ECS.Requests;
+﻿using ECS.Events;
+using ECS.Requests;
+using ECS.Tags;
 using Leopotam.Ecs;
 
 namespace ECS.Systems
@@ -15,6 +17,16 @@ namespace ECS.Systems
                 ref var request = ref _initFilter.Get1(i);
 
                 request.entityReference.Entity = entity;
+                
+                if (entity.Has<PlayerTag>())
+                {
+                    entity.Get<InitializePlayerEvent>();
+                }
+                if (entity.Has<EnemyTag>())
+                {
+                    entity.Get<InitializeEnemyEvent>();
+                }
+                
                 entity.Del<InitializeEntityRequest>();
             }
         }

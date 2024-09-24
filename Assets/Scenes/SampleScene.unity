@@ -952,6 +952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3833655451958653470, guid: 14a26e939b2c5ce4ba2eb9ebfd833b2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4651731209406827233, guid: 14a26e939b2c5ce4ba2eb9ebfd833b2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.9039173
@@ -990,6 +994,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4651731209406827233, guid: 14a26e939b2c5ce4ba2eb9ebfd833b2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305304390715832380, guid: 14a26e939b2c5ce4ba2eb9ebfd833b2c, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305304390715832380, guid: 14a26e939b2c5ce4ba2eb9ebfd833b2c, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
