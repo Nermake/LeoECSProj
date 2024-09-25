@@ -1,11 +1,11 @@
 ﻿using Builder;
-using Leopotam.Ecs;
 using UnityEngine;
 
 namespace Factory
 {
-    public abstract class AbstractEntitySpawnerFactory
+    public abstract class AbstractEntityFactory
     {
         public abstract GameObject CreateEntity(BaseEntityBuilder builder, GameObject prefab);
+        public abstract GameObject CreateEntity(BaseEntityBuilder builder, GameObject prefab, Transform point);
     }
 }

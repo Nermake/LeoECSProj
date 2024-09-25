@@ -1,24 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using Factory;
+﻿using Factory;
 using GameTypes;
 using UnityEngine;
 
 namespace Spawner
 {
-    public class Spawner : MonoBehaviour
+    public class Spawner : ISpawner
     {
-        [SerializeField] private UnitDictionary _unitDictionary;
+        private AbstractEntityFactory _entityFactory;
 
-        private Dictionary<UnitType, GameObject> _unitPrefabs;
-
-        private void Start()
+        public void Init()
         {
-            _unitPrefabs = _unitDictionary.Units;
+            _entityFactory = new EntityFactory();
         }
 
 
-        public void Spawn<T>(UnitType key, Vector2 pos) where T : AbstractEntitySpawnerFactory
+        public void Spawn<T>(UnitType key) where T : AbstractEntityFactory
+        {
+            
+        }
+
+        public void SpawnAtPoint<T>(UnitType key, Vector2 pos) where T : AbstractEntityFactory
         {
             
         }

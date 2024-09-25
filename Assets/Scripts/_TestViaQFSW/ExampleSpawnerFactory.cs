@@ -10,14 +10,15 @@ namespace _TestViaQFSW
     {
         [SerializeField] private GameObject _playerPrefab;
         [SerializeField] private GameObject _enemyPrefab;
+        [SerializeField] private Transform _spawnPoint;
         
-        private AbstractEntitySpawnerFactory _entitySpawnerFactory;
+        private AbstractEntityFactory _entityFactory;
         private PlayerEntityBuilder _playerBuilder;
         private EnemyEntityBuilder _enemyBuilder;
 
         private void Start()
         {
-            _entitySpawnerFactory = new EntitySpawnerFactory();
+            _entityFactory = new EntityFactory();
             _playerBuilder = new PlayerEntityBuilder();
             _enemyBuilder = new EnemyEntityBuilder();
         }
@@ -28,11 +29,29 @@ namespace _TestViaQFSW
             switch (tag)
             {
                 case Tag.Player:
-                    _entitySpawnerFactory.CreateEntity(_playerBuilder, _playerPrefab);
+                    _entityFactory.CreateEntity(_playerBuilder, _playerPrefab);
                     break;
                 
                 case Tag.Enemy:
-                    _entitySpawnerFactory.CreateEntity(_enemyBuilder, _enemyPrefab);
+                    _entityFactory.CreateEntity(_enemyBuilder, _enemyPrefab);
+                    break;
+                
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(tag), tag, null);
+            }
+        }
+
+        [Command("spawn_entity_at_point")]
+        private void SpawnEntityAtPoint(Tag tag)
+        {
+            switch (tag)
+            {
+                case Tag.Player:
+                    _entityFactory.CreateEntity(_playerBuilder, _playerPrefab, _spawnPoint);
+                    break;
+                
+                case Tag.Enemy:
+                    _entityFactory.CreateEntity(_enemyBuilder, _enemyPrefab, _spawnPoint);
                     break;
                 
                 default:

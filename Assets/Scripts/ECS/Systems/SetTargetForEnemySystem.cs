@@ -1,29 +1,23 @@
 ﻿using ECS.Components;
-using ECS.Events;
-using ECS.Tags;
+using ECS.Data;
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace ECS.Systems
 {
     public sealed class SetTargetForEnemySystem : IEcsRunSystem
     {
         private readonly EcsFilter<FollowComponent, TransformComponent> _enemyFilter = null;
-        private readonly EcsFilter<PlayerTag, InitializePlayerEvent> _targetFilter = null;
+        private readonly RuntimeData _runtimeData = null;
 
-        private EcsEntity _player;
-        
         public void Run()
         {
-            foreach (var entity in _targetFilter)
-            {
-                _player = _targetFilter.GetEntity(entity);
-                _player.Del<InitializePlayerEvent>();
-            }
-            
             foreach (var entity in _enemyFilter)
             {
-                ref var playerTransformComponent = ref _player.Get<TransformComponent>();
+                if (_runtimeData.Player == EcsEntity.Null) return;
+
+                ref var player = ref _runtimeData.Player;
+                
+                ref var playerTransformComponent = ref player.Get<TransformComponent>();
                 ref var followComponent = ref _enemyFilter.Get1(entity);
                 ref var enemyTransformComponent = ref _enemyFilter.Get2(entity);
                 

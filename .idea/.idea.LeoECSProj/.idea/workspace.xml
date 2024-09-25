@@ -20,20 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd681d53-6bd3-4c72-a426-0a8ef2bdd33b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializeEnemyEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializeEnemyEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializePlayerEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializePlayerEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyEntityBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyEntityBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builder/PlayerEntityBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/PlayerEntityBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/EntityInitializeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/EntityInitializeSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/MovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/MovementSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForEnemySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForEnemySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntitySpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntitySpawnerFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/EntitySpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/EntitySpawnerFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/SyncedTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/SyncedTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/SyncedTimer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/SyncedTimer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/T_Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/T_Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/T_Timer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/T_Timer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeChangingSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeChangingSource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeChangingSource.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeChangingSource.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeInvoker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeInvoker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeInvoker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimerType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimerType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimerType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimerType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,17 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/EAbilityStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/EResourceCostType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/Ability.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityCastHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/T_AbilityConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/T_Ability.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/TimerType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/TimeChangingSource.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ability/AbilityConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/TimeInvoker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Timer/SyncedTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/Buff&amp;Debuff/Buff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Timer/T_Timer.cs" />
@@ -91,19 +99,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UpdatePositionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/TransformComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factory/EntitySpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntitySpawnerFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/FollowProvider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DebugTransformEntitySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/MovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyEntityBuilder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Builder/PlayerEntityBuilder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializeEnemyEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializePlayerEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/EntityInitializeSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntityFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/EntityFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForEnemySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs" />
       </list>
     </option>
   </component>
@@ -165,7 +184,8 @@
       <workItem from="1726653307542" duration="14566000" />
       <workItem from="1727156830028" duration="137000" />
       <workItem from="1727157103753" duration="1033000" />
-      <workItem from="1727158393927" duration="2501000" />
+      <workItem from="1727158393927" duration="2574000" />
+      <workItem from="1727242157006" duration="9480000" />
     </task>
     <servers />
   </component>
@@ -191,10 +211,15 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="773" y="226" key="RiderGenerateDialog" timestamp="1721331758739">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="618" y="196" key="RiderGenerateDialog" timestamp="1727258541551">
+      <screen x="0" y="0" width="1536" height="912" />
     </state>
+    <state x="618" y="196" key="RiderGenerateDialog/0.0.1536.912@0.0.1536.912" timestamp="1727258541551" />
     <state x="773" y="226" key="RiderGenerateDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1721331758739" />
+    <state x="93" y="93" width="1350" height="726" key="VCS.FileHistoryDialog" timestamp="1727244447109">
+      <screen x="0" y="0" width="1536" height="912" />
+    </state>
+    <state x="93" y="93" width="1350" height="726" key="VCS.FileHistoryDialog/0.0.1536.912@0.0.1536.912" timestamp="1727244447109" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1721164701621">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

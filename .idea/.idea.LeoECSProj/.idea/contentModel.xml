@@ -403,9 +403,11 @@
               <e p="FollowSystem.cs" t="Include" />
               <e p="InitializeInputControllerSystem.cs" t="Include" />
               <e p="MovementSystem.cs" t="Include" />
+              <e p="PlayerInitializeSystem.cs" t="Include" />
               <e p="PlayerInputSystem.cs" t="Include" />
               <e p="PlayerTestSendEventSystem.cs" t="Include" />
               <e p="SetTargetForEnemySystem.cs" t="Include" />
+              <e p="SpawnEnemySystem.cs" t="Include" />
               <e p="TestEventSystem.cs" t="Include" />
               <e p="UpdatePositionSystem.cs" t="Include" />
             </e>
@@ -413,10 +415,6 @@
               <e p="EnemyTag.cs" t="Include" />
               <e p="PlayerTag.cs" t="Include" />
             </e>
-          </e>
-          <e p="Factory" t="Include">
-            <e p="AbstractEntitySpawnerFactory.cs" t="Include" />
-            <e p="EntitySpawnerFactory.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
             <e p="Logic" t="Include">
@@ -443,19 +441,26 @@
             <e p="UnitResourceType.cs" t="Include" />
             <e p="UnitType.cs" t="Include" />
           </e>
+          <e p="Services" t="Include">
+            <e p="Factory" t="Include">
+              <e p="AbstractEntityFactory.cs" t="Include" />
+              <e p="EntityFactory.cs" t="Include" />
+            </e>
+            <e p="Timer" t="Include">
+              <e p="SyncedTimer.cs" t="Include" />
+              <e p="T_Timer.cs" t="Include" />
+              <e p="TimeChangingSource.cs" t="Include" />
+              <e p="TimeInvoker.cs" t="Include" />
+              <e p="TimerType.cs" t="Include" />
+            </e>
+          </e>
           <e p="Spawner" t="Include">
             <e p="Data" t="Include">
               <e p="UnitData.cs" t="Include" />
               <e p="UnitDictionary.cs" t="Include" />
             </e>
+            <e p="ISpawner.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
-          </e>
-          <e p="Timer" t="Include">
-            <e p="SyncedTimer.cs" t="Include" />
-            <e p="T_Timer.cs" t="Include" />
-            <e p="TimeChangingSource.cs" t="Include" />
-            <e p="TimeInvoker.cs" t="Include" />
-            <e p="TimerType.cs" t="Include" />
           </e>
         </e>
       </e>
