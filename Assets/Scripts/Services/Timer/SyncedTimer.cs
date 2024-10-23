@@ -1,7 +1,8 @@
 ﻿using System;
+using Timer;
 using UnityEngine;
 
-namespace Timer
+namespace Services.Timer
 {
 	public delegate void TimerValueChangedHandler(float remainingSeconds, TimeChangingSource changingSource);
 

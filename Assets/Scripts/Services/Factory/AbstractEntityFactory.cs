@@ -1,7 +1,7 @@
 ﻿using Builder;
 using UnityEngine;
 
-namespace Factory
+namespace Services.Factory
 {
     public abstract class AbstractEntityFactory
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Timer
+namespace Services.Timer
 {
 	public class TimeInvoker : MonoBehaviour
 	{

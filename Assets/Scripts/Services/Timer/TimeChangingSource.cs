@@ -1,4 +1,4 @@
-﻿namespace Timer
+﻿namespace Services.Timer
 {
     public enum TimeChangingSource
     {

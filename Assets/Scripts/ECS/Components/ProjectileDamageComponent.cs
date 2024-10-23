@@ -3,8 +3,8 @@
 namespace ECS.Components
 {
     [Serializable]
-    public struct TestEventComponent
+    public struct ProjectileDamageComponent
     {
-        
+        public float damage;
     }
 }

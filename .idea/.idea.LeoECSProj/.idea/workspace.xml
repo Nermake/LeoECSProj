@@ -20,38 +20,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd681d53-6bd3-4c72-a426-0a8ef2bdd33b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/ECS/Configs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/ECS/Configs/EntityConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/ECS/Configs/EntityConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyShoot.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyShoot.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Wiht_Providers.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Wiht_Providers.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_With_Providers.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_With_Providers.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyMileBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyMileBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyRangeBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyRangeBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/ProjectileEntityBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/ProjectileEntityBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Configs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Configs/EntityConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Configs/EntityConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Blocks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Blocks/BlockMoveDuration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Blocks/BlockMoveDuration.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/DeathComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/DeathComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileDamageComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileDamageComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ShootPointComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ShootPointComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/BuilderData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/BuilderData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/StartProjectileMovementEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/StartProjectileMovementEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Flags.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Flags/MileAttackFlag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Flags/MileAttackFlag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Flags/RangeAttackFlag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Flags/RangeAttackFlag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Requests/InitializeProjectileRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Requests/InitializeProjectileRequest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DeathSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/GenerateProjectileSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/GenerateProjectileSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/ProjectileMovementSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/ProjectileMovementSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/RemovesProhibitionMoveSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/RemovesProhibitionMoveSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForProjectileSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForProjectileSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/T_SpawnPlayerSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/T_SpawnPlayerSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/MainScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/MainScript.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/PoolMono.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/PoolMono.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/Unit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/Unit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/EntitySpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/UnitType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/UnitType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ECS/StaticData/Test_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ECS/StaticData/Test_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player 1.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builder/BaseEntityBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/BaseEntityBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyEntityBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyEntityBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Builder/PlayerEntityBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Builder/PlayerEntityBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/FollowComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/FollowComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/TestEventComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileTargetComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/TestEventComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileTargetComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializeEnemyEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializeEnemyEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializePlayerEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializePlayerEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/TestEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/DeathEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/TestEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Events/DeathEvent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DebugTransformEntitySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DebugTransformEntitySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/MovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerMovementSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/MovementSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerMovementSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerTestSendEventSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerTestSendEventSystem.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForEnemySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForEnemySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntitySpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntitySpawnerFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/EntitySpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factory/EntitySpawnerFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/SyncedTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/SyncedTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/SyncedTimer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/SyncedTimer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/T_Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/T_Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/T_Timer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/T_Timer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeChangingSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeChangingSource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeChangingSource.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeChangingSource.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeInvoker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimeInvoker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeInvoker.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimerType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimerType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/TimerType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimerType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/TestEventSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/TestEventSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UpdatePositionSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UpdatePositionSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DeathSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Tags/EnemyTag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Tags/EnemyTag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Tags/PlayerTag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Tags/PlayerTag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Logic/Buff&amp;Debuff/Buff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Logic/Buff&amp;Debuff/Buff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/SyncedTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/SyncedTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/T_Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/T_Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeChangingSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeChangingSource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimeInvoker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimerType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Timer/TimerType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/Data/UnitDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/Data/UnitDictionary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/EntitySpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,66 +143,72 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/Unit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsWorld.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/BaseMonoProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011CCACB-5878-4A80-AC4B-48B4C50EE0B7/ba/90e9ed8b/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/011CCACB-5878-4A80-AC4B-48B4C50EE0B7/6c/996779ca/020002E2.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/IConvertToEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/MainScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/MonoProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/PoolMono.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/SyncedTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/Buff&amp;Debuff/Buff.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Timer/T_Timer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/DamageType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/EffectType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/UnitResourceType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/UnitConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/DamageCalculate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/IController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/HealthController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/ManaController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/ResistController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/StatsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Logic/Controller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameTypes/Unit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/BaseBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/MainScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProgectileDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Configs/EntityConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Flags/_Info.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Data/UnitType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/BuilderType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Data/UnitData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Data/UnitDictionary.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/UnitType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyMileBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/RemoveBlockFollowSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/EntitySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/BuilderData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyRangeBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ShootPointComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Builder/BaseEntityBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/UnitEntityBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/EntityBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/TramsformProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/TransformProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerTestSendEventSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInputSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/TestEventSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UpdatePositionSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/TransformComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/EntitySpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntitySpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/FollowProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DebugTransformEntitySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/MovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Builder/EnemyEntityBuilder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Builder/PlayerEntityBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializeEnemyEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Requests/InitialileProjectileRequest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/EnemyTargetComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/DeathComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/BlockFollowSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializePlayerEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/EntityInitializeSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/ISpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/AbstractEntityFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factory/EntityFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleSpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/AbstractEntityFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Events/InitializeEnemyEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Events/DeathEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DeathSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/ProjectileMoveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileTargetComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Builder/ProjectileEntityBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Events/StartProjectileMovementEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/ProjectileComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/ProjectileMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInitializeSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/T_SpawnPlayerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Requests/InitializeProjectileRequest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/GenerateProjectileSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForProjectileSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/ECSGameStartup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Components/FollowComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SetTargetForEnemySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/SpawnEnemySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/FollowSystem.cs" />
       </list>
     </option>
   </component>
@@ -185,7 +271,12 @@
       <workItem from="1727156830028" duration="137000" />
       <workItem from="1727157103753" duration="1033000" />
       <workItem from="1727158393927" duration="2574000" />
-      <workItem from="1727242157006" duration="9480000" />
+      <workItem from="1727242157006" duration="14771000" />
+      <workItem from="1727755064322" duration="18797000" />
+      <workItem from="1728467878117" duration="3649000" />
+      <workItem from="1728646129726" duration="19415000" />
+      <workItem from="1729677534042" duration="4575000" />
+      <workItem from="1729684270671" duration="2893000" />
     </task>
     <servers />
   </component>
@@ -220,6 +311,10 @@
       <screen x="0" y="0" width="1536" height="912" />
     </state>
     <state x="93" y="93" width="1350" height="726" key="VCS.FileHistoryDialog/0.0.1536.912@0.0.1536.912" timestamp="1727244447109" />
+    <state x="425" y="209" key="run.anything.popup" timestamp="1728370372326">
+      <screen x="0" y="0" width="1536" height="912" />
+    </state>
+    <state x="425" y="209" key="run.anything.popup/0.0.1536.912@0.0.1536.912" timestamp="1728370372326" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1721164701621">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

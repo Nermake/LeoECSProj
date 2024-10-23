@@ -362,17 +362,33 @@
           <e p="Builder" t="Include">
             <e p="BaseEntityBuilder.cs" t="Include" />
             <e p="EnemyEntityBuilder.cs" t="Include" />
+            <e p="EnemyMileBuilder.cs" t="Include" />
+            <e p="EnemyRangeBuilder.cs" t="Include" />
             <e p="PlayerEntityBuilder.cs" t="Include" />
+            <e p="ProjectileEntityBuilder.cs" t="Include" />
+          </e>
+          <e p="Data" t="Include">
+            <e p="Configs" t="Include">
+              <e p="EntityConfig.cs" t="Include" />
+            </e>
           </e>
           <e p="ECS" t="Include">
+            <e p="Blocks" t="Include">
+              <e p="BlockMoveDuration.cs" t="Include" />
+            </e>
             <e p="Components" t="Include">
+              <e p="DeathComponent.cs" t="Include" />
               <e p="DirectionComponent.cs" t="Include" />
               <e p="FollowComponent.cs" t="Include" />
               <e p="MovableComponent.cs" t="Include" />
-              <e p="TestEventComponent.cs" t="Include" />
+              <e p="ProjectileComponent.cs" t="Include" />
+              <e p="ProjectileDamageComponent.cs" t="Include" />
+              <e p="ProjectileTargetComponent.cs" t="Include" />
+              <e p="ShootPointComponent.cs" t="Include" />
               <e p="TransformComponent.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
+              <e p="BuilderData.cs" t="Include" />
               <e p="RuntimeData.cs" t="Include" />
               <e p="SceneData.cs" t="Include" />
               <e p="StaticData.cs" t="Include" />
@@ -380,9 +396,14 @@
             <e p="ECSGameStartup.cs" t="Include" />
             <e p="EntityReference.cs" t="Include" />
             <e p="Events" t="Include">
+              <e p="DeathEvent.cs" t="Include" />
               <e p="InitializeEnemyEvent.cs" t="Include" />
               <e p="InitializePlayerEvent.cs" t="Include" />
-              <e p="TestEvent.cs" t="Include" />
+              <e p="StartProjectileMovementEvent.cs" t="Include" />
+            </e>
+            <e p="Flags" t="Include">
+              <e p="MileAttackFlag.cs" t="Include" />
+              <e p="RangeAttackFlag.cs" t="Include" />
             </e>
             <e p="Providers" t="Include">
               <e p="DirectionProvider.cs" t="Include" />
@@ -396,20 +417,24 @@
             </e>
             <e p="Requests" t="Include">
               <e p="InitializeEntityRequest.cs" t="Include" />
+              <e p="InitializeProjectileRequest.cs" t="Include" />
             </e>
             <e p="Systems" t="Include">
+              <e p="DeathSystem.cs" t="Include" />
               <e p="DebugTransformEntitySystem.cs" t="Include" />
               <e p="EntityInitializeSystem.cs" t="Include" />
               <e p="FollowSystem.cs" t="Include" />
+              <e p="GenerateProjectileSystem.cs" t="Include" />
               <e p="InitializeInputControllerSystem.cs" t="Include" />
-              <e p="MovementSystem.cs" t="Include" />
               <e p="PlayerInitializeSystem.cs" t="Include" />
               <e p="PlayerInputSystem.cs" t="Include" />
-              <e p="PlayerTestSendEventSystem.cs" t="Include" />
+              <e p="PlayerMovementSystem.cs" t="Include" />
+              <e p="ProjectileMovementSystem.cs" t="Include" />
+              <e p="RemovesProhibitionMoveSystem.cs" t="Include" />
               <e p="SetTargetForEnemySystem.cs" t="Include" />
+              <e p="SetTargetForProjectileSystem.cs" t="Include" />
               <e p="SpawnEnemySystem.cs" t="Include" />
-              <e p="TestEventSystem.cs" t="Include" />
-              <e p="UpdatePositionSystem.cs" t="Include" />
+              <e p="T_SpawnPlayerSystem.cs" t="Include" />
             </e>
             <e p="Tags" t="Include">
               <e p="EnemyTag.cs" t="Include" />
@@ -446,6 +471,11 @@
               <e p="AbstractEntityFactory.cs" t="Include" />
               <e p="EntityFactory.cs" t="Include" />
             </e>
+            <e p="ObjectPool" t="Include">
+              <e p="MainScript.cs" t="Include" />
+              <e p="PoolMono.cs" t="Include" />
+              <e p="Unit.cs" t="Include" />
+            </e>
             <e p="Timer" t="Include">
               <e p="SyncedTimer.cs" t="Include" />
               <e p="T_Timer.cs" t="Include" />
@@ -459,8 +489,9 @@
               <e p="UnitData.cs" t="Include" />
               <e p="UnitDictionary.cs" t="Include" />
             </e>
+            <e p="EntitySpawner.cs" t="Include" />
             <e p="ISpawner.cs" t="Include" />
-            <e p="Spawner.cs" t="Include" />
+            <e p="UnitType.cs" t="Include" />
           </e>
         </e>
       </e>

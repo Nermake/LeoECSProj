@@ -1,6 +1,8 @@
-﻿namespace ECS.Events
+﻿using Leopotam.Ecs;
+
+namespace ECS.Events
 {
-    public struct InitializeEnemyEvent
+    public struct InitializeEnemyEvent : IEcsIgnoreInFilter
     {
         
     }

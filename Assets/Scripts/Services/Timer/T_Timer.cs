@@ -1,5 +1,5 @@
-﻿using System;
-using QFSW.QC;
+﻿using QFSW.QC;
+using Services.Timer;
 using UnityEngine;
 
 namespace Timer

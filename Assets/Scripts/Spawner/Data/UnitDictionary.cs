@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using GameTypes;
 using UnityEngine;
 
 namespace Spawner

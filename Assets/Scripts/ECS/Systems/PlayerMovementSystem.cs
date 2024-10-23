@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class MovementSystem : IEcsRunSystem
+    public sealed class PlayerMovementSystem : IEcsRunSystem
     {
         private readonly EcsFilter<MovableComponent, DirectionComponent> _movableFilter = null;
         

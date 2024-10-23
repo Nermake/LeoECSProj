@@ -11,11 +11,11 @@ namespace ECS.Systems
 
         public void Run()
         {
+            if (_runtimeData.PlayerEntity == EcsEntity.Null) return;
+            
             foreach (var entity in _enemyFilter)
             {
-                if (_runtimeData.Player == EcsEntity.Null) return;
-
-                ref var player = ref _runtimeData.Player;
+                ref var player = ref _runtimeData.PlayerEntity;
                 
                 ref var playerTransformComponent = ref player.Get<TransformComponent>();
                 ref var followComponent = ref _enemyFilter.Get1(entity);
@@ -23,13 +23,16 @@ namespace ECS.Systems
                 
                 ref var playerTransform = ref playerTransformComponent.modelTransform;
                 ref var enemyTransform = ref enemyTransformComponent.modelTransform;
-                ref var target = ref followComponent.target;
-
+                ref var targetDirection = ref followComponent.targetDirection;
+                
                 var playerPosition = playerTransform.position;
                 var enemyPosition = enemyTransform.position;
+
+                followComponent.target.x = playerPosition.x;
+                followComponent.target.y = playerPosition.y;
                 
-                target.x = playerPosition.x - enemyPosition.x;
-                target.y = playerPosition.y - enemyPosition.y;
+                targetDirection.x = playerPosition.x - enemyPosition.x;
+                targetDirection.y = playerPosition.y - enemyPosition.y;
             }
         }
     }

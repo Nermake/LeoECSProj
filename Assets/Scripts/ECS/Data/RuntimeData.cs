@@ -1,19 +1,13 @@
-﻿using Builder;
-using Leopotam.Ecs;
+﻿using Leopotam.Ecs;
+using UnityEngine;
 
 namespace ECS.Data
 {
     public class RuntimeData
     {
-        public PlayerEntityBuilder PlayerBuilder;
-        public EnemyEntityBuilder EntityBuilder;
-        public EcsEntity Player;
+        public readonly BuilderData BuilderData = new BuilderData();
         
-        public void Init()
-        {
-            PlayerBuilder = new PlayerEntityBuilder();
-            EntityBuilder = new EnemyEntityBuilder();
-            Player = EcsEntity.Null;
-        }
+        public GameObject Player;
+        public EcsEntity PlayerEntity = EcsEntity.Null;
     }
 }

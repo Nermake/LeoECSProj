@@ -24,7 +24,7 @@ namespace ECS.Systems
             {
                 ref var entity = ref _transformFilter.GetEntity(i);
                 ref var followComponent = ref _followFilter.Get1(i);
-                ref var follow = ref followComponent.target;
+                ref var follow = ref followComponent.targetDirection;
                 
                 Debug.Log($"[Entity: {entity.ToString()}] [Follow position: {follow}]");
             }

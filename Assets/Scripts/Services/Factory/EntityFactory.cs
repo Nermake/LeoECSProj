@@ -1,7 +1,8 @@
 ﻿using Builder;
+using Leopotam.Ecs;
 using UnityEngine;
 
-namespace Factory
+namespace Services.Factory
 {
     public class EntityFactory : AbstractEntityFactory
     {
@@ -19,6 +20,14 @@ namespace Factory
             builder.Build(unit);
             
             return unit;
+        }
+        
+        public EcsEntity CreateEntity(BaseEntityBuilder builder, GameObject prefab, Transform point, out GameObject unit)
+        {
+            unit = Object.Instantiate(prefab, point.position, point.rotation);
+            var entity = builder.Build(unit);
+            
+            return entity;
         }
     }
 }

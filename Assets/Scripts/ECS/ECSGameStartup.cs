@@ -1,8 +1,9 @@
 using ECS.Data;
 using ECS.Events;
 using ECS.Systems;
-using Factory;
 using Leopotam.Ecs;
+using Services.Factory;
+using Spawner;
 using UnityEngine;
 using Voody.UniLeo;
 
@@ -11,16 +12,16 @@ namespace ECS
     public class ECSGameStartup : MonoBehaviour
     {
         [SerializeField] private StaticData _staticData;
-        [SerializeField] private RuntimeData _runtimeData;
-    
+        
         private EcsWorld _world;
         private EcsSystems _systems;
         private EcsSystems _systemsForFixedUpdate;
 
         private SceneData _sceneData;
+        private RuntimeData _runtimeData;
         private InputController _inputController;
-
         private EntityFactory _entityFactory;
+        //private EntitySpawner _entitySpawner;
 
         private void Start()
         {
@@ -29,14 +30,14 @@ namespace ECS
             _systemsForFixedUpdate = new EcsSystems(_world);
 
             _sceneData = gameObject.GetComponent<SceneData>();
+            
             _runtimeData = new RuntimeData();
             _inputController = new InputController();
             _entityFactory = new EntityFactory();
+            //_entitySpawner = new EntitySpawner();
 
             _systems.ConvertScene();
 
-            _runtimeData.Init();
-            
             AddInjections();
             AddOneFrames();
             AddSystems();
@@ -63,6 +64,7 @@ namespace ECS
                 Inject(_runtimeData).
                 Inject(_inputController).
                 Inject(_entityFactory)
+                //Inject(_entitySpawner)
                 ;
 
             _systemsForFixedUpdate.
@@ -74,24 +76,30 @@ namespace ECS
     
         private void AddOneFrames()
         {
-            _systems.OneFrame<TestEvent>();
+            _systems.OneFrame<DeathEvent>();
         }
     
         private void AddSystems()
         {
             _systems.
+                Add(new EntityInitializeSystem()).
                 Add(new PlayerInitializeSystem()).
                 Add(new InitializeInputControllerSystem()).
                 Add(new PlayerInputSystem()).
-                Add(new EntityInitializeSystem()).
                 Add(new SetTargetForEnemySystem()).
-                Add(new SpawnEnemySystem())
-                //Add(new DebugTransformEntitySystem())
+                //Add(new SpawnEnemySystem()).
+                Add(new RemovesProhibitionMoveSystem()).
+                Add(new GenerateProjectileSystem()).
+                Add(new SetTargetForProjectileSystem()).
+                Add(new T_SpawnPlayerSystem()).
+                Add(new DeathSystem())
                 ;
 
             _systemsForFixedUpdate.
-                Add(new MovementSystem()).
-                Add(new FollowSystem());
+                Add(new ProjectileMovementSystem()).
+                Add(new PlayerMovementSystem()).
+                Add(new FollowSystem())
+                ;
         }
     
         private void OnDestroy()

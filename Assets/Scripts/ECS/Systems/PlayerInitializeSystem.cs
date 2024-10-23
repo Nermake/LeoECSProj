@@ -19,7 +19,7 @@ namespace ECS.Systems
                 _player = _playerFilter.GetEntity(entity);
                 _player.Del<InitializePlayerEvent>();
                 
-                _runtimeData.Player = _player;
+                _runtimeData.PlayerEntity = _player;
             }
         }
     }

@@ -1,6 +1,8 @@
-﻿namespace ECS.Tags
+﻿using Leopotam.Ecs;
+
+namespace ECS.Tags
 {
-    public struct EnemyTag
+    public struct EnemyTag : IEcsIgnoreInFilter
     {
         
     }

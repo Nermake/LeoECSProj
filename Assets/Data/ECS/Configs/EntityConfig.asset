@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88d5a39c86d4eca872025b9d87d7c64, type: 3}
+  m_Name: EntityConfig
+  m_EditorClassIdentifier: 
+  <player>k__BackingField: {fileID: 8211259534643091359, guid: f96d509553714ee4aa122ece775b6d48, type: 3}
+  <enemyMile>k__BackingField: {fileID: 243786794426881411, guid: 9449bd8dce6a7844ea1e88c37858e6ff, type: 3}
+  <enemyRange>k__BackingField: {fileID: 5619560211623519563, guid: 763fd45c64972144dbbee78cff62db8b, type: 3}
+  <projectile>k__BackingField: {fileID: -3109004005459629137, guid: 1d219b0c76501864cbea63cc585add71, type: 3}
+  <entity>k__BackingField: {fileID: 0}

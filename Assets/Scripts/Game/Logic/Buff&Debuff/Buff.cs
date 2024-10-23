@@ -1,4 +1,5 @@
-﻿using Timer;
+﻿using Services.Timer;
+using Timer;
 using UnityEngine;
 
 namespace Game.Logic
