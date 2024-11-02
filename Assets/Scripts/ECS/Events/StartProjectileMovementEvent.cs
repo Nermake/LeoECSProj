@@ -2,7 +2,7 @@
 
 namespace ECS.Events
 {
-    public struct StartProjectileMovementEvent : IEcsIgnoreInFilter// todo test
+    public struct StartProjectileMovementEvent : IEcsIgnoreInFilter
     {
         
     }

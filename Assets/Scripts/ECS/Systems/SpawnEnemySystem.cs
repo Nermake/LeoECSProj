@@ -8,7 +8,7 @@ namespace ECS.Systems
 {
     public sealed class SpawnEnemySystem : IEcsRunSystem
     {
-        private readonly SceneData _sceneData = null; // todo протестируй через статикдату
+        private readonly SceneData _sceneData = null;
         private readonly RuntimeData _runtimeData = null;
         private readonly EntityFactory _entityFactory = null;
         private readonly List<GameObject> _enemies = new List<GameObject>();

@@ -75,8 +75,8 @@ namespace Ability
     {
         NoneTarget,
         Target,
-        Oblast, // TODO область
-        Kon // TODO конус
+        Oblast, 
+        Kon
     }
     
     public enum EBuffDebuffType : sbyte
@@ -86,10 +86,10 @@ namespace Ability
         Magic,
         Curse,
         Venom,
-        Boles // TODO болезнь
+        Boles
     }
     
-    public enum EAbilityOgType : sbyte // TODO ограничения
+    public enum EAbilityOgType : sbyte
     {
         None,
         Silence,

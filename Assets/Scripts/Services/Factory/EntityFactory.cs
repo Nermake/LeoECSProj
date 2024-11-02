@@ -22,7 +22,7 @@ namespace Services.Factory
             return unit;
         }
         
-        public EcsEntity CreateEntity(BaseEntityBuilder builder, GameObject prefab, Transform point, out GameObject unit)
+        public override EcsEntity CreateEntity(BaseEntityBuilder builder, GameObject prefab, Transform point, out GameObject unit)
         {
             unit = Object.Instantiate(prefab, point.position, point.rotation);
             var entity = builder.Build(unit);

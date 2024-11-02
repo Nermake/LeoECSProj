@@ -91,7 +91,7 @@ namespace ECS
                 Add(new RemovesProhibitionMoveSystem()).
                 Add(new GenerateProjectileSystem()).
                 Add(new SetTargetForProjectileSystem()).
-                Add(new T_SpawnPlayerSystem()).
+                //Add(new T_SpawnPlayerSystem()).
                 Add(new DeathSystem())
                 ;
 

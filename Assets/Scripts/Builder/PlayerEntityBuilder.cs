@@ -1,16 +1,16 @@
-﻿using ECS;
-using ECS.Components;
-using ECS.Requests;
+﻿using ECS.Components;
 using ECS.Tags;
 using Leopotam.Ecs;
 using UnityEngine;
 
 namespace Builder
 {
-    public class PlayerEntityBuilder : BaseEntityBuilder
+    public class PlayerEntityBuilder : UnitEntityBuilder
     {
         protected override void Setup(GameObject unit)
         {
+            base.Setup(unit);
+            
             entity.Get<PlayerTag>();
             entity.Get<DirectionComponent>();
 

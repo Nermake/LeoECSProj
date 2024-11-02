@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1825be0a7acc4abdbeb126d650a08f89, type: 3}
+  m_Name: Orc
+  m_EditorClassIdentifier: 
+  _attack:
+    attackPower: 12
+    spellPowerDamage: 0
+    accuracy: 0.05
+    armorPenetrationRate: 0
+    penetratingPowerOfSpells: 0
+    chanceOfCriticalHit: 0.15
+    powerOfCriticalHit: 1.6
+  _attributes:
+    strength: 14
+    agility: 6
+    intelligence: 2
+  _defense:
+    protection: 110
+    percentageProtection: 0
+    resistance: 60
+    percentageResistance: 0
+    evasion: 0
+  _resources:
+    health: 125
+    mana: 55
+    energy: 100

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Builder;
-using Data.Configs;
+using Configs;
 using QFSW.QC;
 using Services.Factory;
 using Spawner;
