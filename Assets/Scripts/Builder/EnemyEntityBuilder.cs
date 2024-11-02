@@ -5,10 +5,12 @@ using UnityEngine;
 
 namespace Builder
 {
-    public class EnemyEntityBuilder : BaseEntityBuilder
+    public class EnemyEntityBuilder : UnitEntityBuilder
     {
         protected override void Setup(GameObject unit)
         {
+            base.Setup(unit);
+            
             entity.Get<EnemyTag>();
 
             ref var movableComponent = ref entity.Get<MovableComponent>();

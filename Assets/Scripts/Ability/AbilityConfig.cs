@@ -2,7 +2,7 @@
 
 namespace Ability
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
+    [CreateAssetMenu(fileName = "AbilityConfig", menuName = "Game Data/Test", order = 0)]
     public class AbilityConfig : ScriptableObject
     {
         public string Title { get; private set; }

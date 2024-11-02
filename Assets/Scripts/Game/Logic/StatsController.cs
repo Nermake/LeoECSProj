@@ -10,7 +10,6 @@ namespace Game.Logic
         private HealthController _healthController;
         private ResistController _resistController;
         private ManaController _manaController;
-        //todo ModifiersController
 
         public StatsController(UnitConfig config, Unit owner)
         {

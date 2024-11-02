@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Data.Configs;
+using Configs;
 using UnityEngine;
 
 namespace ECS.Data

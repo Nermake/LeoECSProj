@@ -516,6 +516,39 @@ MonoBehaviour:
   - {fileID: 1442363868}
   _playerSpawnPoint: {fileID: 648515265}
   _enemyPrefab: {fileID: 3833655451958653470, guid: 9449bd8dce6a7844ea1e88c37858e6ff, type: 3}
+--- !u!1 &1080659345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080659346}
+  m_Layer: 0
+  m_Name: Quantum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080659346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080659345}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2004624919}
+  - {fileID: 1867240462}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219769966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1224,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1867240461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867240462}
+  - component: {fileID: 1867240463}
+  m_Layer: 0
+  m_Name: HeroFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1867240462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867240461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080659346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1867240463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867240461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e67a42e3044603b6a6aa38ca2d2d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _orc:
+    raceUnitData: {fileID: 11400000, guid: cae0e41f2c6baca449d7432a87b11205, type: 2}
+    modelData: {fileID: 11400000, guid: 80a99f483b8eade4e9c59d251f64ce94, type: 2}
+  _troll:
+    raceUnitData: {fileID: 11400000, guid: 92fe82f179f06054e8b3d8577835a178, type: 2}
+    modelData: {fileID: 11400000, guid: 20e0d313d14c7c84a827921e6c65cb82, type: 2}
+  _human:
+    raceUnitData: {fileID: 11400000, guid: 7c7d307e4b88f0f438c1a77d970cd05b, type: 2}
+    modelData: {fileID: 11400000, guid: 4e5c042ff03535f4b86e8d8e5322ee27, type: 2}
+  _elf:
+    raceUnitData: {fileID: 11400000, guid: adfb6b221692c714b8d86b0995f8dbd1, type: 2}
+    modelData: {fileID: 11400000, guid: 0a684e00ec99e6d409628598eae91b9a, type: 2}
+  _hunter: {fileID: 11400000, guid: f896deb9a3aa55548b88e1b0d4201d58, type: 2}
+  _druid: {fileID: 11400000, guid: f066b520964262d4d824c19874b45634, type: 2}
+  _paladin: {fileID: 11400000, guid: 816df0df23b1bdf4c8dbf5a578ecad03, type: 2}
+  _shaman: {fileID: 11400000, guid: 9c2a25d7a31ade449939c2df89330afd, type: 2}
+  _rogue: {fileID: 11400000, guid: 1eee142efd04b974f80d85182c14d6ba, type: 2}
+  _mage: {fileID: 11400000, guid: 200e36cff78c5ed4d94d804a3d1f675e, type: 2}
+  _warrior: {fileID: 11400000, guid: f6184d1a4df704d4fa309c7e897270d6, type: 2}
+  _priest: {fileID: 11400000, guid: 7a23909060f6f4845ab29d84f260a603, type: 2}
 --- !u!1 &2004624917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1080659346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1255,7 +1352,7 @@ SceneRoots:
   - {fileID: 1238103253}
   - {fileID: 1219769969}
   - {fileID: 1843424271}
-  - {fileID: 2004624919}
+  - {fileID: 1080659346}
   - {fileID: 294666627}
   - {fileID: 702512475}
   - {fileID: 519420032}

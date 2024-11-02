@@ -5,7 +5,7 @@ using Object = UnityEngine.Object;
 
 namespace Services.ObjectPool
 {
-    public class PoolMono<T> where T : MonoBehaviour
+    public class PoolMono<T> where T : MonoBehaviour //todo EcsPool есть в leoecs lite так что поменяй библеотеку с тандарта на лайт
     {
         private List<T> _pool;
         

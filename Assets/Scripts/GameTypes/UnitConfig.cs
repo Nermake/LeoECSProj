@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameTypes
 {
-    [CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
+    [CreateAssetMenu(fileName = "Test UnitConfig", menuName = "Game Data/Test/Test UnitConfig", order = 0)]
     public class UnitConfig : ScriptableObject
     {
         #region Fields

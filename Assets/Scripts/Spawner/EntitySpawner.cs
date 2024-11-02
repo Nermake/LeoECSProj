@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Builder;
-using Data.Configs;
+using Configs;
 using ECS;
 using Services.Factory;
 using UnityEngine;

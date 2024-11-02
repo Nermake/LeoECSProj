@@ -346,6 +346,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="_TestViaQFSW" t="Include">
+            <e p="ExampleHeroFactory.cs" t="Include" />
             <e p="ExampleSpawnerFactory.cs" t="Include" />
           </e>
           <e p="Ability" t="Include">
@@ -364,13 +365,18 @@
             <e p="EnemyEntityBuilder.cs" t="Include" />
             <e p="EnemyMileBuilder.cs" t="Include" />
             <e p="EnemyRangeBuilder.cs" t="Include" />
+            <e p="HeroEntityBuilder.cs" t="Include" />
             <e p="PlayerEntityBuilder.cs" t="Include" />
             <e p="ProjectileEntityBuilder.cs" t="Include" />
+            <e p="UnitEntityBuilder.cs" t="Include" />
+          </e>
+          <e p="Configs" t="Include">
+            <e p="EntityConfig.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
-            <e p="Configs" t="Include">
-              <e p="EntityConfig.cs" t="Include" />
-            </e>
+            <e p="ClassUnitData.cs" t="Include" />
+            <e p="ModelData.cs" t="Include" />
+            <e p="RaceUnitData.cs" t="Include" />
           </e>
           <e p="ECS" t="Include">
             <e p="Blocks" t="Include">
@@ -386,6 +392,12 @@
               <e p="ProjectileTargetComponent.cs" t="Include" />
               <e p="ShootPointComponent.cs" t="Include" />
               <e p="TransformComponent.cs" t="Include" />
+              <e p="UnitStats" t="Include">
+                <e p="AttackCharacteristicComponent.cs" t="Include" />
+                <e p="AttributesUnitComponent.cs" t="Include" />
+                <e p="DefenseStatUnitComponent.cs" t="Include" />
+                <e p="ResourcesUnitComponent.cs" t="Include" />
+              </e>
             </e>
             <e p="Data" t="Include">
               <e p="BuilderData.cs" t="Include" />
@@ -469,7 +481,9 @@
           <e p="Services" t="Include">
             <e p="Factory" t="Include">
               <e p="AbstractEntityFactory.cs" t="Include" />
+              <e p="AbstractHeroEntityFactory.cs" t="Include" />
               <e p="EntityFactory.cs" t="Include" />
+              <e p="HeroEntityFactory.cs" t="Include" />
             </e>
             <e p="ObjectPool" t="Include">
               <e p="MainScript.cs" t="Include" />
@@ -485,10 +499,6 @@
             </e>
           </e>
           <e p="Spawner" t="Include">
-            <e p="Data" t="Include">
-              <e p="UnitData.cs" t="Include" />
-              <e p="UnitDictionary.cs" t="Include" />
-            </e>
             <e p="EntitySpawner.cs" t="Include" />
             <e p="ISpawner.cs" t="Include" />
             <e p="UnitType.cs" t="Include" />
