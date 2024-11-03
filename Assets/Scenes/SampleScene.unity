@@ -239,7 +239,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.18823533, g: 0.40253705, b: 0.49019608, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1280,14 +1280,15 @@ MonoBehaviour:
   _elf:
     raceUnitData: {fileID: 11400000, guid: adfb6b221692c714b8d86b0995f8dbd1, type: 2}
     modelData: {fileID: 11400000, guid: 0a684e00ec99e6d409628598eae91b9a, type: 2}
-  _hunter: {fileID: 11400000, guid: f896deb9a3aa55548b88e1b0d4201d58, type: 2}
   _druid: {fileID: 11400000, guid: f066b520964262d4d824c19874b45634, type: 2}
-  _paladin: {fileID: 11400000, guid: 816df0df23b1bdf4c8dbf5a578ecad03, type: 2}
-  _shaman: {fileID: 11400000, guid: 9c2a25d7a31ade449939c2df89330afd, type: 2}
-  _rogue: {fileID: 11400000, guid: 1eee142efd04b974f80d85182c14d6ba, type: 2}
+  _hunter: {fileID: 11400000, guid: f896deb9a3aa55548b88e1b0d4201d58, type: 2}
   _mage: {fileID: 11400000, guid: 200e36cff78c5ed4d94d804a3d1f675e, type: 2}
-  _warrior: {fileID: 11400000, guid: f6184d1a4df704d4fa309c7e897270d6, type: 2}
+  _paladin: {fileID: 11400000, guid: 816df0df23b1bdf4c8dbf5a578ecad03, type: 2}
   _priest: {fileID: 11400000, guid: 7a23909060f6f4845ab29d84f260a603, type: 2}
+  _rogue: {fileID: 11400000, guid: 1eee142efd04b974f80d85182c14d6ba, type: 2}
+  _shaman: {fileID: 11400000, guid: 9c2a25d7a31ade449939c2df89330afd, type: 2}
+  _warlock: {fileID: 11400000, guid: 0a5827f2f0d0fb14092e822a4271ebc3, type: 2}
+  _warrior: {fileID: 11400000, guid: f6184d1a4df704d4fa309c7e897270d6, type: 2}
 --- !u!1 &2004624917
 GameObject:
   m_ObjectHideFlags: 0

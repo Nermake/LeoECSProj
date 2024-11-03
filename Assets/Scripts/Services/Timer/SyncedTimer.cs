@@ -1,5 +1,4 @@
 ﻿using System;
-using Timer;
 using UnityEngine;
 
 namespace Services.Timer

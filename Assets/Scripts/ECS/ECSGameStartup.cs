@@ -3,7 +3,6 @@ using ECS.Events;
 using ECS.Systems;
 using Leopotam.Ecs;
 using Services.Factory;
-using Spawner;
 using UnityEngine;
 using Voody.UniLeo;
 
@@ -21,7 +20,6 @@ namespace ECS
         private RuntimeData _runtimeData;
         private InputController _inputController;
         private EntityFactory _entityFactory;
-        //private EntitySpawner _entitySpawner;
 
         private void Start()
         {
@@ -34,7 +32,6 @@ namespace ECS
             _runtimeData = new RuntimeData();
             _inputController = new InputController();
             _entityFactory = new EntityFactory();
-            //_entitySpawner = new EntitySpawner();
 
             _systems.ConvertScene();
 
@@ -64,7 +61,6 @@ namespace ECS
                 Inject(_runtimeData).
                 Inject(_inputController).
                 Inject(_entityFactory)
-                //Inject(_entitySpawner)
                 ;
 
             _systemsForFixedUpdate.

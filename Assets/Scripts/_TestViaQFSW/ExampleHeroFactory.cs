@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using Data;
+using Extensions;
 using QFSW.QC;
 using Services.Factory;
 using UnityEngine;
@@ -18,24 +18,17 @@ namespace _TestViaQFSW
         [SerializeField] private Hero _elf;
 
         [Space, Header("Classes")] 
-        [SerializeField] private ClassUnitData _hunter;
         [SerializeField] private ClassUnitData _druid;
-        [SerializeField] private ClassUnitData _paladin;
-        [SerializeField] private ClassUnitData _shaman;
-        [SerializeField] private ClassUnitData _rogue;
+        [SerializeField] private ClassUnitData _hunter;
         [SerializeField] private ClassUnitData _mage;
-        [SerializeField] private ClassUnitData _warrior;
+        [SerializeField] private ClassUnitData _paladin;
         [SerializeField] private ClassUnitData _priest;
+        [SerializeField] private ClassUnitData _rogue;
+        [SerializeField] private ClassUnitData _shaman;
+        [SerializeField] private ClassUnitData _warlock;
+        [SerializeField] private ClassUnitData _warrior;
 
-        private readonly HeroEntityFactory _entityFactory = new HeroEntityFactory();
-
-        private void Start()
-        {
-            _entityFactory.CreateEntity(_druid, _orc.raceUnitData, _orc.modelData);// todo тут почемуто нету ссылки на объект
-            
-            var unit = _entityFactory.GetGameObject();
-            unit.GetComponent<SpriteRenderer>().color = new Color(255, 128, 0);
-        }
+        private readonly HeroEntityFactory _entityFactory = new();
 
         [Command()]
         private void create_hero(Race raceType, Class classType)
@@ -61,28 +54,116 @@ namespace _TestViaQFSW
                 default:
                     throw new ArgumentOutOfRangeException(nameof(raceType), raceType, null);
             }
+
+            var spriteRenderer = _entityFactory.GetGameObject().GetComponent<SpriteRenderer>();
+            ChangeColor(spriteRenderer, classType);
         }
 
-        [Command()]
-        private void test_init_so()
+        [Command]
+        private void create_all_class_for_orc()
         {
-            Debug.Log(_druid.Attributes.agility);
-            Debug.Log(_orc.modelData.Prefab.name);
-            Debug.Log(_orc.raceUnitData.Resources.health);
+            ClassUnitData[] classes =
+                { _druid, _hunter, _mage, _paladin, _priest, _rogue, _shaman, _warlock, _warrior };
+
+            var i = 0;
+            foreach (var variableClass in classes)
+            {
+                _entityFactory.CreateEntity(variableClass, _orc.raceUnitData, _orc.modelData);
+                var spriteRenderer = _entityFactory.GetGameObject().GetComponent<SpriteRenderer>();
+                ChangeColor(spriteRenderer, i);
+                i++;
+            }
         }
 
+        private static void ChangeColor(SpriteRenderer sr, Class classType)
+        {
+            switch (classType)
+            {
+                case Class.Druid: 
+                    ChangeColor(sr, "#ff7c0a"); break;
+                
+                case Class.Hunter: 
+                    ChangeColor(sr, "#aad372"); break;
+                
+                case Class.Mage: 
+                    ChangeColor(sr, "#68ccef"); break;
+                
+                case Class.Paladin: 
+                    ChangeColor(sr, "#f48cba"); break;
+                
+                case Class.Priest: 
+                    ChangeColor(sr, "#f0ebe0"); break;
+                
+                case Class.Rogue: 
+                    ChangeColor(sr, "#fff468"); break;
+                
+                case Class.Shaman: 
+                    ChangeColor(sr, "#2359ff"); break;
+                
+                case Class.Warlock: 
+                    ChangeColor(sr, "#9382c9"); break;
+                
+                case Class.Warrior: 
+                    ChangeColor(sr, "#c69b6d"); break;
+                
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(classType), classType, null);
+            }
+        }
+        private static void ChangeColor(SpriteRenderer sr, int i)
+        {
+            switch (i)
+            {
+                case 0: 
+                    ChangeColor(sr, "#ff7c0a"); break;
+                
+                case 1: 
+                    ChangeColor(sr, "#aad372"); break;
+                
+                case 2: 
+                    ChangeColor(sr, "#68ccef"); break;
+                
+                case 3: 
+                    ChangeColor(sr, "#f48cba"); break;
+                
+                case 4: 
+                    ChangeColor(sr, "#f0ebe0"); break;
+                
+                case 5: 
+                    ChangeColor(sr, "#fff468"); break;
+                
+                case 6: 
+                    ChangeColor(sr, "#2359ff"); break;
+                
+                case 7: 
+                    ChangeColor(sr, "#9382c9"); break;
+                
+                case 8: 
+                    ChangeColor(sr, "#c69b6d"); break;
+                
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(i), i, null);
+            }
+        }
+        private static void ChangeColor(SpriteRenderer spriteRenderer, string hex)
+        {
+            ColorUtility.TryParseHtmlString(hex, out Color newColor);
+            spriteRenderer.color = newColor;
+        }
+        
         private ClassUnitData CreateHero(Class classType)
         {
             return classType switch
             {
-                Class.Hunter => _hunter,
                 Class.Druid => _druid,
-                Class.Paladin => _paladin,
-                Class.Shaman => _shaman,
-                Class.Rogue => _rogue,
+                Class.Hunter => _hunter,
                 Class.Mage => _mage,
-                Class.Warrior => _warrior,
+                Class.Paladin => _paladin,
                 Class.Priest => _priest,
+                Class.Rogue => _rogue,
+                Class.Shaman => _shaman,
+                Class.Warlock => _warlock,
+                Class.Warrior => _warrior,
                 _ => throw new ArgumentOutOfRangeException(nameof(classType), classType, null)
             };
         }
@@ -98,14 +179,15 @@ namespace _TestViaQFSW
 
     public enum Class
     {
-        Hunter,
         Druid,
-        Paladin,
-        Shaman,
-        Rogue,
+        Hunter,
         Mage,
-        Warrior,
-        Priest
+        Paladin,
+        Priest,
+        Rogue,
+        Shaman,
+        Warlock,
+        Warrior
     }
 
     [Serializable]
