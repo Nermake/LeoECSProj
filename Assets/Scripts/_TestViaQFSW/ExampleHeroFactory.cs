@@ -1,9 +1,9 @@
 ﻿using System;
 using Data;
-using Extensions;
 using QFSW.QC;
 using Services.Factory;
 using UnityEngine;
+using StaticString;
 
 namespace _TestViaQFSW
 {
@@ -80,31 +80,31 @@ namespace _TestViaQFSW
             switch (classType)
             {
                 case Class.Druid: 
-                    ChangeColor(sr, "#ff7c0a"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_DRUID); break;
                 
                 case Class.Hunter: 
-                    ChangeColor(sr, "#aad372"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_HUNTER); break;
                 
                 case Class.Mage: 
-                    ChangeColor(sr, "#68ccef"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_MAGE); break;
                 
                 case Class.Paladin: 
-                    ChangeColor(sr, "#f48cba"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_PALADIN); break;
                 
                 case Class.Priest: 
-                    ChangeColor(sr, "#f0ebe0"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_PRIEST); break;
                 
                 case Class.Rogue: 
-                    ChangeColor(sr, "#fff468"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_ROGUE); break;
                 
                 case Class.Shaman: 
-                    ChangeColor(sr, "#2359ff"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_SHAMAN); break;
                 
                 case Class.Warlock: 
-                    ChangeColor(sr, "#9382c9"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_WARLOCK); break;
                 
                 case Class.Warrior: 
-                    ChangeColor(sr, "#c69b6d"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_WARRIOR); break;
                 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(classType), classType, null);
@@ -115,31 +115,31 @@ namespace _TestViaQFSW
             switch (i)
             {
                 case 0: 
-                    ChangeColor(sr, "#ff7c0a"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_DRUID); break;
                 
                 case 1: 
-                    ChangeColor(sr, "#aad372"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_HUNTER); break;
                 
                 case 2: 
-                    ChangeColor(sr, "#68ccef"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_MAGE); break;
                 
                 case 3: 
-                    ChangeColor(sr, "#f48cba"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_PALADIN); break;
                 
                 case 4: 
-                    ChangeColor(sr, "#f0ebe0"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_PRIEST); break;
                 
                 case 5: 
-                    ChangeColor(sr, "#fff468"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_ROGUE); break;
                 
                 case 6: 
-                    ChangeColor(sr, "#2359ff"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_SHAMAN); break;
                 
                 case 7: 
-                    ChangeColor(sr, "#9382c9"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_WARLOCK); break;
                 
                 case 8: 
-                    ChangeColor(sr, "#c69b6d"); break;
+                    ChangeColor(sr, StringConstants.CLASS_COLOR_WARRIOR); break;
                 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(i), i, null);

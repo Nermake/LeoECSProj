@@ -4,15 +4,16 @@
     {
         #region Class Color
 
-        public static readonly string CLASS_COLOR_HUNTER = "MenuScene";
-        public static readonly string CLASS_COLOR_DRUID = "MenuScene";
-        public static readonly string CLASS_COLOR_PALADIN = "MenuScene";
-        public static readonly string CLASS_COLOR_SHAMAN = "MenuScene";
-        public static readonly string CLASS_COLOR_ROGUE = "MenuScene";
-        public static readonly string CLASS_COLOR_MAGE = "MenuScene";
-        public static readonly string CLASS_COLOR_WARRIOR = "MenuScene";
-        public static readonly string CLASS_COLOR_PRIEST = "MenuScene";
-
+        public const string CLASS_COLOR_DRUID = "#ff7c0a";
+        public const string CLASS_COLOR_HUNTER = "#aad372";
+        public const string CLASS_COLOR_MAGE = "#68ccef";
+        public const string CLASS_COLOR_PALADIN = "#f48cba";
+        public const string CLASS_COLOR_PRIEST = "#f0ebe0";
+        public const string CLASS_COLOR_ROGUE = "#fff468";
+        public const string CLASS_COLOR_SHAMAN = "#2359ff";
+        public const string CLASS_COLOR_WARLOCK = "#9382c9";
+        public const string CLASS_COLOR_WARRIOR = "#c69b6d";
+        
         #endregion
     }
 }
