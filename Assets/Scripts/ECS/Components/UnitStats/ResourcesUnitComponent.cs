@@ -18,5 +18,14 @@ namespace ECS.Components
                 energy = a.energy + b.energy
             };
         }
+
+        public override string ToString()
+        {
+            var massage = $"health: {health} \n" +
+                          $"mana: {mana} \n" +
+                          $"energy: {energy}";
+            
+            return massage;
+        }
     }
 }

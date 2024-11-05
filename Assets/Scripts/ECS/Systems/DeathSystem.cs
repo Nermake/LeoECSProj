@@ -1,17 +1,32 @@
 ﻿using ECS.Components;
+using ECS.Events;
 using Leopotam.Ecs;
+using Services;
 
 namespace ECS.Systems
 {
     public sealed class DeathSystem : IEcsRunSystem 
     {
-        private readonly EcsFilter<DeathComponent> _deathFilter = null;
+        private readonly EcsFilter<ResourcesUnitComponent> _resources = null;
+        private readonly EcsFilter<DeathEvent> _deaths = null;
+        
+        private readonly Destroyer _destroyer = null;
         
         public void Run()
         {
-            foreach (var i in _deathFilter)
+            foreach (var i in _resources)
             {
-                _deathFilter.GetEntity(i).Destroy();
+                ref var resourcesUnitComponent = ref _resources.Get1(i);
+                if (resourcesUnitComponent.health <= 0)
+                {
+                    _resources.GetEntity(i).Get<DeathEvent>();
+                }
+            }
+            
+            foreach (var i in _deaths)
+            {
+                _destroyer.DestroyUnit(_deaths.GetEntity(i).Get<TransformComponent>().modelTransform.gameObject);
+                _deaths.GetEntity(i).Destroy();
             }
         }
     }

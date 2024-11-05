@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 1044379817}
   - component: {fileID: 1044379816}
   - component: {fileID: 1044379818}
+  - component: {fileID: 1044379819}
   m_Layer: 0
   m_Name: ECSGameStartup
   m_TagString: Untagged
@@ -481,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _staticData: {fileID: 11400000, guid: d9a5c5fb53ef37c4e92a61ece70a30d0, type: 2}
+  _destroyer: {fileID: 1044379819}
 --- !u!4 &1044379817
 Transform:
   m_ObjectHideFlags: 0
@@ -516,6 +518,18 @@ MonoBehaviour:
   - {fileID: 1442363868}
   _playerSpawnPoint: {fileID: 648515265}
   _enemyPrefab: {fileID: 3833655451958653470, guid: 9449bd8dce6a7844ea1e88c37858e6ff, type: 3}
+--- !u!114 &1044379819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044379815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6cca15bf70422687fd8f24d57a8ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1080659345
 GameObject:
   m_ObjectHideFlags: 0

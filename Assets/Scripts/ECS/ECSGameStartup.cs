@@ -2,6 +2,7 @@ using ECS.Data;
 using ECS.Events;
 using ECS.Systems;
 using Leopotam.Ecs;
+using Services;
 using Services.Factory;
 using UnityEngine;
 using Voody.UniLeo;
@@ -11,6 +12,7 @@ namespace ECS
     public class ECSGameStartup : MonoBehaviour
     {
         [SerializeField] private StaticData _staticData;
+        [SerializeField] private Destroyer _destroyer;
         
         private EcsWorld _world;
         private EcsSystems _systems;
@@ -60,6 +62,7 @@ namespace ECS
                 Inject(_staticData).
                 Inject(_runtimeData).
                 Inject(_inputController).
+                Inject(_destroyer).
                 Inject(_entityFactory)
                 ;
 

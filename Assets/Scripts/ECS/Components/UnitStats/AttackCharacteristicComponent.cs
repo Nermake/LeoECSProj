@@ -30,5 +30,18 @@ namespace ECS.Components
                 powerOfCriticalHit = a.powerOfCriticalHit + b.powerOfCriticalHit
             };
         }
+
+        public override string ToString()
+        {
+            var massage = $"attackPower: {attackPower} \n" +
+                      $"spellPowerDamage: {spellPowerDamage} \n" +
+                      $"accuracy: {accuracy} \n" +
+                      $"armorPenetrationRate: {armorPenetrationRate} \n" +
+                      $"penetratingPowerOfSpells: {penetratingPowerOfSpells} \n" +
+                      $"chanceOfCriticalHit: {chanceOfCriticalHit} \n" +
+                      $"powerOfCriticalHit: {powerOfCriticalHit}";
+            
+            return massage;
+        }
     }
 }

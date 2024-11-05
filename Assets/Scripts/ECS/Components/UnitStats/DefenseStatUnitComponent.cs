@@ -22,5 +22,16 @@ namespace ECS.Components
                 evasion = a.evasion + b.evasion
             };
         }
+
+        public override string ToString()
+        {
+            var massage = $"protection: {protection} \n" +
+                          $"percentageProtection: {percentageProtection} \n" +
+                          $"resistance: {resistance} \n" +
+                          $"percentageResistance: {percentageResistance} \n" +
+                          $"evasion: {evasion}";
+            
+            return massage;
+        }
     }
 }
