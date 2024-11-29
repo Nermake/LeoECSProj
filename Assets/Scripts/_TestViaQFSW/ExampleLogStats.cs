@@ -1,5 +1,4 @@
-﻿using System;
-using ECS;
+﻿using ECS;
 using ECS.Components;
 using Leopotam.Ecs;
 using QFSW.QC;

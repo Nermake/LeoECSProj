@@ -1,15 +1,19 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
+using Data;
 
 namespace Ability
 {
-    public class AbilityStorage : MonoBehaviour
+    public class AbilityStorage
     {
-        [SerializeField] private AbilityConfig[] _abilityConfigs;
-
-        private List<Ability> _abilities;
-
-        public void Init()
+        //private AbilityConfig _abilityConfigs;
+        private Dictionary<string, Ability> _abilities;
+        
+        public void Init(AbilityData[] abilityConfigs)
+        {
+            //_abilityConfigs = abilityConfigs;
+        }
+        
+        /*public void Init()
         {
             _abilities = new List<Ability>();
             
@@ -20,8 +24,8 @@ namespace Ability
                 builder.Make();
                 _abilities.Add(builder.GetResult());
             }
-        }
+        }*/
 
-        public Ability[] GetAbilities() => _abilities.ToArray();
+        public Ability GetAbility(string key) => _abilities[key];
     }
 }
