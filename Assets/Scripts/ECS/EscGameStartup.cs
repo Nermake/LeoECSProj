@@ -13,8 +13,7 @@ namespace ECS
     public class EscGameStartup : MonoBehaviour
     {
         [SerializeField] private StaticData _staticData;
-        [SerializeField] private GameServices gameServices; // todo
-        [SerializeField] private Destroyer _destroyer;
+        [SerializeField] private GameServices _gameServices; // todo
         
         private EcsWorld _world;
         private EcsSystems _systems;
@@ -22,22 +21,18 @@ namespace ECS
 
         private SceneData _sceneData;
         private RuntimeData _runtimeData;
-        private InputController _inputController;
-        private EntityFactory _entityFactory;
-        private IActorFactory _actorFactory;
 
         private void Awake()
         {
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
+            _gameServices.Init(_world);
+            
             _systemsForFixedUpdate = new EcsSystems(_world);
 
             _sceneData = gameObject.GetComponent<SceneData>();
             
             _runtimeData = new RuntimeData();
-            _inputController = new InputController();
-            _entityFactory = new EntityFactory();
-            _actorFactory = new ActorFactory(_world);
 
             _systems.ConvertScene();
 
@@ -47,11 +42,6 @@ namespace ECS
         
             _systems?.Init();
             _systemsForFixedUpdate?.Init();
-        }
-
-        private void Start()
-        {
-            //ServiceLocator.Current.Register(_actorFactory);
         }
 
         private void Update()
@@ -69,10 +59,7 @@ namespace ECS
             _systems.
                 Inject(_sceneData).
                 Inject(_staticData).
-                Inject(_runtimeData).
-                Inject(_inputController).
-                Inject(_destroyer).
-                Inject(_entityFactory)
+                Inject(_runtimeData)
                 ;
 
             _systemsForFixedUpdate.

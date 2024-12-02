@@ -4,6 +4,7 @@ using ECS.Data;
 using ECS.Requests;
 using Leopotam.Ecs;
 using Services.Factory;
+using Services.Locator;
 using UnityEngine;
 
 namespace ECS.Systems
@@ -13,15 +14,17 @@ namespace ECS.Systems
         private readonly EcsFilter<ShootPointComponent> _shootFilter = null;
         private readonly StaticData _staticData = null;
         private readonly RuntimeData _runtimeData = null;
-        private readonly EntityFactory _entityFactory = null;
+        private readonly EntityFactory _entityFactory = null; // todo refactor on actorfactory 
 
         //private PoolMono<EntityReference> _poolMono; todo реализуй пул под данную задачу
+        private IActorFactory _actorFactory;
         private BaseEntityBuilder _builder;
         private GameObject _projectile;
 
         public void Init()
         {
             //_poolMono = new PoolMono<EntityReference>(_staticData.config.entity, 5, true);
+            _actorFactory = ServiceLocator.Current.Get<ActorFactory>();
             _builder = _runtimeData.BuilderData.ProjectileBuilder;
             _projectile = _staticData.config.projectile.gameObject;
         }

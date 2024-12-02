@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class SpawnEnemySystem : IEcsRunSystem
+    public sealed class SpawnEnemySystem : IEcsRunSystem //todo refactor
     {
         private readonly SceneData _sceneData = null;
         private readonly RuntimeData _runtimeData = null;

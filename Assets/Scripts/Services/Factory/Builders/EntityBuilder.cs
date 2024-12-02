@@ -13,10 +13,11 @@ namespace Services.Factory.Builders
         protected EcsEntity _entity;
         protected ActorView _view;
         protected EcsWorld _world;
+        protected GameObject _gameObject;
 
         private Vector3 _spawnLocation;
 
-        private readonly EntityConfig _config;
+        private  readonly EntityConfig _config;
 
         public EntityBuilder(EntityConfig config) => _config = config;
 
@@ -26,8 +27,10 @@ namespace Services.Factory.Builders
         public virtual void Make()
         {
             _entity = _world.NewEntity();
-            _view = Object.Instantiate(_config.ActorView, _spawnLocation, Quaternion.identity);
-
+            //_view = Object.Instantiate(_config.ActorView, _spawnLocation, Quaternion.identity); //todo по какой-то причине объект не хочет создаваться, хотя при написании без "_view =" всё работает исправно
+            _gameObject = Object.Instantiate(_config.Prefab);//
+            _view = _gameObject.GetComponent<ActorView>();//
+            
             foreach (var unit in _config.UnitResources)
             {
                 switch (unit.type)

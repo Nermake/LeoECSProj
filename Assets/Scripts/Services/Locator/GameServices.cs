@@ -2,22 +2,25 @@
 using Leopotam.Ecs;
 using Services.Factory;
 using UnityEngine;
-using Voody.UniLeo;
 
 namespace Services.Locator
 {
     public class GameServices : MonoBehaviour
     {
-        private ActorFactory _actorFactory;
+        [SerializeField] private Destroyer _destroyer;
         
-        private List<IDisposable> _disposables = new List<IDisposable>();
-
-        private void Init(EcsWorld world)
+        private readonly List<IDisposable> _disposables = new List<IDisposable>();
+        
+        private ActorFactory _actorFactory;
+        private InputController _inputController;
+        
+        public void Init(EcsWorld world)
         {
             _actorFactory = new ActorFactory(world);
+            _inputController = new InputController();
             
             RegisterServices();
-            Init();
+            InitServices();
             AddDisposables();
         }
         
@@ -26,9 +29,11 @@ namespace Services.Locator
             ServiceLocator.Initialize();
             
             ServiceLocator.Current.Register(_actorFactory);
+            ServiceLocator.Current.Register(_inputController);
+            ServiceLocator.Current.Register(_destroyer);
         }
 
-        private void Init()
+        private void InitServices()
         {
             
         }

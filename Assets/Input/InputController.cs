@@ -9,13 +9,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using Services.Locator;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using IDisposable = System.IDisposable;
 
-public partial class @InputController: IInputActionCollection2, IDisposable
+public partial class @InputController: IInputActionCollection2, IDisposable, IService
 {
     public InputActionAsset asset { get; }
     public @InputController()
