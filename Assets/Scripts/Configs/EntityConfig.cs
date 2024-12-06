@@ -10,7 +10,5 @@ namespace Configs
         [field: SerializeField] public EntityReference enemyMile { get; private set; }
         [field: SerializeField] public EntityReference enemyRange { get; private set; }
         [field: SerializeField] public EntityReference projectile { get; private set; }
-        [field: SerializeField] public EntityReference entity { get; private set; }
-        
     }
 }

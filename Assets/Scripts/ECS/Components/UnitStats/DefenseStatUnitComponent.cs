@@ -1,11 +1,12 @@
 ﻿using System;
+using UnityEngine.Serialization;
 
 namespace ECS.Components
 {
     [Serializable]
     public struct DefenseStatUnitComponent
     {
-        public int protection;
+        public int physicProtection;
         public float percentageProtection;
 
         public int resistance;
@@ -17,10 +18,21 @@ namespace ECS.Components
         {
             return new DefenseStatUnitComponent()
             {
-                protection = a.protection +b.protection,
+                physicProtection = a.physicProtection +b.physicProtection,
                 resistance = a.resistance + b.resistance,
                 evasion = a.evasion + b.evasion
             };
+        }
+
+        public override string ToString()
+        {
+            var massage = $"protection: {physicProtection} \n" +
+                          $"percentageProtection: {percentageProtection} \n" +
+                          $"resistance: {resistance} \n" +
+                          $"percentageResistance: {percentageResistance} \n" +
+                          $"evasion: {evasion}";
+            
+            return massage;
         }
     }
 }

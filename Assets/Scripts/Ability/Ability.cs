@@ -1,5 +1,5 @@
 ﻿using System;
-using GameTypes;
+using Leopotam.Ecs;
 using UnityEngine;
 
 namespace Ability
@@ -7,52 +7,36 @@ namespace Ability
     public class Ability
     {
         public event Action<float, float> EventChangeCooldownTimer;
+
+        protected string _id;
+        protected string _title;
+        protected string _description;
+        protected Sprite _icon;
+        protected float _cooldown;
+        protected float _cooldownTimer;
+        protected float _resourceCost;
+        protected EcsEntity _entity;
+        protected ResourceCostType _resourceType;
+        protected AbilityStatus _status;
+
+        public void SetID(string id) => _id = id;
         
-        public string Title { get; private set; }
-        public string Description { get; private set; }
-        public Sprite DisplayImage { get; private set; }
+        public void SetDescription(string title, string description, Sprite icon)
+        {
+            _title = title;
+            _description = description;
+            _icon = icon;
+        }
         
-        public float CooldownTime { get; private set; }
-        public float CooldownTimer { get; private set; }
+        public void SetResource(float cost, ResourceCostType type)
+        {
+            _resourceCost = cost;
+            _resourceType = type;
+        }
         
-        public float ResourceCost { get; private set; }
-        public EResourceCostType ResourceType { get; private set; }
+        public void SetCooldown(float cooldown) => _cooldown = cooldown;
+        public void ChangeStatus(AbilityStatus status) => _status = status;
         
-        public KeyCode HotKey { get; private set; }
-        public EAbilityStatus Status { get; private set; }
-
-        public void SetDescription(string title, string description, Sprite displayImage)
-        {
-            Title = title;
-            Description = description;
-            DisplayImage = displayImage;
-        }
-
-        public void SetResourceCost(float cost, EResourceCostType type)
-        {
-            ResourceCost = cost;
-            ResourceType = type;
-        }
-
-        public void SetKey(KeyCode key) => HotKey = key;
-        public void SetCooldown(float cooldown) => CooldownTime = cooldown;
-        public void ChangeStatus(EAbilityStatus status) => Status = status;
-
-        public void ChangeCooldownTimer(float timer)
-        {
-            CooldownTimer = Mathf.Clamp(timer, 0.0f, CooldownTime);
-            EventChangeCooldownTimer?.Invoke(CooldownTimer, CooldownTime);
-        }
-
-        public virtual void StartCast() { }
-
-        public virtual bool CheckCondition(Unit owner, Unit target, Vector2 location = default)
-        {
-            return false;
-        }
-
         public virtual void ApplyCast() { }
-        public virtual void EventTick(float deltaTick) { }
-        public virtual void CancelCast() { }
     }
 }

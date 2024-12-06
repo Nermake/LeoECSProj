@@ -7,7 +7,7 @@ namespace ECS.Systems
 {
     public sealed class T_SpawnPlayerSystem : IEcsInitSystem
     {
-        private readonly PlayerEntityBuilder _entityBuilder = new PlayerEntityBuilder();
+        private readonly PlayerEntityBuilder _entityBuilder = new();
         private readonly EntityFactory _entityFactory = null;
         private readonly SceneData _sceneData = null;
         private readonly StaticData _staticData = null;

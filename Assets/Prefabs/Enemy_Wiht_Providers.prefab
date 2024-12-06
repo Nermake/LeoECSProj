@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &243786794426881411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     target: {x: 0, y: 0}
+    targetDirection: {x: 0, y: 0}
+    distanceToStop: 0
 --- !u!114 &1322334594813577213
 MonoBehaviour:
   m_ObjectHideFlags: 0

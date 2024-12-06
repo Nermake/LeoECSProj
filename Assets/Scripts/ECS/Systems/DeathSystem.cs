@@ -1,17 +1,38 @@
 ﻿using ECS.Components;
+using ECS.Events;
 using Leopotam.Ecs;
+using Services;
+using Services.Locator;
 
 namespace ECS.Systems
 {
-    public sealed class DeathSystem : IEcsRunSystem 
+    public sealed class DeathSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<DeathComponent> _deathFilter = null;
+        private readonly EcsFilter<HealthComponent> _resources = null;
+        private readonly EcsFilter<DeathEvent> _deaths = null;
+        
+        private Destroyer _destroyer;
+
+        public void Init()
+        {
+            _destroyer = ServiceLocator.Current.Get<Destroyer>();
+        }
         
         public void Run()
         {
-            foreach (var i in _deathFilter)
+            foreach (var i in _resources)
             {
-                _deathFilter.GetEntity(i).Destroy();
+                ref var resourcesUnitComponent = ref _resources.Get1(i);
+                if (resourcesUnitComponent.current <= 0)
+                {
+                    _resources.GetEntity(i).Get<DeathEvent>();
+                }
+            }
+            
+            foreach (var i in _deaths)
+            {
+                _destroyer.DestroyUnit(_deaths.GetEntity(i).Get<ActorViewComponent>().actorView.gameObject);
+                _deaths.GetEntity(i).Destroy();
             }
         }
     }

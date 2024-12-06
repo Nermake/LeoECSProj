@@ -6,14 +6,14 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class SpawnEnemySystem : IEcsRunSystem
+    public sealed class SpawnEnemySystem : IEcsRunSystem //todo refactor
     {
         private readonly SceneData _sceneData = null;
         private readonly RuntimeData _runtimeData = null;
         private readonly EntityFactory _entityFactory = null;
-        private readonly List<GameObject> _enemies = new List<GameObject>();
+        private readonly List<GameObject> _enemies = new();
 
-        private float _tickDuration = 3f;
+        private const float _tickDuration = 3f;
         private float _timer;
         
         public void Run()

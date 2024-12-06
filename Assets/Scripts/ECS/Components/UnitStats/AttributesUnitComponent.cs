@@ -18,5 +18,14 @@ namespace ECS.Components
                 intelligence = a.intelligence + b.intelligence,
             };
         }
+
+        public override string ToString()
+        {
+            var massage = $"strength: {strength} \n" +
+                          $"agility: {agility} \n" +
+                          $"intelligence: {intelligence}";
+            
+            return massage;
+        }
     }
 }
