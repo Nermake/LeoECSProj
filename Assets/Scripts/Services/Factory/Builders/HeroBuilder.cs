@@ -1,7 +1,5 @@
-﻿using ECS;
-using ECS.Components;
+﻿using ECS.Components;
 using ECS.Mark;
-using ECS.Requests;
 using ECS.Tags;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -19,12 +17,12 @@ namespace Services.Factory.Builders
             base.Make();
             
             _entity.Get<PlayerTag>();
+            _entity.Get<ActorViewComponent>().actorView = _view;
             _entity.Get<HeroClassMark>().classType = _config.ClassType;
             _entity.Get<HeroRaceMark>().raceType = _config.RaceType;
             _entity.Get<DirectionComponent>();
             _entity.Get<AttackCharacteristicComponent>();
             _entity.Get<DefenseStatUnitComponent>();
-            _entity.Get<ResourcesUnitComponent>();
             _entity.Get<AttributesUnitComponent>() += _config.RaceAttributes + _config.ClassAttributes;
             
             ref var movableComponent = ref _entity.Get<MovableComponent>();

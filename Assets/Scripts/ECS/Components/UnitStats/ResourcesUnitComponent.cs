@@ -3,7 +3,7 @@
 namespace ECS.Components
 {
     [Serializable]
-    public struct ResourcesUnitComponent
+    public struct ResourcesUnitComponent // todo delete
     {
         public float health;
         public float mana;

@@ -1,46 +1,34 @@
-﻿using QFSW.QC;
+﻿using ECS.Components;
+using Leopotam.Ecs;
+using Logic.View;
+using QFSW.QC;
 using Services.Factory;
 using Services.Factory.Builders;
 using Services.Locator;
 using UnityEngine;
+using Voody.UniLeo;
 
 namespace _TestViaQFSW
 {
     public class ExampleActorFactory : MonoBehaviour
     {
-        [SerializeField] private EntityConfig _entityConfig;
         [SerializeField] private HeroConfig _heroConfig;
+        [SerializeField] Transform _spawnPoint;
+        
         private IActorFactory _actorFactory;
+        private IActorFactory _actorFactory1;
+        private ActorView _view;
 
         private void Start()
         {
             _actorFactory = ServiceLocator.Current.Get<ActorFactory>();
-        }
-
-        [Command]
-        private void af1_b()
-        {
-            var builder = _entityConfig.GetBuilder();
-            builder.Make();
+            _actorFactory1 = new ActorFactory(WorldHandler.GetWorld());
         }
         
         [Command]
-        private void af2_b()
+        private void af_ch()
         {
-            var builder = _heroConfig.GetBuilder();
-            builder.Make();
-        }
-        
-        [Command]
-        private void af_ch_old()
-        {
-            _actorFactory.CreateEntity(_entityConfig, Vector3.zero);
-        }
-        
-        [Command]
-        private void af_ch_new()
-        {
-            _actorFactory.CreateEntity(_heroConfig, Vector3.zero);
+            _actorFactory1.CreateEntity(_heroConfig, _spawnPoint.position);
         }
     }
 }

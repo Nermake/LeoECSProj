@@ -572,7 +572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb73677e55eb4f24a9697d552740a6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _entityConfig: {fileID: 11400000, guid: 1cc522ee5e386494786b300eb9964526, type: 2}
+  _heroConfig: {fileID: 11400000, guid: 1cc522ee5e386494786b300eb9964526, type: 2}
+  _spawnPoint: {fileID: 648515265}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +753,7 @@ Transform:
   m_GameObject: {fileID: 648515264}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.23, y: 2.89, z: 0}
+  m_LocalPosition: {x: 3, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
