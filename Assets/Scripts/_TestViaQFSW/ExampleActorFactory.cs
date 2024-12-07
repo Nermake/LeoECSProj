@@ -1,6 +1,4 @@
-﻿using ECS.Components;
-using Leopotam.Ecs;
-using Logic.View;
+﻿using Logic.View;
 using QFSW.QC;
 using Services.Factory;
 using Services.Factory.Builders;
@@ -16,19 +14,18 @@ namespace _TestViaQFSW
         [SerializeField] Transform _spawnPoint;
         
         private IActorFactory _actorFactory;
-        private IActorFactory _actorFactory1;
         private ActorView _view;
 
         private void Start()
         {
             _actorFactory = ServiceLocator.Current.Get<ActorFactory>();
-            _actorFactory1 = new ActorFactory(WorldHandler.GetWorld());
+            _actorFactory = new ActorFactory(WorldHandler.GetWorld());
         }
         
         [Command]
         private void af_ch()
         {
-            _actorFactory1.CreateEntity(_heroConfig, _spawnPoint.position);
+            _actorFactory.CreateEntity(_heroConfig, _spawnPoint.position);
         }
     }
 }
