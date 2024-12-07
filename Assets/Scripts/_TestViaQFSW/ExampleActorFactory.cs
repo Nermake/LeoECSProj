@@ -13,7 +13,7 @@ namespace _TestViaQFSW
         [SerializeField] private HeroConfig _heroConfig;
         [SerializeField] Transform _spawnPoint;
         
-        private IActorFactory _actorFactory;
+        private IActorFactory _actorFactory; // todo
         private ActorView _view;
 
         private void Start()
