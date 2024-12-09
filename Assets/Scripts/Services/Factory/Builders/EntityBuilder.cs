@@ -17,7 +17,7 @@ namespace Services.Factory.Builders
 
         private Vector3 _spawnLocation;
 
-        private  readonly EntityConfig _config;
+        private readonly EntityConfig _config;
 
         public EntityBuilder(EntityConfig config) => _config = config;
 
