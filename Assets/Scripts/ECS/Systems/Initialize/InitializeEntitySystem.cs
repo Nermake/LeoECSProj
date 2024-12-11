@@ -5,7 +5,7 @@ using Leopotam.Ecs;
 
 namespace ECS.Systems
 {
-    public sealed class EntityInitializeSystem : IEcsRunSystem
+    public sealed class InitializeEntitySystem : IEcsRunSystem // todo delete
     {
         private readonly EcsFilter<InitializeEntityRequest> _initFilter = null;
 

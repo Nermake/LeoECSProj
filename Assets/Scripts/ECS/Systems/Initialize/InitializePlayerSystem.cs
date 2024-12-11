@@ -5,7 +5,7 @@ using Leopotam.Ecs;
 
 namespace ECS.Systems
 {
-    public sealed class PlayerInitializeSystem : IEcsRunSystem
+    public sealed class InitializePlayerSystem : IEcsRunSystem
     {
         private readonly EcsFilter<PlayerTag, InitializePlayerEvent> _playerFilter = null;
         private readonly RuntimeData _runtimeData = null;

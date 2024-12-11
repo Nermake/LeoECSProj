@@ -77,15 +77,18 @@ namespace ECS
         private void AddSystems()
         {
             _systems.
-                Add(new EntityInitializeSystem()).
-                Add(new PlayerInitializeSystem()).
+                Add(new InitializeEntitySystem()).
+                Add(new InitializePlayerSystem()).
                 Add(new InitializeInputControllerSystem()).
+                Add(new InitializeResourceViewSystem()).
                 Add(new PlayerInputSystem()).
                 Add(new SetTargetForEnemySystem()).
                 //Add(new SpawnEnemySystem()).
                 Add(new RemovesProhibitionMoveSystem()).
                 Add(new GenerateProjectileSystem()).
                 Add(new SetTargetForProjectileSystem()).
+                Add(new RegenerationUnitSystem()).
+                Add(new ResourceViewSystem()).
                 //Add(new T_SpawnPlayerSystem()).
                 Add(new DeathSystem())
                 ;

@@ -15,5 +15,14 @@
         public const string CLASS_COLOR_WARRIOR = "#c69b6d";
         
         #endregion
+        
+        #region Progress Bar Collor
+        
+        public const string PROGRESS_BAR_COLLOR_HEALTH = "#55f01e"; 
+        public const string PROGRESS_BAR_COLLOR_MANA = "#272ef4"; 
+        public const string PROGRESS_BAR_COLLOR_ENERGY = "#f4ec3a"; 
+        public const string PROGRESS_BAR_COLLOR_RAGE = "#f70e0e"; 
+            
+        #endregion
     }
 }

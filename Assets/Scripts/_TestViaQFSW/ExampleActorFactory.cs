@@ -1,4 +1,6 @@
-﻿using Logic.View;
+﻿using ECS.Components;
+using Leopotam.Ecs;
+using Logic.View;
 using QFSW.QC;
 using Services.Factory;
 using Services.Factory.Builders;
@@ -15,6 +17,7 @@ namespace _TestViaQFSW
         
         private IActorFactory _actorFactory; // todo
         private ActorView _view;
+        private EcsEntity _entity;
 
         private void Start()
         {
@@ -25,7 +28,21 @@ namespace _TestViaQFSW
         [Command]
         private void af_ch()
         {
-            _actorFactory.CreateEntity(_heroConfig, _spawnPoint.position);
+            ref var entity =  ref _actorFactory.CreateEntity(_heroConfig, _spawnPoint.position);
+            _entity = entity;
+        }
+
+        [Command]
+        private void af_get_hp()
+        {
+            Debug.Log($" Max: {_entity.Get<HealthComponent>().max} \n Current: {_entity.Get<HealthComponent>().current}");
+        }
+        
+        [Command]
+        private void af_set_hp(float value)
+        {
+            _entity.Get<HealthComponent>().current -= value;
+            Debug.Log($"Set: {value} \n Max: {_entity.Get<HealthComponent>().max} \n Current: {_entity.Get<HealthComponent>().current}");
         }
     }
 }

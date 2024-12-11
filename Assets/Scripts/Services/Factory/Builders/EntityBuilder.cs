@@ -1,5 +1,6 @@
 ﻿using System;
 using ECS.Components;
+using ECS.Events;
 using Game.Types;
 using Leopotam.Ecs;
 using Logic.View;
@@ -28,8 +29,10 @@ namespace Services.Factory.Builders
         {
             _entity = _world.NewEntity();
             _view = Object.Instantiate(_config.ActorView, _spawnLocation, Quaternion.identity); //todo по какой-то причине объект не хочет создаваться, хотя при написании без "_view =" всё работает исправно
-            //_gameObject = Object.Instantiate(_config.Prefab);//
-            //_view = _gameObject.GetComponent<ActorView>();//
+
+            _entity.Get<InitializeResourceViewEvent>();
+            ref var resourceViewComponent = ref _entity.Get<ResourceViewComponent>();
+            resourceViewComponent.resourcePanelView = _view.ResourcePanel;
             
             foreach (var unit in _config.UnitResources)
             {
@@ -41,6 +44,7 @@ namespace Services.Factory.Builders
                         healthComponent.max = unit.max; 
                         healthComponent.current = unit.current; 
                         healthComponent.regeneration = unit.regeneration;
+                        
                         break;
                     }
                     case UnitResourcesType.Mana:
@@ -49,6 +53,9 @@ namespace Services.Factory.Builders
                         manaComponent.max = unit.max; 
                         manaComponent.current = unit.current; 
                         manaComponent.regeneration = unit.regeneration;
+
+                        resourceViewComponent.secondaryResourcesType = UnitResourcesType.Mana;
+                        
                         break;
                     }
                     case UnitResourcesType.Energy:
@@ -57,6 +64,9 @@ namespace Services.Factory.Builders
                         energyComponent.max = unit.max; 
                         energyComponent.current = unit.current; 
                         energyComponent.regeneration = unit.regeneration;
+                        
+                        resourceViewComponent.secondaryResourcesType = UnitResourcesType.Energy;
+                        
                         break;
                     }
                     case UnitResourcesType.Rage:
@@ -65,6 +75,9 @@ namespace Services.Factory.Builders
                         rageComponent.max = unit.max; 
                         rageComponent.current = unit.current; 
                         rageComponent.regeneration = unit.regeneration;
+                        
+                        resourceViewComponent.secondaryResourcesType = UnitResourcesType.Rage;
+                        
                         break;
                     }
                     default:
