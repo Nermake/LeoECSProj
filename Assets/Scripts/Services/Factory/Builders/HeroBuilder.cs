@@ -1,6 +1,8 @@
 ﻿using ECS.Components;
+using ECS.Events;
 using ECS.Mark;
 using ECS.Tags;
+using Game.Types;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -17,13 +19,23 @@ namespace Services.Factory.Builders
             base.Make();
             
             _entity.Get<PlayerTag>();
-            _entity.Get<ActorViewComponent>().actorView = _view;
-            _entity.Get<HeroClassMark>().classType = _config.ClassType;
-            _entity.Get<HeroRaceMark>().raceType = _config.RaceType;
+            _entity.Get<ChangeSecondaryResourceEvent>();
             _entity.Get<DirectionComponent>();
             _entity.Get<AttackCharacteristicComponent>();
             _entity.Get<DefenseStatUnitComponent>();
             _entity.Get<AttributesUnitComponent>() += _config.RaceAttributes + _config.ClassAttributes;
+            
+            ref var actorViewComponent = ref _entity.Get<ActorViewComponent>();
+            actorViewComponent.actorView = _view;
+            
+            ref var heroRaceMark = ref _entity.Get<HeroRaceMark>();
+            heroRaceMark.raceType = _config.RaceType;
+            
+            ref var heroClassMark = ref _entity.Get<HeroClassMark>();
+            heroClassMark.classType = _config.ClassType;
+            
+            ref var resourceViewComponent = ref _entity.Get<ResourceViewComponent>();
+            resourceViewComponent.secondaryResourcesType = UnitResourcesType.Mana;
             
             ref var movableComponent = ref _entity.Get<MovableComponent>();
             movableComponent.rigidbody2D = _view.GetComponent<Rigidbody2D>();
@@ -31,9 +43,6 @@ namespace Services.Factory.Builders
             
             ref var transformComponent = ref _entity.Get<TransformComponent>();
             transformComponent.modelTransform = _view.transform;
-            
-            //ref var initializeEntityRequest = ref _entity.Get<InitializeEntityRequest>();
-            //initializeEntityRequest.entityReference = _view.GetComponent<EntityReference>();// todo temporary stub
         }
     }
 }

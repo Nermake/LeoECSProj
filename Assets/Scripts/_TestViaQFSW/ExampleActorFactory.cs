@@ -1,4 +1,7 @@
 ﻿using ECS.Components;
+using ECS.Events;
+using ECS.Systems;
+using Game.Types;
 using Leopotam.Ecs;
 using Logic.View;
 using QFSW.QC;
@@ -43,6 +46,13 @@ namespace _TestViaQFSW
         {
             _entity.Get<HealthComponent>().current -= value;
             Debug.Log($"Set: {value} \n Max: {_entity.Get<HealthComponent>().max} \n Current: {_entity.Get<HealthComponent>().current}");
+        }
+        
+        [Command]
+        private void af_change_sr(UnitResourcesType type)
+        {
+            _entity.Get<ResourceViewComponent>().secondaryResourcesType = type;
+            _entity.Get<ChangeSecondaryResourceEvent>();
         }
     }
 }

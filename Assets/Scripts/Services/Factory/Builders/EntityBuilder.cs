@@ -30,7 +30,7 @@ namespace Services.Factory.Builders
             _entity = _world.NewEntity();
             _view = Object.Instantiate(_config.ActorView, _spawnLocation, Quaternion.identity); //todo по какой-то причине объект не хочет создаваться, хотя при написании без "_view =" всё работает исправно
 
-            _entity.Get<InitializeResourceViewEvent>();
+            _entity.Get<ChangeSecondaryResourceEvent>();
             ref var resourceViewComponent = ref _entity.Get<ResourceViewComponent>();
             resourceViewComponent.resourcePanelView = _view.ResourcePanel;
             
@@ -53,8 +53,6 @@ namespace Services.Factory.Builders
                         manaComponent.max = unit.max; 
                         manaComponent.current = unit.current; 
                         manaComponent.regeneration = unit.regeneration;
-
-                        resourceViewComponent.secondaryResourcesType = UnitResourcesType.Mana;
                         
                         break;
                     }
@@ -65,8 +63,6 @@ namespace Services.Factory.Builders
                         energyComponent.current = unit.current; 
                         energyComponent.regeneration = unit.regeneration;
                         
-                        resourceViewComponent.secondaryResourcesType = UnitResourcesType.Energy;
-                        
                         break;
                     }
                     case UnitResourcesType.Rage:
@@ -75,8 +71,6 @@ namespace Services.Factory.Builders
                         rageComponent.max = unit.max; 
                         rageComponent.current = unit.current; 
                         rageComponent.regeneration = unit.regeneration;
-                        
-                        resourceViewComponent.secondaryResourcesType = UnitResourcesType.Rage;
                         
                         break;
                     }

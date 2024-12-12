@@ -8,9 +8,9 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class InitializeResourceViewSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class SetResourceViewSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<ResourceViewComponent, InitializeResourceViewEvent> _filter = null;
+        private readonly EcsFilter<ResourceViewComponent, ChangeSecondaryResourceEvent> _filter = null;
 
         private Color _healthColor;
         private Color _manaColor;
@@ -49,7 +49,7 @@ namespace ECS.Systems
                     _ => throw new ArgumentOutOfRangeException()
                 };
                 
-                _filter.GetEntity(i).Del<InitializeResourceViewEvent>();
+                _filter.GetEntity(i).Del<ChangeSecondaryResourceEvent>();
             }
         }
     }

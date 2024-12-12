@@ -2,8 +2,6 @@ using ECS.Data;
 using ECS.Events;
 using ECS.Systems;
 using Leopotam.Ecs;
-using Services;
-using Services.Factory;
 using Services.Locator;
 using UnityEngine;
 using Voody.UniLeo;
@@ -80,7 +78,6 @@ namespace ECS
                 Add(new InitializeEntitySystem()).
                 Add(new InitializePlayerSystem()).
                 Add(new InitializeInputControllerSystem()).
-                Add(new InitializeResourceViewSystem()).
                 Add(new PlayerInputSystem()).
                 Add(new SetTargetForEnemySystem()).
                 //Add(new SpawnEnemySystem()).
@@ -88,6 +85,7 @@ namespace ECS
                 Add(new GenerateProjectileSystem()).
                 Add(new SetTargetForProjectileSystem()).
                 Add(new RegenerationUnitSystem()).
+                Add(new SetResourceViewSystem()).
                 Add(new ResourceViewSystem()).
                 //Add(new T_SpawnPlayerSystem()).
                 Add(new DeathSystem())

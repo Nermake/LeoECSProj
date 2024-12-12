@@ -21,6 +21,14 @@ MonoBehaviour:
     current: 75
     regeneration: 2.5
     type: 1
+  - max: 100
+    current: 0
+    regeneration: 2.5
+    type: 2
+  - max: 100
+    current: 0
+    regeneration: 1
+    type: 3
   <ActorView>k__BackingField: {fileID: 8451109971592554728, guid: 5ed77c49f88df4d45b72ec18469272d3, type: 3}
   <Team>k__BackingField: 1
   <RaceAttributes>k__BackingField:

@@ -2,7 +2,7 @@
 
 namespace ECS.Events
 {
-    public struct InitializeResourceViewEvent : IEcsIgnoreInFilter
+    public struct ChangeSecondaryResourceEvent : IEcsIgnoreInFilter
     {
         
     }
