@@ -24,13 +24,11 @@ namespace ECS
         {
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
-            _gameServices.Init(_world);
-            
             _systemsForFixedUpdate = new EcsSystems(_world);
 
             _sceneData = gameObject.GetComponent<SceneData>();
-            
             _runtimeData = new RuntimeData();
+            _gameServices.Init(_world, _runtimeData);
 
             _systems.ConvertScene();
 
@@ -76,9 +74,11 @@ namespace ECS
         {
             _systems.
                 Add(new InitializeEntitySystem()).
-                Add(new InitializePlayerSystem()).
+                Add(new InitializeCameraSystem()).
                 Add(new InitializeInputControllerSystem()).
                 Add(new PlayerInputSystem()).
+                Add(new SetTargetForCameraSystem()).
+                Add(new CameraFollowSystem()).
                 Add(new SetTargetForEnemySystem()).
                 //Add(new SpawnEnemySystem()).
                 Add(new RemovesProhibitionMoveSystem()).
@@ -94,7 +94,7 @@ namespace ECS
             _systemsForFixedUpdate.
                 Add(new ProjectileMovementSystem()).
                 Add(new PlayerMovementSystem()).
-                Add(new FollowSystem())
+                Add(new UnitFollowSystem())
                 ;
         }
     

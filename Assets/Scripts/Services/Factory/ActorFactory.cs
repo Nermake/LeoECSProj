@@ -1,4 +1,5 @@
-﻿using Leopotam.Ecs;
+﻿using ECS.Data;
+using Leopotam.Ecs;
 using Logic.View;
 using Services.Factory.Builders;
 using Services.Locator;
@@ -23,6 +24,8 @@ namespace Services.Factory
             builder.SetLocation(location);
             builder.Make();
 
+            ServiceLocator.Current.Get<RuntimeData>().PlayerActor = builder.GetView();
+            
             //ActorView entityView = builder.GetView();
 
             //InjectServices(entityView.gameObject);

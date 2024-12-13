@@ -15,9 +15,9 @@ namespace ECS.Systems
 
         public void Init()
         {
-            _entityFactory.CreateEntity(_entityBuilder, _staticData.config.player.gameObject,
-                _sceneData.PlayerSpawnPoint, out var unit);
-            _runtimeData.Player = unit;
+            // _entityFactory.CreateEntity(_entityBuilder, _staticData.config.player.gameObject,
+            //     _sceneData.PlayerSpawnPoint, out var unit);
+            // _runtimeData.PlayerActor.gameObject = unit;
         }
     }
 }

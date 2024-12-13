@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class FollowSystem : IEcsRunSystem
+    public sealed class UnitFollowSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<FollowComponent, MovableComponent>.
+        private readonly EcsFilter<UnitFollowComponent, MovableComponent>.
             Exclude<BlockMoveDuration> _followFilter = null;
         
         public void Run()

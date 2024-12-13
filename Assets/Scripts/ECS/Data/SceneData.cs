@@ -5,12 +5,14 @@ namespace ECS.Data
 {
     public class SceneData : MonoBehaviour
     {
-        [SerializeField] private List<Transform> _spawnPoints;
-        [SerializeField] private Transform _playerSpawnPoint;
-        [SerializeField] private GameObject _enemyPrefab;
-
-        public List<Transform> SpawnPoints => _spawnPoints;
-        public Transform PlayerSpawnPoint => _playerSpawnPoint;
-        public GameObject EnemyPrefab => _enemyPrefab;
+        [field: Header("Camera")]
+        [field: SerializeField] public Camera Camera { get; private set; }
+        [field: SerializeField] public Vector3 Offset { get; private set; }
+        [field: SerializeField] public float Smoothing { get; private set; }
+        
+        [field: Space, Header("Other References")]
+        [field: SerializeField] public List<Transform> SpawnPoints { get; private set; }
+        [field: SerializeField] public Transform PlayerSpawnPoint { get; private set; }
+        [field: SerializeField] public GameObject EnemyPrefab { get; private set; }
     }
 }

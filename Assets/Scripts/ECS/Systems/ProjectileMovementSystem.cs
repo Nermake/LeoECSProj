@@ -12,7 +12,7 @@ namespace ECS.Systems
 
         public void Run()
         {
-            if (_runtimeData.PlayerEntity == EcsEntity.Null) return;
+            if (_runtimeData.PlayerActor == null) return;
             
             foreach (var i in _filter)
             {

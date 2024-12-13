@@ -13,7 +13,7 @@ namespace Builder
 
             Entity.Get<MileAttackFlag>();
 
-            ref var followComponent = ref Entity.Get<FollowComponent>();
+            ref var followComponent = ref Entity.Get<UnitFollowComponent>();
 
             followComponent.distanceToStop = 1.5f;
         }

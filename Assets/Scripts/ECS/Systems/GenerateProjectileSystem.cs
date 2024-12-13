@@ -31,7 +31,7 @@ namespace ECS.Systems
         
         public void Run()
         {
-            if (_runtimeData.PlayerEntity == EcsEntity.Null) return;
+            if (_runtimeData.PlayerActor == null) return;
             
             foreach (var i in _shootFilter)
             {
@@ -51,7 +51,7 @@ namespace ECS.Systems
                     var entity = _entityFactory.CreateEntity(_builder, _projectile, point, out var unit);
                     ref var request = ref entity.Get<InitializeProjectileRequest>();
 
-                    request.target = _runtimeData.Player.transform.position;
+                    request.target = _runtimeData.PlayerActor.transform.position;
                     request.startPosition = unit.transform.position;
                     
                     Debug.Log(entity);

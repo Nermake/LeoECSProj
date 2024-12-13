@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ECS.Data;
 using Leopotam.Ecs;
 using Services.Factory;
 using UnityEngine;
@@ -12,11 +13,13 @@ namespace Services.Locator
         private readonly List<IDisposable> _disposables = new List<IDisposable>();
         
         private ActorFactory _actorFactory;
+        private RuntimeData _runtimeData;
         private InputController _inputController;
         
-        public void Init(EcsWorld world)
+        public void Init(EcsWorld world, RuntimeData runtimeData)
         {
             _actorFactory = new ActorFactory(world);
+            _runtimeData = runtimeData;
             _inputController = new InputController();
             
             RegisterServices();
@@ -28,6 +31,7 @@ namespace Services.Locator
         {
             ServiceLocator.Initialize();
             
+            ServiceLocator.Current.Register(_runtimeData);
             ServiceLocator.Current.Register(_actorFactory);
             ServiceLocator.Current.Register(_inputController);
             ServiceLocator.Current.Register(_destroyer);

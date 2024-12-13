@@ -7,7 +7,7 @@ namespace ECS.Systems
     public class DebugTransformEntitySystem : IEcsRunSystem
     {
         private readonly EcsFilter<TransformComponent> _transformFilter = null;
-        private readonly EcsFilter<FollowComponent> _followFilter = null;
+        private readonly EcsFilter<UnitFollowComponent> _followFilter = null;
         
         public void Run()
         {

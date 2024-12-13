@@ -1372,14 +1372,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647d7942908a476bb6f7b33fe05d9e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnPoints:
+  <Camera>k__BackingField: {fileID: 519420031}
+  <Offset>k__BackingField: {x: 0, y: 0, z: -10}
+  <Smoothing>k__BackingField: 2
+  <SpawnPoints>k__BackingField:
   - {fileID: 1798219424}
   - {fileID: 1498330638}
   - {fileID: 532175874}
   - {fileID: 607114681}
   - {fileID: 1442363868}
-  _playerSpawnPoint: {fileID: 648515265}
-  _enemyPrefab: {fileID: 3833655451958653470, guid: 9449bd8dce6a7844ea1e88c37858e6ff, type: 3}
+  <PlayerSpawnPoint>k__BackingField: {fileID: 648515265}
+  <EnemyPrefab>k__BackingField: {fileID: 6819397375135153671, guid: 763fd45c64972144dbbee78cff62db8b, type: 3}
 --- !u!1 &1059268078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1509,10 @@ PrefabInstance:
     - target: {fileID: 6265289413109871555, guid: 5ed77c49f88df4d45b72ec18469272d3, type: 3}
       propertyPath: m_Name
       value: HeroA
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265289413109871555, guid: 5ed77c49f88df4d45b72ec18469272d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2615,7 +2622,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2042890643}
   - component: {fileID: 2042890641}
-  - component: {fileID: 2042890642}
   m_Layer: 0
   m_Name: UICamera
   m_TagString: Untagged
@@ -2674,14 +2680,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2042890642
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042890640}
-  m_Enabled: 1
 --- !u!4 &2042890643
 Transform:
   m_ObjectHideFlags: 0

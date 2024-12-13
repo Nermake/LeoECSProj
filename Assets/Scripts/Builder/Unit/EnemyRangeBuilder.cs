@@ -13,7 +13,7 @@ namespace Builder
 
             Entity.Get<RangeAttackFlag>();
             ref var shootPointComponent = ref Entity.Get<ShootPointComponent>();
-            ref var followComponent = ref Entity.Get<FollowComponent>();
+            ref var followComponent = ref Entity.Get<UnitFollowComponent>();
             
             shootPointComponent.tick = 2f;
             shootPointComponent.point = unit.transform;

@@ -6,16 +6,16 @@ namespace ECS.Systems
 {
     public sealed class SetTargetForEnemySystem : IEcsRunSystem
     {
-        private readonly EcsFilter<FollowComponent, TransformComponent> _enemyFilter = null;
+        private readonly EcsFilter<UnitFollowComponent, TransformComponent> _enemyFilter = null;
         private readonly RuntimeData _runtimeData = null;
 
         public void Run()
         {
-            if (_runtimeData.PlayerEntity == EcsEntity.Null) return;
+            if (_runtimeData.PlayerActor == null) return;
             
             foreach (var entity in _enemyFilter)
             {
-                ref var player = ref _runtimeData.PlayerEntity;
+                ref var player = ref _runtimeData.PlayerActor.GetEntity();
                 
                 ref var playerTransformComponent = ref player.Get<TransformComponent>();
                 ref var followComponent = ref _enemyFilter.Get1(entity);

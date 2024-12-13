@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ECS.Components
 {
     [Serializable]
-    public struct FollowComponent
+    public struct UnitFollowComponent
     {
         public Vector2 target;
         public Vector2 targetDirection;

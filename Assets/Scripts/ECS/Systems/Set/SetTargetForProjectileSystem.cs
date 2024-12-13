@@ -1,7 +1,6 @@
 ﻿using ECS.Components;
 using ECS.Requests;
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace ECS.Systems
 {
