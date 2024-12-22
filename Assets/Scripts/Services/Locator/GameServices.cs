@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ECS.Data;
+﻿using ECS.Data;
 using Leopotam.Ecs;
 using Services.Factory;
 using UnityEngine;
@@ -9,8 +8,8 @@ namespace Services.Locator
     public class GameServices : MonoBehaviour
     {
         [SerializeField] private Destroyer _destroyer;
-        
-        private readonly List<IDisposable> _disposables = new List<IDisposable>();
+        [SerializeField] private SceneData _sceneData;
+        [SerializeField] private StaticData _staticData;
         
         private ActorFactory _actorFactory;
         private RuntimeData _runtimeData;
@@ -24,7 +23,6 @@ namespace Services.Locator
             
             RegisterServices();
             InitServices();
-            AddDisposables();
         }
         
         private void RegisterServices()
@@ -35,25 +33,13 @@ namespace Services.Locator
             ServiceLocator.Current.Register(_actorFactory);
             ServiceLocator.Current.Register(_inputController);
             ServiceLocator.Current.Register(_destroyer);
+            ServiceLocator.Current.Register(_staticData);
+            ServiceLocator.Current.Register(_sceneData);
         }
 
         private void InitServices()
         {
             
         }
-
-        private void AddDisposables()
-        {
-            
-        }
-
-        private void OnDestroy()
-        {
-            foreach (var disposable in _disposables)
-            {
-                disposable.Dispose();
-            }
-        }
-
     }
 }

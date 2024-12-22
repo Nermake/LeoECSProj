@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Services.Locator;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ECS.Data
 {
-    public class SceneData : MonoBehaviour
+    public class SceneData : MonoBehaviour, IService
     {
         [field: Header("Camera")]
         [field: SerializeField] public Camera Camera { get; private set; }
@@ -14,5 +18,15 @@ namespace ECS.Data
         [field: SerializeField] public List<Transform> SpawnPoints { get; private set; }
         [field: SerializeField] public Transform PlayerSpawnPoint { get; private set; }
         [field: SerializeField] public GameObject EnemyPrefab { get; private set; }
+        
+        [field: Space, Header("Test")]
+        [field: SerializeField] public ExpBar ExpBar { get; private set; }
+    }
+
+    [Serializable]
+    public class ExpBar
+    {
+        public Image Image;
+        public TMP_Text Counter;
     }
 }

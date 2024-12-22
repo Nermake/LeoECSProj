@@ -13,7 +13,6 @@ namespace Services.Factory.Builders
         
         [field: Header("View")]
         [field: SerializeField] public ActorView ActorView { get; private set; }
-        //[field: SerializeField] public GameObject Prefab { get; private set; }//
 
         [field: Header("Team")]
         [field: SerializeField] public Team Team { get; private set; }

@@ -41,7 +41,7 @@ namespace Services.Timer
 			if (Math.Abs(RemainingSeconds) < Mathf.Epsilon)
 			{
 #if DEBUG
-				Debug.LogError("TIMER: You are trying start timer with remaining seconds equal 0.");
+				Debug.LogError("TIMER: You are trying start Timer with remaining seconds equal 0.");
 #endif
 				TimerFinished?.Invoke();
 			}

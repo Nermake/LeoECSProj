@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace ECS.Components
+﻿namespace ECS.Components
 {
-    [Serializable]
     public struct ProjectileDamageComponent
     {
-        public float damage;
+        public float Damage;
     }
 }

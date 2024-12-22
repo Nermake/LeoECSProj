@@ -14,7 +14,7 @@ namespace Logic.View
             if (_entity.IsAlive() && _entity.Has<DamageableComponent>())
             {
                 ref var damageableComponent = ref _entity.Get<DamageableComponent>();
-                damageableComponent.damageQueue.Enqueue(damage);
+                damageableComponent.DamageQueue.Enqueue(damage);
             }
         }
     }

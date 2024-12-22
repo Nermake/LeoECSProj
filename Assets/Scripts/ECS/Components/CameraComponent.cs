@@ -1,11 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct CameraComponent
     {
-        public Camera camera;
+        public Camera Camera;
     }
 }

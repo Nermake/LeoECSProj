@@ -28,7 +28,7 @@ namespace _TestViaQFSW
         [SerializeField] private ClassUnitData _warlock;
         [SerializeField] private ClassUnitData _warrior;
 
-        private readonly HeroEntityFactory _entityFactory = new();
+        //private readonly HeroEntityFactory _entityFactory = new();
         private readonly IActorFactory _actorFactory;
 
         [Command()]
@@ -37,27 +37,27 @@ namespace _TestViaQFSW
             switch (raceType)
             {
                 case Race.Orc:
-                    _entityFactory.CreateEntity(CreateHero(classType), _orc.raceUnitData, _orc.modelData);
+                    //_entityFactory.CreateEntity(CreateHero(ClassType), _orc.raceUnitData, _orc.modelData);
                     break;
                 
                 case Race.Troll:
-                    _entityFactory.CreateEntity(CreateHero(classType), _troll.raceUnitData, _troll.modelData);
+                    //_entityFactory.CreateEntity(CreateHero(ClassType), _troll.raceUnitData, _troll.modelData);
                     break;
                 
                 case Race.Human:
-                    _entityFactory.CreateEntity(CreateHero(classType), _human.raceUnitData, _human.modelData);
+                    //_entityFactory.CreateEntity(CreateHero(ClassType), _human.raceUnitData, _human.modelData);
                     break;
                 
                 case Race.Elf:
-                    _entityFactory.CreateEntity(CreateHero(classType), _elf.raceUnitData, _elf.modelData);
+                    //_entityFactory.CreateEntity(CreateHero(ClassType), _elf.raceUnitData, _elf.modelData);
                     break;
                 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(raceType), raceType, null);
             }
 
-            var spriteRenderer = _entityFactory.GetGameObject().GetComponent<SpriteRenderer>();
-            ChangeColor(spriteRenderer, classType);
+            //var spriteRenderer = _entityFactory.GetGameObject().GetComponent<SpriteRenderer>();
+            //ChangeColor(spriteRenderer, ClassType);
         }
 
         [Command]
@@ -69,9 +69,9 @@ namespace _TestViaQFSW
             var i = 0;
             foreach (var variableClass in classes)
             {
-                _entityFactory.CreateEntity(variableClass, _orc.raceUnitData, _orc.modelData);
-                var spriteRenderer = _entityFactory.GetGameObject().GetComponent<SpriteRenderer>();
-                ChangeColor(spriteRenderer, i);
+                //_entityFactory.CreateEntity(variableClass, _orc.raceUnitData, _orc.modelData);
+                //var spriteRenderer = _entityFactory.GetGameObject().GetComponent<SpriteRenderer>();
+                //ChangeColor(spriteRenderer, i);
                 i++;
             }
         }

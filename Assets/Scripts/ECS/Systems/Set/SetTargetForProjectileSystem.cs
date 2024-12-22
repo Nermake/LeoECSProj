@@ -1,12 +1,12 @@
 ﻿using ECS.Components;
-using ECS.Requests;
+using ECS.Events;
 using Leopotam.Ecs;
 
 namespace ECS.Systems
 {
     public class SetTargetForProjectileSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<InitializeProjectileRequest, ProjectileTargetComponent> _filter = null;
+        private readonly EcsFilter<InitializeProjectileEvent, ProjectileTargetComponent> _filter;
         
         public void Run()
         {
@@ -15,13 +15,13 @@ namespace ECS.Systems
                 ref var request = ref _filter.Get1(i);
                 ref var targetComponent = ref _filter.Get2(i);
 
-                ref var target = ref request.target;
-                ref var startPosition = ref request.startPosition;
+                ref var target = ref request.Target;
+                ref var startPosition = ref request.StartPosition;
 
-                targetComponent.target.x = target.x - startPosition.x;
-                targetComponent.target.y = target.y - startPosition.y;
+                targetComponent.Target.x = target.x - startPosition.x;
+                targetComponent.Target.y = target.y - startPosition.y;
                 
-                _filter.GetEntity(i).Del<InitializeProjectileRequest>();
+                _filter.GetEntity(i).Del<InitializeProjectileEvent>();
             }
         }
     }

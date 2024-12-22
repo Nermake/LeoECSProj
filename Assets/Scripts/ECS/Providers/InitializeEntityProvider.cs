@@ -1,9 +1,9 @@
-﻿using ECS.Requests;
+﻿using ECS.Events;
 using Voody.UniLeo;
 
 namespace ECS.Providers
 {
-    public class InitializeEntityProvider : MonoProvider<InitializeEntityRequest>
+    public class InitializeEntityProvider : MonoProvider<InitializeEntityEvent>
     {
         
     }

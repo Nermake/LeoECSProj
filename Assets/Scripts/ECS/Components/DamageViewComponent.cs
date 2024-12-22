@@ -5,7 +5,7 @@ namespace ECS.Components
 {
     public struct DamageViewComponent
     {
-        public Vector2 healthWidgetOffset;
-        public EntityView view;
+        public Vector2 HealthWidgetOffset;
+        public EntityView View;
     }
 }

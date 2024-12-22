@@ -1,36 +1,32 @@
-﻿using System;
-using UnityEngine.Serialization;
-
-namespace ECS.Components
+﻿namespace ECS.Components
 {
-    [Serializable]
     public struct DefenseStatUnitComponent
     {
-        public int physicProtection;
-        public float percentageProtection;
+        public int PhysicProtection;
+        public float PercentageProtection;
 
-        public int resistance;
-        public float percentageResistance;
+        public int Resistance;
+        public float PercentageResistance;
 
-        public float evasion;
+        public float Evasion;
 
         public static DefenseStatUnitComponent operator +(DefenseStatUnitComponent a, DefenseStatUnitComponent b)
         {
             return new DefenseStatUnitComponent()
             {
-                physicProtection = a.physicProtection +b.physicProtection,
-                resistance = a.resistance + b.resistance,
-                evasion = a.evasion + b.evasion
+                PhysicProtection = a.PhysicProtection +b.PhysicProtection,
+                Resistance = a.Resistance + b.Resistance,
+                Evasion = a.Evasion + b.Evasion
             };
         }
 
         public override string ToString()
         {
-            var massage = $"protection: {physicProtection} \n" +
-                          $"percentageProtection: {percentageProtection} \n" +
-                          $"resistance: {resistance} \n" +
-                          $"percentageResistance: {percentageResistance} \n" +
-                          $"evasion: {evasion}";
+            var massage = $"Protection: {PhysicProtection} \n" +
+                          $"PercentageProtection: {PercentageProtection} \n" +
+                          $"Resistance: {Resistance} \n" +
+                          $"PercentageResistance: {PercentageResistance} \n" +
+                          $"Evasion: {Evasion}";
             
             return massage;
         }

@@ -6,7 +6,7 @@ namespace ECS.Systems
 {
     public sealed class RemovesProhibitionMoveSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<BlockMoveDuration> _blockFilter = null;
+        private readonly EcsFilter<BlockMoveDuration> _blockFilter;
         
         public void Run()
         {
@@ -15,9 +15,9 @@ namespace ECS.Systems
                 ref var entity = ref _blockFilter.GetEntity(i);
                 ref var blockMoveComponent = ref _blockFilter.Get1(i);
                 
-                blockMoveComponent.time -= Time.deltaTime;
+                blockMoveComponent.Time -= Time.deltaTime;
                 
-                if (blockMoveComponent.time <= 0)
+                if (blockMoveComponent.Time <= 0)
                 {
                     entity.Del<BlockMoveDuration>();
                 }

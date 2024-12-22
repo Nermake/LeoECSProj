@@ -8,8 +8,8 @@ namespace ECS.Systems
 {
     public sealed class DeathSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<HealthComponent> _resources = null;
-        private readonly EcsFilter<DeathEvent> _deaths = null;
+        private readonly EcsFilter<HealthComponent> _resources;
+        private readonly EcsFilter<DeathEvent> _deaths;
         
         private Destroyer _destroyer;
 
@@ -23,7 +23,7 @@ namespace ECS.Systems
             foreach (var i in _resources)
             {
                 ref var resourcesUnitComponent = ref _resources.Get1(i);
-                if (resourcesUnitComponent.current <= 0)
+                if (resourcesUnitComponent.Current <= 0)
                 {
                     _resources.GetEntity(i).Get<DeathEvent>();
                 }
@@ -31,7 +31,7 @@ namespace ECS.Systems
             
             foreach (var i in _deaths)
             {
-                _destroyer.DestroyUnit(_deaths.GetEntity(i).Get<ActorViewComponent>().actorView.gameObject);
+                _destroyer.DestroyUnit(_deaths.GetEntity(i).Get<ActorViewComponent>().ActorView.gameObject);
                 _deaths.GetEntity(i).Destroy();
             }
         }

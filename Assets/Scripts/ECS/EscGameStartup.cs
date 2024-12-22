@@ -10,14 +10,12 @@ namespace ECS
 {
     public class EscGameStartup : MonoBehaviour
     {
-        [SerializeField] private StaticData _staticData;
         [SerializeField] private GameServices _gameServices; // todo
         
         private EcsWorld _world;
         private EcsSystems _systems;
         private EcsSystems _systemsForFixedUpdate;
-
-        private SceneData _sceneData;
+        
         private RuntimeData _runtimeData;
 
         private void Awake()
@@ -25,8 +23,6 @@ namespace ECS
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
             _systemsForFixedUpdate = new EcsSystems(_world);
-
-            _sceneData = gameObject.GetComponent<SceneData>();
             _runtimeData = new RuntimeData();
             _gameServices.Init(_world, _runtimeData);
 
@@ -52,17 +48,15 @@ namespace ECS
 
         private void AddInjections()
         {
-            _systems.
-                Inject(_sceneData).
-                Inject(_staticData).
-                Inject(_runtimeData)
-                ;
-
-            _systemsForFixedUpdate.
-                Inject(_sceneData).
-                Inject(_staticData).
-                Inject(_runtimeData)
-                ;
+            // _systems.
+            //     Inject().
+            //     Inject()
+            //     ;
+            //
+            // _systemsForFixedUpdate.
+            //     Inject().
+            //     Inject()
+            //     ;
         }
     
         private void AddOneFrames()
@@ -87,7 +81,8 @@ namespace ECS
                 Add(new RegenerationUnitSystem()).
                 Add(new SetResourceViewSystem()).
                 Add(new ResourceViewSystem()).
-                //Add(new T_SpawnPlayerSystem()).
+                Add(new UnitLevelSystem()).
+                Add(new UnitLevelViewSystem()).
                 Add(new DeathSystem())
                 ;
 

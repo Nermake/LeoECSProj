@@ -1,13 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct ShootPointComponent
     {
-        public float tick;
-        public float timer;
-        public Transform point;
+        public float Tick;
+        public float Timer;
+        public Transform Point;
     }
 }

@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace ECS.Blocks
+﻿namespace ECS.Blocks
 {
-    [Serializable]
     public struct BlockMoveDuration
     {
-        public float time;
+        public float Time;
     }
 }

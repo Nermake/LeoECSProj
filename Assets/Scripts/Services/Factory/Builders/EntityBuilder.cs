@@ -1,6 +1,5 @@
 ﻿using System;
 using ECS.Components;
-using ECS.Events;
 using Game.Types;
 using Leopotam.Ecs;
 using Logic.View;
@@ -14,7 +13,6 @@ namespace Services.Factory.Builders
         protected EcsEntity _entity;
         protected ActorView _view;
         protected EcsWorld _world;
-        //protected GameObject _gameObject;
 
         private Vector3 _spawnLocation;
 
@@ -28,11 +26,7 @@ namespace Services.Factory.Builders
         public virtual void Make()
         {
             _entity = _world.NewEntity();
-            _view = Object.Instantiate(_config.ActorView, _spawnLocation, Quaternion.identity); //todo по какой-то причине объект не хочет создаваться, хотя при написании без "_view =" всё работает исправно
-
-            _entity.Get<ChangeSecondaryResourceEvent>();
-            ref var resourceViewComponent = ref _entity.Get<ResourceViewComponent>();
-            resourceViewComponent.resourcePanelView = _view.ResourcePanel;
+            _view = Object.Instantiate(_config.ActorView, _spawnLocation, Quaternion.identity);
             
             foreach (var unit in _config.UnitResources)
             {
@@ -41,36 +35,36 @@ namespace Services.Factory.Builders
                     case UnitResourcesType.Health:
                     {
                         ref var healthComponent = ref _entity.Get<HealthComponent>();
-                        healthComponent.max = unit.max; 
-                        healthComponent.current = unit.current; 
-                        healthComponent.regeneration = unit.regeneration;
+                        healthComponent.Max = unit.max; 
+                        healthComponent.Current = unit.current; 
+                        healthComponent.Regeneration = unit.regeneration;
                         
                         break;
                     }
                     case UnitResourcesType.Mana:
                     {
                         ref var manaComponent = ref _entity.Get<ManaComponent>();
-                        manaComponent.max = unit.max; 
-                        manaComponent.current = unit.current; 
-                        manaComponent.regeneration = unit.regeneration;
+                        manaComponent.Max = unit.max; 
+                        manaComponent.Current = unit.current; 
+                        manaComponent.Regeneration = unit.regeneration;
                         
                         break;
                     }
                     case UnitResourcesType.Energy:
                     {
                         ref var energyComponent = ref _entity.Get<EnergyComponent>();
-                        energyComponent.max = unit.max; 
-                        energyComponent.current = unit.current; 
-                        energyComponent.regeneration = unit.regeneration;
+                        energyComponent.Max = unit.max; 
+                        energyComponent.Current = unit.current; 
+                        energyComponent.Regeneration = unit.regeneration;
                         
                         break;
                     }
                     case UnitResourcesType.Rage:
                     {
                         ref var rageComponent = ref _entity.Get<RageComponent>();
-                        rageComponent.max = unit.max; 
-                        rageComponent.current = unit.current; 
-                        rageComponent.regeneration = unit.regeneration;
+                        rageComponent.Max = unit.max; 
+                        rageComponent.Current = unit.current; 
+                        rageComponent.Regeneration = unit.regeneration;
                         
                         break;
                     }
@@ -78,19 +72,9 @@ namespace Services.Factory.Builders
                         throw new ArgumentOutOfRangeException();
                 }
             }
-            
-            
-
-            // ref var viewComponent = ref _entity.Get<ViewComponent>();
-            // viewComponent.View = _view;
-            // viewComponent.HealthWidgetOffset = _config.WidgetOffset;
 
             ref var damageableComponent = ref _entity.Get<DamageableComponent>();
-            damageableComponent.damageQueue = new();
-
-            // ref var unionsComponent = ref _entity.Get<UnionsComponent>();
-            // unionsComponent.EnemyTeams = _config.EnemyTeams;
-            // unionsComponent.EnemyLayers = _config.EnemyLayers;
+            damageableComponent.DamageQueue = new();
 
             _view.Init(_entity, _world);
             _view.SetTeam(_config.Team);

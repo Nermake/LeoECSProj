@@ -1,45 +1,42 @@
-﻿using System;
-
-namespace ECS.Components
+﻿namespace ECS.Components
 {
-    [Serializable]
     public struct AttackCharacteristicComponent
     {
-        public float attackPower;
-        public float spellPowerDamage;
+        public float AttackPower;
+        public float SpellPowerDamage;
         
-        public float accuracy;
-        public float armorPenetrationRate;
-        public float penetratingPowerOfSpells;
+        public float Accuracy;
+        public float ArmorPenetrationRate;
+        public float PenetratingPowerOfSpells;
 
-        public float chanceOfCriticalHit;
-        public float powerOfCriticalHit;
+        public float ChanceOfCriticalHit;
+        public float PowerOfCriticalHit;
 
         public static AttackCharacteristicComponent operator +(AttackCharacteristicComponent a, AttackCharacteristicComponent b)
         {
             return new AttackCharacteristicComponent()
             {
-                attackPower = a.attackPower + b.attackPower,
-                spellPowerDamage = a.spellPowerDamage + b.spellPowerDamage,
+                AttackPower = a.AttackPower + b.AttackPower,
+                SpellPowerDamage = a.SpellPowerDamage + b.SpellPowerDamage,
                 
-                accuracy = a.accuracy + b.accuracy,
-                armorPenetrationRate = a.armorPenetrationRate + b.armorPenetrationRate,
-                penetratingPowerOfSpells = a.penetratingPowerOfSpells + b.penetratingPowerOfSpells,
+                Accuracy = a.Accuracy + b.Accuracy,
+                ArmorPenetrationRate = a.ArmorPenetrationRate + b.ArmorPenetrationRate,
+                PenetratingPowerOfSpells = a.PenetratingPowerOfSpells + b.PenetratingPowerOfSpells,
                 
-                chanceOfCriticalHit = a.chanceOfCriticalHit + b.chanceOfCriticalHit,
-                powerOfCriticalHit = a.powerOfCriticalHit + b.powerOfCriticalHit
+                ChanceOfCriticalHit = a.ChanceOfCriticalHit + b.ChanceOfCriticalHit,
+                PowerOfCriticalHit = a.PowerOfCriticalHit + b.PowerOfCriticalHit
             };
         }
 
         public override string ToString()
         {
-            var massage = $"attackPower: {attackPower} \n" +
-                      $"spellPowerDamage: {spellPowerDamage} \n" +
-                      $"accuracy: {accuracy} \n" +
-                      $"armorPenetrationRate: {armorPenetrationRate} \n" +
-                      $"penetratingPowerOfSpells: {penetratingPowerOfSpells} \n" +
-                      $"chanceOfCriticalHit: {chanceOfCriticalHit} \n" +
-                      $"powerOfCriticalHit: {powerOfCriticalHit}";
+            var massage = $"AttackPower: {AttackPower} \n" +
+                      $"SpellPowerDamage: {SpellPowerDamage} \n" +
+                      $"Accuracy: {Accuracy} \n" +
+                      $"ArmorPenetrationRate: {ArmorPenetrationRate} \n" +
+                      $"PenetratingPowerOfSpells: {PenetratingPowerOfSpells} \n" +
+                      $"ChanceOfCriticalHit: {ChanceOfCriticalHit} \n" +
+                      $"PowerOfCriticalHit: {PowerOfCriticalHit}";
             
             return massage;
         }

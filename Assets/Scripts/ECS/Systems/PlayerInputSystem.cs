@@ -8,7 +8,7 @@ namespace ECS.Systems
 {
     public sealed class PlayerInputSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<PlayerTag, DirectionComponent> _directionFilter = null;
+        private readonly EcsFilter<PlayerTag, DirectionComponent> _directionFilter;
         
         private InputController _inputController;
 
@@ -25,7 +25,7 @@ namespace ECS.Systems
             {
                 ref var directionComponent = ref _directionFilter.Get2(entity);
 
-                directionComponent.direction = moveDirection;
+                directionComponent.Direction = moveDirection;
             }
         }
     }

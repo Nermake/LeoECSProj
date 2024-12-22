@@ -38,20 +38,20 @@ namespace _TestViaQFSW
         [Command]
         private void af_get_hp()
         {
-            Debug.Log($" Max: {_entity.Get<HealthComponent>().max} \n Current: {_entity.Get<HealthComponent>().current}");
+            Debug.Log($" Max: {_entity.Get<HealthComponent>().Max} \n Current: {_entity.Get<HealthComponent>().Current}");
         }
         
         [Command]
         private void af_set_hp(float value)
         {
-            _entity.Get<HealthComponent>().current -= value;
-            Debug.Log($"Set: {value} \n Max: {_entity.Get<HealthComponent>().max} \n Current: {_entity.Get<HealthComponent>().current}");
+            _entity.Get<HealthComponent>().Current -= value;
+            Debug.Log($"Set: {value} \n Max: {_entity.Get<HealthComponent>().Max} \n Current: {_entity.Get<HealthComponent>().Current}");
         }
         
         [Command]
         private void af_change_sr(UnitResourcesType type)
         {
-            _entity.Get<ResourceViewComponent>().secondaryResourcesType = type;
+            _entity.Get<ResourceViewComponent>().SecondaryResourcesType = type;
             _entity.Get<ChangeSecondaryResourceEvent>();
         }
     }

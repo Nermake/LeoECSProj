@@ -18,7 +18,7 @@ namespace Timer
         {
             _lastTick = Duration;
             
-            Debug.Log("The buff with tick has been successfully applied");
+            Debug.Log("The buff with Tick has been successfully applied");
             _timerBuff = new SyncedTimer(TimerType.OneSecTick, Duration);
             _timerBuff.Start();
             _timerBuff.TimerValueChanged += OnTimerValueChanged;
@@ -35,7 +35,7 @@ namespace Timer
         
         private void OnTimerFinished()
         {
-            Debug.Log("The buff with tick has been successfully finished");
+            Debug.Log("The buff with Tick has been successfully finished");
             _timerBuff.TimerFinished -= OnTimerFinished;
             _timerBuff.TimerValueChanged -= OnTimerValueChanged;
         }

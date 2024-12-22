@@ -1,11 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct TransformComponent
     {
-        public Transform modelTransform;
+        public Transform ModelTransform;
     }
 }

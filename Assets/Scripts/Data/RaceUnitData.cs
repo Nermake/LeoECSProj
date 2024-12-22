@@ -7,9 +7,7 @@ namespace Data
     public class RaceUnitData : ScriptableObject
     {
         [SerializeField] private AttributesUnitComponent _attributes;
-        [SerializeField] private ResourcesUnitComponent _resources;
 
         public AttributesUnitComponent Attributes => _attributes;
-        public ResourcesUnitComponent Resources => _resources;
     }
 }

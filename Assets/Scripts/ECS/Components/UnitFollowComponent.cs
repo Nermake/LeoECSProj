@@ -1,13 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct UnitFollowComponent
     {
-        public Vector2 target;
-        public Vector2 targetDirection;
-        public float distanceToStop;
+        public Vector2 Target;
+        public Vector2 TargetDirection;
+        public float DistanceToStop;
     }
 }

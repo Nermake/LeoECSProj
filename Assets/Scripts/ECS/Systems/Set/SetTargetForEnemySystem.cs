@@ -1,13 +1,19 @@
 ﻿using ECS.Components;
 using ECS.Data;
 using Leopotam.Ecs;
+using Services.Locator;
 
 namespace ECS.Systems
 {
-    public sealed class SetTargetForEnemySystem : IEcsRunSystem
+    public sealed class SetTargetForEnemySystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<UnitFollowComponent, TransformComponent> _enemyFilter = null;
-        private readonly RuntimeData _runtimeData = null;
+        private readonly EcsFilter<UnitFollowComponent, TransformComponent> _enemyFilter;
+        private RuntimeData _runtimeData;
+        
+        public void Init()
+        {
+            _runtimeData = ServiceLocator.Current.Get<RuntimeData>();
+        }
 
         public void Run()
         {
@@ -21,15 +27,15 @@ namespace ECS.Systems
                 ref var followComponent = ref _enemyFilter.Get1(entity);
                 ref var enemyTransformComponent = ref _enemyFilter.Get2(entity);
                 
-                ref var playerTransform = ref playerTransformComponent.modelTransform;
-                ref var enemyTransform = ref enemyTransformComponent.modelTransform;
-                ref var targetDirection = ref followComponent.targetDirection;
+                ref var playerTransform = ref playerTransformComponent.ModelTransform;
+                ref var enemyTransform = ref enemyTransformComponent.ModelTransform;
+                ref var targetDirection = ref followComponent.TargetDirection;
                 
                 var playerPosition = playerTransform.position;
                 var enemyPosition = enemyTransform.position;
 
-                followComponent.target.x = playerPosition.x;
-                followComponent.target.y = playerPosition.y;
+                followComponent.Target.x = playerPosition.x;
+                followComponent.Target.y = playerPosition.y;
                 
                 targetDirection.x = playerPosition.x - enemyPosition.x;
                 targetDirection.y = playerPosition.y - enemyPosition.y;

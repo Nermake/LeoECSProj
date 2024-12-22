@@ -1,5 +1,4 @@
 ﻿using ECS.Events;
-using ECS.Requests;
 using ECS.Tags;
 using Leopotam.Ecs;
 
@@ -7,7 +6,7 @@ namespace ECS.Systems
 {
     public sealed class InitializeEntitySystem : IEcsRunSystem // todo delete
     {
-        private readonly EcsFilter<InitializeEntityRequest> _initFilter = null;
+        private readonly EcsFilter<InitializeEntityEvent> _initFilter;
 
         public void Run()
         {
@@ -16,7 +15,7 @@ namespace ECS.Systems
                 ref var entity = ref _initFilter.GetEntity(i);
                 ref var request = ref _initFilter.Get1(i);
 
-                request.entityReference.Entity = entity;
+                request.EntityReference.Entity = entity;
                 
                 if (entity.Has<PlayerTag>())
                 {
@@ -27,7 +26,7 @@ namespace ECS.Systems
                     entity.Get<InitializeEnemyEvent>();
                 }
                 
-                entity.Del<InitializeEntityRequest>();
+                entity.Del<InitializeEntityEvent>();
             }
         }
     }

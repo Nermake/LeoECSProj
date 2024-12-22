@@ -1,21 +1,19 @@
-﻿using System;
-using Ability;
+﻿using Ability;
 using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct AbilityComponent
     {
-        public string title;
-        public string description;
-        public Sprite icon;
+        public string Title;
+        public string Description;
+        public Sprite Icon;
 
-        public float cooldownTime;
-        public float cooldownTimer;
+        public float CooldownTime;
+        public float CooldownTimer;
 
-        public float resourceCost;
-        public ResourceCostType resourceType;
+        public float ResourceCost;
+        public ResourceCostType ResourceType;
     }
 }
 

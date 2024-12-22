@@ -6,7 +6,7 @@ namespace ECS.Systems
 {
     public sealed class PlayerMovementSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<MovableComponent, DirectionComponent> _movableFilter = null;
+        private readonly EcsFilter<MovableComponent, DirectionComponent> _movableFilter;
         
         public void Run()
         {
@@ -15,9 +15,9 @@ namespace ECS.Systems
                 ref var movableComponent = ref _movableFilter.Get1(entity);
                 ref var directionComponent = ref _movableFilter.Get2(entity);
 
-                ref var direction = ref directionComponent.direction;
-                ref var rigidbody2D = ref movableComponent.rigidbody2D;
-                ref var speed = ref movableComponent.speed;
+                ref var direction = ref directionComponent.Direction;
+                ref var rigidbody2D = ref movableComponent.Rigidbody2D;
+                ref var speed = ref movableComponent.Speed;
                 
                 rigidbody2D.MovePosition(rigidbody2D.position + direction * speed * Time.deltaTime);
             }

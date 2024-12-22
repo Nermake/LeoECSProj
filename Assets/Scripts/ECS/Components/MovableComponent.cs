@@ -1,12 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct MovableComponent
     {
-        public Rigidbody2D rigidbody2D;
-        public float speed;
+        public Rigidbody2D Rigidbody2D;
+        public float Speed;
     }
 }
