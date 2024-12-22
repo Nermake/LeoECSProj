@@ -1,11 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct ProjectileComponent  //todo не используется
     {
-        public Vector2 direction;
+        public Vector2 Direction;
     }
 }

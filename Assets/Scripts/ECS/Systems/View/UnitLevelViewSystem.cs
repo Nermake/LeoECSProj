@@ -1,0 +1,43 @@
+﻿using ECS.Components;
+using ECS.Data;
+using ECS.Events;
+using Leopotam.Ecs;
+using Services.Locator;
+
+namespace ECS.Systems
+{
+    public sealed class UnitLevelViewSystem : IEcsInitSystem, IEcsRunSystem
+    {
+        private readonly EcsFilter<ChangeExperienceEvent> _changeExperienceFilter;
+        private readonly EcsFilter<LevelUpEvent> _levelUpFilter;
+        
+        private ExpBar _expBar;
+        
+        public void Init()
+        {
+            _expBar = ServiceLocator.Current.Get<SceneData>().ExpBar;
+        }
+
+        public void Run()
+        {
+            foreach (var i in _changeExperienceFilter)
+            {
+                ref var entity = ref _changeExperienceFilter.GetEntity(i);
+                ref var experienceComponent = ref entity.Get<ExperienceComponent>();
+                
+                _expBar.Image.fillAmount = experienceComponent.Current / experienceComponent.Limit;
+                
+                entity.Del<ChangeExperienceEvent>();
+            }
+            
+            foreach (var i in _levelUpFilter)
+            {
+                ref var entity = ref _changeExperienceFilter.GetEntity(i);
+                
+                _expBar.Counter.text = $"{entity.Get<ExperienceComponent>().Level}";
+                
+                entity.Del<LevelUpEvent>();
+            }
+        }
+    }
+}

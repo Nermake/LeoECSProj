@@ -1,29 +1,26 @@
-﻿using System;
-
-namespace ECS.Components
+﻿namespace ECS.Components
 {
-    [Serializable]
     public struct AttributesUnitComponent
     {
-        public int strength;
-        public int agility;
-        public int intelligence;
+        public int Strength;
+        public int Agility;
+        public int Intelligence;
         
         public static AttributesUnitComponent operator +(AttributesUnitComponent a, AttributesUnitComponent b)
         {
             return new AttributesUnitComponent()
             {
-                strength = a.strength + b.strength,
-                agility = a.agility + b.agility,
-                intelligence = a.intelligence + b.intelligence,
+                Strength = a.Strength + b.Strength,
+                Agility = a.Agility + b.Agility,
+                Intelligence = a.Intelligence + b.Intelligence,
             };
         }
 
         public override string ToString()
         {
-            var massage = $"strength: {strength} \n" +
-                          $"agility: {agility} \n" +
-                          $"intelligence: {intelligence}";
+            var massage = $"Strength: {Strength} \n" +
+                          $"Agility: {Agility} \n" +
+                          $"Intelligence: {Intelligence}";
             
             return massage;
         }

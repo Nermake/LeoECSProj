@@ -16,6 +16,6 @@ namespace Data
         [field: SerializeField] public ResourceCostType ResourceType { get; private set; }
         [field: SerializeField] public AbilityStatus Status { get; private set; }
         
-        public AbilityBuilder GetBuilder() => new(this);
+        //public AbilityBuilder GetBuilder() => new(this);
     }
 }

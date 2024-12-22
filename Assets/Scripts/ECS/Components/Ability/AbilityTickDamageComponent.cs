@@ -1,14 +1,11 @@
-﻿using System;
-
-namespace ECS.Components
+﻿namespace ECS.Components
 {
-    [Serializable]
     public class AbilityTickDamageComponent
     {
-        public float damage;
-        public float scaleDamage;
+        public float Damage;
+        public float ScaleDamage;
         
-        public float duration;
-        public float tickInterval;
+        public float Duration;
+        public float TickInterval;
     }
 }

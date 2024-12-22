@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace ECS.Components
+﻿namespace ECS.Components
 {
-    [Serializable]
     public struct AbilityEffectComponent
     {
-        public float duration;
+        public float Duration;
     }
 }

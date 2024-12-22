@@ -8,9 +8,10 @@ namespace ECS.Systems
 {
     public sealed class SpawnEnemySystem : IEcsRunSystem //todo refactor
     {
-        private readonly SceneData _sceneData = null;
-        private readonly RuntimeData _runtimeData = null;
-        private readonly EntityFactory _entityFactory = null;
+        private readonly SceneData _sceneData;
+        private readonly RuntimeData _runtimeData;
+        //private readonly EntityFactory _entityFactory;
+        
         private readonly List<GameObject> _enemies = new();
 
         private const float _tickDuration = 3f;
@@ -26,9 +27,9 @@ namespace ECS.Systems
             {
                 var rSpawnPoint = Random.Range(0, _sceneData.SpawnPoints.Count);
 
-                var enemy = _entityFactory.CreateEntity(_runtimeData.BuilderData.EnemyMileBuilder,
-                    _sceneData.EnemyPrefab, _sceneData.SpawnPoints[rSpawnPoint]);
-                _enemies.Add(enemy);
+                //var enemy = _entityFactory.CreateEntity(_runtimeData.BuilderData.EnemyMileBuilder,
+                    //_sceneData.EnemyPrefab, _sceneData.SpawnPoints[rSpawnPoint]);
+                //_enemies.Add(enemy);
 
                 _timer = 0;
             }

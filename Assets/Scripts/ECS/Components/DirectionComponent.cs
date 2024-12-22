@@ -1,11 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {
-    [Serializable]
     public struct DirectionComponent
     {
-        public Vector2 direction;
+        public Vector2 Direction;
     }
 }

@@ -1,0 +1,33 @@
+﻿using ECS.Events;
+using ECS.Tags;
+using Leopotam.Ecs;
+
+namespace ECS.Systems
+{
+    public sealed class InitializeEntitySystem : IEcsRunSystem // todo delete
+    {
+        private readonly EcsFilter<InitializeEntityEvent> _initFilter;
+
+        public void Run()
+        {
+            foreach (var i in _initFilter)
+            {
+                ref var entity = ref _initFilter.GetEntity(i);
+                ref var request = ref _initFilter.Get1(i);
+
+                request.EntityReference.Entity = entity;
+                
+                if (entity.Has<PlayerTag>())
+                {
+                    entity.Get<InitializePlayerEvent>();
+                }
+                if (entity.Has<EnemyTag>())
+                {
+                    entity.Get<InitializeEnemyEvent>();
+                }
+                
+                entity.Del<InitializeEntityEvent>();
+            }
+        }
+    }
+}

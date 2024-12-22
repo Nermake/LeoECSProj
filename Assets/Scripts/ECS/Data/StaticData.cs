@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-using Configs;
+﻿using Configs;
+using Services.Locator;
 using UnityEngine;
 
 namespace ECS.Data
 {
-    [CreateAssetMenu(fileName = "EcsData", menuName = "Game Data/ECS/StaticConstrains Data", order = 0)]
-    public class StaticData : ScriptableObject
+    [CreateAssetMenu(fileName = "EcsData", menuName = "Game Data/ECS/Static Data", order = 0)]
+    public class StaticData : ScriptableObject, IService
     {
-        [field: SerializeField] public List<Transform> spawnPoints { get; set; }
-        [field: SerializeField] public GameObject playerPrefab { get; private set; }
-        [field: SerializeField] public EntityConfig config { get; private set; }
+        [field: SerializeField] public LevelUpConfig LevelUpConfig { get; private set; }
     }
 }

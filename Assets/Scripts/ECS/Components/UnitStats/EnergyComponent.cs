@@ -1,12 +1,9 @@
-﻿using System;
-
-namespace ECS.Components
+﻿namespace ECS.Components
 {
-    [Serializable]
     public struct EnergyComponent
     {
-        public float max;
-        public float current;
-        public float regeneration;
+        public float Max;
+        public float Current;
+        public float Regeneration;
     }
 }

@@ -1,13 +1,10 @@
-﻿using Leopotam.Ecs;
-using UnityEngine;
+﻿using Logic.View;
+using Services.Locator;
 
 namespace ECS.Data
 {
-    public class RuntimeData
+    public class RuntimeData : IService
     {
-        public readonly BuilderData BuilderData = new();
-        
-        public GameObject Player;
-        public EcsEntity PlayerEntity = EcsEntity.Null;
+        public ActorView PlayerActor;
     }
 }

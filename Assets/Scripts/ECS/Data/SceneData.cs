@@ -1,16 +1,32 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Services.Locator;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ECS.Data
 {
-    public class SceneData : MonoBehaviour
+    public class SceneData : MonoBehaviour, IService
     {
-        [SerializeField] private List<Transform> _spawnPoints;
-        [SerializeField] private Transform _playerSpawnPoint;
-        [SerializeField] private GameObject _enemyPrefab;
+        [field: Header("Camera")]
+        [field: SerializeField] public Camera Camera { get; private set; }
+        [field: SerializeField] public Vector3 Offset { get; private set; }
+        [field: SerializeField] public float Smoothing { get; private set; }
+        
+        [field: Space, Header("Other References")]
+        [field: SerializeField] public List<Transform> SpawnPoints { get; private set; }
+        [field: SerializeField] public Transform PlayerSpawnPoint { get; private set; }
+        [field: SerializeField] public GameObject EnemyPrefab { get; private set; }
+        
+        [field: Space, Header("Test")]
+        [field: SerializeField] public ExpBar ExpBar { get; private set; }
+    }
 
-        public List<Transform> SpawnPoints => _spawnPoints;
-        public Transform PlayerSpawnPoint => _playerSpawnPoint;
-        public GameObject EnemyPrefab => _enemyPrefab;
+    [Serializable]
+    public class ExpBar
+    {
+        public Image Image;
+        public TMP_Text Counter;
     }
 }
