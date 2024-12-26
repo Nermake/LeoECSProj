@@ -79,7 +79,9 @@ namespace ECS
                 Add(new GenerateProjectileSystem()).
                 Add(new SetTargetForProjectileSystem()).
                 Add(new RegenerationUnitSystem()).
-                Add(new SetResourceViewSystem()).
+                Add(new SetGoldSystem()).
+                Add(new SetRaceSystem()).
+                Add(new SetResourceSystem()).
                 Add(new ResourceViewSystem()).
                 Add(new UnitLevelSystem()).
                 Add(new UnitLevelViewSystem()).

@@ -2,6 +2,7 @@
 using Game.Types;
 using Leopotam.Ecs;
 using UnityEngine;
+using View;
 
 namespace Logic.View
 {

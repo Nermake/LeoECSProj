@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4228d20c7526466a891dbaaf2ba49133, type: 3}
+  m_Name: RaceConfig
+  m_EditorClassIdentifier: 
+  <Races>k__BackingField:
+  - <Race>k__BackingField: 0
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 15ec14e5b409878459a708d32847779e, type: 3}
+  - <Race>k__BackingField: 1
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 445cd1718f8643543943bb99908f8785, type: 3}
+  - <Race>k__BackingField: 2
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 65a16ecc28bddba4388f3c2fb7d3989e, type: 3}
+  - <Race>k__BackingField: 3
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 93f91469b9ac05c46884212588e93229, type: 3}

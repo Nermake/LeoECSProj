@@ -41,6 +41,9 @@ namespace Services.Factory.Builders
             resourceViewComponent.ResourcePanelView = _view.ResourcePanel;
             resourceViewComponent.SecondaryResourcesType = UnitResourcesType.Mana;
             
+            ref var raceViewComponent = ref _entity.Get<RaceViewComponent>();
+            raceViewComponent.Provider = ServiceLocator.Current.Get<SceneData>().MainFrameView.RaceProvider;
+            
             ref var transformComponent = ref _entity.Get<TransformComponent>();
             transformComponent.ModelTransform = _view.transform;
             
@@ -52,6 +55,7 @@ namespace Services.Factory.Builders
         private void GetEvents()
         {
             _entity.Get<ChangeSecondaryResourceEvent>();
+            _entity.Get<ChangeRaceEvent>();
             _entity.Get<ChangeExperienceEvent>();
             _entity.Get<LevelUpEvent>();
         }

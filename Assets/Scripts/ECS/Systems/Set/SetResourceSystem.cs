@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class SetResourceViewSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class SetResourceSystem : IEcsInitSystem, IEcsRunSystem
     {
         private readonly EcsFilter<ResourceViewComponent, ChangeSecondaryResourceEvent> _filter = null;
 

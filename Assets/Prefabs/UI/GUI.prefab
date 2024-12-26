@@ -1386,6 +1386,7 @@ GameObject:
   - component: {fileID: 4249412248740574061}
   - component: {fileID: 3823840107824481446}
   - component: {fileID: 8489280671682086213}
+  - component: {fileID: 7828009628947119966}
   m_Layer: 5
   m_Name: MainFrame
   m_TagString: Untagged
@@ -1469,6 +1470,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &7828009628947119966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636743399482425646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799776332f47481f84c8c68e90a7dba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RaceProvider>k__BackingField:
+    <Image>k__BackingField: {fileID: 4446466185855504879}
+  <LevelProvider>k__BackingField:
+    <Image>k__BackingField: {fileID: 8061607642786756648}
+    <Counter>k__BackingField: {fileID: 1814854218908677843}
 --- !u!1 &5712580912786428751
 GameObject:
   m_ObjectHideFlags: 0

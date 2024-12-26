@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: EcsData
   m_EditorClassIdentifier: 
   <LevelUpConfig>k__BackingField: {fileID: 11400000, guid: a39ae3fe487b3fd4ca2ddb3b89e25520, type: 2}
+  <RaceConfig>k__BackingField: {fileID: 11400000, guid: 539c20fc933bd7b47a36431037a17d84, type: 2}

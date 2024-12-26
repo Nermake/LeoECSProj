@@ -1,5 +1,5 @@
 ﻿using Game.Types;
-using Logic.View;
+using View;
 
 namespace ECS.Components
 {

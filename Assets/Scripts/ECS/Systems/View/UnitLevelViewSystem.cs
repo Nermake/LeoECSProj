@@ -3,6 +3,7 @@ using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
 using Services.Locator;
+using View;
 
 namespace ECS.Systems
 {
@@ -11,11 +12,11 @@ namespace ECS.Systems
         private readonly EcsFilter<ChangeExperienceEvent> _changeExperienceFilter;
         private readonly EcsFilter<LevelUpEvent> _levelUpFilter;
         
-        private ExpBar _expBar;
+        private LevelProvider _levelProvider;
         
         public void Init()
         {
-            _expBar = ServiceLocator.Current.Get<SceneData>().ExpBar;
+            _levelProvider = ServiceLocator.Current.Get<SceneData>().MainFrameView.LevelProvider;
         }
 
         public void Run()
@@ -25,7 +26,7 @@ namespace ECS.Systems
                 ref var entity = ref _changeExperienceFilter.GetEntity(i);
                 ref var experienceComponent = ref entity.Get<ExperienceComponent>();
                 
-                _expBar.Image.fillAmount = experienceComponent.Current / experienceComponent.Limit;
+                _levelProvider.Image.fillAmount = experienceComponent.Current / experienceComponent.Limit;
                 
                 entity.Del<ChangeExperienceEvent>();
             }
@@ -34,7 +35,7 @@ namespace ECS.Systems
             {
                 ref var entity = ref _changeExperienceFilter.GetEntity(i);
                 
-                _expBar.Counter.text = $"{entity.Get<ExperienceComponent>().Level}";
+                _levelProvider.Counter.text = $"{entity.Get<ExperienceComponent>().Level}";
                 
                 entity.Del<LevelUpEvent>();
             }

@@ -1,0 +1,60 @@
+﻿using ECS.Components;
+using ECS.Data;
+using ECS.Events;
+using Leopotam.Ecs;
+using Services.Locator;
+using View;
+
+namespace ECS.Systems
+{
+    public sealed class SetGoldSystem : IEcsInitSystem, IEcsRunSystem
+    {
+        private readonly EcsFilter<GoldComponent, AddGoldEvent> _addGoldFilter;
+        private readonly EcsFilter<GoldComponent, RemoveGoldEvent> _removeGoldFilter;
+        private readonly EcsFilter<ChangeGoldEvent> _changeGoldFilter;
+
+        private GoldProvider _goldProvider;
+        
+        public void Init()
+        {
+            _goldProvider = ServiceLocator.Current.Get<SceneData>().GoldProvider;
+        }
+        
+        public void Run()
+        {
+            foreach (var i in _addGoldFilter)
+            {
+                ref var entity = ref _addGoldFilter.GetEntity(i);
+                
+                ref var goldComponent = ref _addGoldFilter.Get1(i);
+                ref var addGoldEvent = ref _addGoldFilter.Get2(i);
+                
+                goldComponent.Amount += addGoldEvent.Amount;
+                
+                entity.Get<ChangeGoldEvent>().Amount = goldComponent.Amount;
+                entity.Del<AddGoldEvent>();
+            }
+
+            foreach (var i in _removeGoldFilter)
+            {
+                ref var entity = ref _removeGoldFilter.GetEntity(i);
+                
+                ref var goldComponent = ref _removeGoldFilter.Get1(i);
+                ref var removeGoldEvent = ref _removeGoldFilter.Get2(i);
+                
+                goldComponent.Amount -= removeGoldEvent.Amount;
+                
+                entity.Get<ChangeGoldEvent>().Amount = goldComponent.Amount;
+                entity.Del<RemoveGoldEvent>();
+            }
+
+            foreach (var i in _changeGoldFilter)
+            {
+                ref var changeGoldEvent = ref _changeGoldFilter.Get1(i);
+                
+                _goldProvider.Counter.text = changeGoldEvent.Amount.ToString();
+                _changeGoldFilter.GetEntity(i).Del<ChangeGoldEvent>();
+            }
+        }
+    }
+}

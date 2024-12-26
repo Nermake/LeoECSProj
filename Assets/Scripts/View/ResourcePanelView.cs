@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Logic.View
+namespace View
 {
     public class ResourcePanelView : MonoBehaviour
     {
