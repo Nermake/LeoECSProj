@@ -1,4 +1,4 @@
-﻿using ECS.Blocks;
+﻿using ECS.Events;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ namespace ECS.Systems
 {
     public sealed class RemovesProhibitionMoveSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<BlockMoveDuration> _blockFilter;
+        private readonly EcsFilter<BlockMoveDurationEvent> _blockFilter;
         
         public void Run()
         {
@@ -19,7 +19,7 @@ namespace ECS.Systems
                 
                 if (blockMoveComponent.Time <= 0)
                 {
-                    entity.Del<BlockMoveDuration>();
+                    entity.Del<BlockMoveDurationEvent>();
                 }
             }
         }

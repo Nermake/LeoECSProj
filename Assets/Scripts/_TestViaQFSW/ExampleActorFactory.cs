@@ -1,12 +1,10 @@
 ﻿using ECS.Components;
 using ECS.Events;
-using ECS.Systems;
 using Game.Types;
 using Leopotam.Ecs;
 using Logic.View;
 using QFSW.QC;
 using Services.Factory;
-using Services.Factory.Builders;
 using Services.Locator;
 using UnityEngine;
 using Voody.UniLeo;
@@ -51,7 +49,7 @@ namespace _TestViaQFSW
         [Command]
         private void af_change_sr(UnitResourcesType type)
         {
-            _entity.Get<ResourceViewComponent>().SecondaryResourcesType = type;
+            _entity.Get<ResourceComponent>().SecondaryResourcesType = type;
             _entity.Get<ChangeSecondaryResourceEvent>();
         }
     }

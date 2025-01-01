@@ -10,7 +10,7 @@ namespace ECS.Systems
 {
     public sealed class SetResourceSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<ResourceViewComponent, ChangeSecondaryResourceEvent> _filter = null;
+        private readonly EcsFilter<ResourceComponent, ChangeSecondaryResourceEvent> _resourceFilter;
 
         private Color _healthColor;
         private Color _manaColor;
@@ -30,24 +30,31 @@ namespace ECS.Systems
             _rageColor = rage;
         }
         
-        public void Run()
+        public void Run()// todo ты тут ддумал про пул, хз короче =)
         {
-            foreach (var i in _filter)
+            foreach (var i in _resourceFilter)
             {
-                ref var resourceViewComponent = ref _filter.Get1(i);
+                ref var resourceViewComponent = ref _resourceFilter.Get1(i);
                 resourceViewComponent.ResourcePanelView.Health.color = _healthColor;
                 
                 var secondaryResource = resourceViewComponent.ResourcePanelView.SecondaryResource;
-                
-                secondaryResource.color = resourceViewComponent.SecondaryResourcesType switch
+
+                switch (resourceViewComponent.SecondaryResourcesType)
                 {
-                    UnitResourcesType.Mana => _manaColor,
-                    UnitResourcesType.Energy => _energyColor,
-                    UnitResourcesType.Rage => _rageColor,
-                    _ => throw new ArgumentOutOfRangeException()
-                };
-                
-                _filter.GetEntity(i).Del<ChangeSecondaryResourceEvent>();
+                    case UnitResourcesType.Mana:
+                        secondaryResource.color = _manaColor;
+                        break;
+                    case UnitResourcesType.Energy:
+                        secondaryResource.color = _energyColor;
+                        break;
+                    case UnitResourcesType.Rage:
+                        secondaryResource.color = _rageColor;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+
+                _resourceFilter.GetEntity(i).Del<ChangeSecondaryResourceEvent>();
             }
         }
     }

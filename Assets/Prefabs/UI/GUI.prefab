@@ -1252,7 +1252,7 @@ GameObject:
   - component: {fileID: 3954903186122417374}
   - component: {fileID: 876253903688724653}
   m_Layer: 5
-  m_Name: CurrentHealth
+  m_Name: CurrentSecondary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1487,6 +1487,15 @@ MonoBehaviour:
   <LevelProvider>k__BackingField:
     <Image>k__BackingField: {fileID: 8061607642786756648}
     <Counter>k__BackingField: {fileID: 1814854218908677843}
+  <ResourceProvider>k__BackingField:
+    <Health>k__BackingField:
+      <Image>k__BackingField: {fileID: 4710883308582686657}
+      <CurrentHealth>k__BackingField: {fileID: 301316604513371662}
+      <Regeneration>k__BackingField: {fileID: 7672628882679224587}
+    <SecondaryResource>k__BackingField:
+      <Image>k__BackingField: {fileID: 8174009954458640846}
+      <CurrentHealth>k__BackingField: {fileID: 876253903688724653}
+      <Regeneration>k__BackingField: {fileID: 4425177825934638402}
 --- !u!1 &5712580912786428751
 GameObject:
   m_ObjectHideFlags: 0

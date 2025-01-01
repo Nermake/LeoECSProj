@@ -4,12 +4,13 @@ using Game.Types;
 using Logic.View;
 using UnityEngine;
 
-namespace Services.Factory.Builders
+namespace Services.Factory
 {
     public class EntityConfig : ScriptableObject
     {
         [field: Header("UnitResource")]
         [field: SerializeField] public List<UnitResource> UnitResources { get; private set; }
+        [field: SerializeField] public UnitResourcesType SecondaryResource { get; private set; }
         
         [field: Header("View")]
         [field: SerializeField] public ActorView ActorView { get; private set; }

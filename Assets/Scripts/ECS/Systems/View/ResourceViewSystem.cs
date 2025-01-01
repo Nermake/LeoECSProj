@@ -7,7 +7,7 @@ namespace ECS.Systems
 {
     public class ResourceViewSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<HealthComponent, ResourceViewComponent> _resourceFilter;
+        private readonly EcsFilter<HealthComponent, ResourceComponent> _resourceFilter;
         
         public void Run()
         {

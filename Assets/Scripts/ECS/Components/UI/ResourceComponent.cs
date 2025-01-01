@@ -3,7 +3,7 @@ using View;
 
 namespace ECS.Components
 {
-    public struct ResourceViewComponent
+    public struct ResourceComponent
     {
         public ResourcePanelView ResourcePanelView;
         public UnitResourcesType SecondaryResourcesType;

@@ -2,18 +2,20 @@
 using Game.Types;
 using UnityEngine;
 
-namespace Services.Factory.Builders
+namespace Services.Factory
 {
     [CreateAssetMenu(fileName = "HeroConfig", menuName = "Game/Hero Config")]
-    public sealed class HeroConfig : EntityConfig
+    public sealed class HeroConfig : MovableEntityConfig
     {
         [field: Header("UnitRace")]
-        [field: SerializeField] public AttributesUnitComponent RaceAttributes { get; private set; }
         [field: SerializeField] public RaceType RaceType { get; private set; }
         
         [field: Header("UnitClass")] 
-        [field: SerializeField] public AttributesUnitComponent ClassAttributes { get; private set; }
+        [field: SerializeField] public AttributesUnitComponent ClassAttributes { get; private set; } // todo
         [field: SerializeField] public ClassType ClassType { get; private set; }
+        
+        [field: Header("DefaultResources")]
+        [field: SerializeField] public int Gold { get; private set; } // todo
         
         public override EntityBuilder GetBuilder()
         {

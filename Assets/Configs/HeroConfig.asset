@@ -29,15 +29,14 @@ MonoBehaviour:
     current: 0
     regeneration: 1
     type: 3
+  <SecondaryResource>k__BackingField: 0
   <ActorView>k__BackingField: {fileID: 8451109971592554728, guid: 5ed77c49f88df4d45b72ec18469272d3, type: 3}
   <Team>k__BackingField: 1
-  <RaceAttributes>k__BackingField:
-    strength: 10
-    agility: 5
-    intelligence: 2
+  <Speed>k__BackingField: 5
   <RaceType>k__BackingField: 0
   <ClassAttributes>k__BackingField:
-    strength: 0
-    agility: 2
-    intelligence: 4
+    Strength: 0
+    Agility: 0
+    Intelligence: 0
   <ClassType>k__BackingField: 0
+  <Gold>k__BackingField: 0

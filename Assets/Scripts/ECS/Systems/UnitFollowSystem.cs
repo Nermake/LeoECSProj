@@ -1,4 +1,4 @@
-﻿using ECS.Blocks;
+﻿using ECS.Events;
 using ECS.Components;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -8,7 +8,7 @@ namespace ECS.Systems
     public sealed class UnitFollowSystem : IEcsRunSystem
     {
         private readonly EcsFilter<UnitFollowComponent, MovableComponent>.
-            Exclude<BlockMoveDuration> _followFilter;
+            Exclude<BlockMoveDurationEvent> _followFilter;
         
         public void Run()
         {

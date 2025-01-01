@@ -6,7 +6,7 @@ using Logic.View;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Services.Factory.Builders
+namespace Services.Factory
 {
     public class EntityBuilder
     {

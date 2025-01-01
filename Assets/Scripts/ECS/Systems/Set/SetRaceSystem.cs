@@ -29,11 +29,11 @@ namespace ECS.Systems
 
                 heroRaceMark.RaceType = changeRaceEvent.NewRace;
 
-                if (_filter.GetEntity(i).Has<RaceViewComponent>())
+                if (_filter.GetEntity(i).Has<RaceComponent>())
                 {
-                    ref var raceViewComponent = ref _filter.GetEntity(i).Get<RaceViewComponent>();
+                    ref var raceViewComponent = ref _filter.GetEntity(i).Get<RaceComponent>();
 
-                    foreach (var current in _raceConfig.Races)
+                    foreach (var current in _raceConfig.RaceDats)
                     {
                         if (changeRaceEvent.NewRace == current.Race)
                         {

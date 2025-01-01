@@ -6,9 +6,9 @@ using ECS.Tags;
 using Game.Types;
 using Leopotam.Ecs;
 using Services.Locator;
-using UnityEngine;
+using View;
 
-namespace Services.Factory.Builders
+namespace Services.Factory
 {
     public class HeroBuilder : EntityBuilder
     {
@@ -20,42 +20,58 @@ namespace Services.Factory.Builders
         {
             base.Make();
             
+            GetServices();
             GetEvents();
             GetMark();
             
             _entity.Get<PlayerTag>();
-            _entity.Get<DirectionComponent>();
+            
             _entity.Get<AttackCharacteristicComponent>();
             _entity.Get<DefenseStatUnitComponent>();
-            _entity.Get<AttributesUnitComponent>() += _config.RaceAttributes + _config.ClassAttributes;
             
-            ref var experienceComponent = ref _entity.Get<ExperienceComponent>();
-            experienceComponent.Level = 1;
-            experienceComponent.Current = 0;
-            experienceComponent.Limit = ServiceLocator.Current.Get<StaticData>().LevelUpConfig.Limit[0];
+            ref var goldComponent = ref _entity.Get<GoldComponent>();
+            goldComponent.Amount = _config.Gold;
             
             ref var actorViewComponent = ref _entity.Get<ActorViewComponent>();
             actorViewComponent.ActorView = _view;
             
-            ref var resourceViewComponent = ref _entity.Get<ResourceViewComponent>();
+            ref var resourceViewComponent = ref _entity.Get<ResourceComponent>();
             resourceViewComponent.ResourcePanelView = _view.ResourcePanel;
-            resourceViewComponent.SecondaryResourcesType = UnitResourcesType.Mana;
+            resourceViewComponent.SecondaryResourcesType = _config.SecondaryResource;
+        }
+
+        private void GetServices() // todo передалать, создай тут команду на отправку в какой нить ViewController
+        {
+            var serviceLocator = ServiceLocator.Current;
             
-            ref var raceViewComponent = ref _entity.Get<RaceViewComponent>();
-            raceViewComponent.Provider = ServiceLocator.Current.Get<SceneData>().MainFrameView.RaceProvider;
+            var raceDats = serviceLocator.Get<StaticData>().RaceConfig.RaceDats;
+            foreach (var raceData in raceDats)
+            {
+                if (raceData.Race == _config.RaceType)
+                {
+                    _entity.Get<AttributesUnitComponent>() += raceData.Attributes + _config.ClassAttributes;
+                }
+            } 
             
-            ref var transformComponent = ref _entity.Get<TransformComponent>();
-            transformComponent.ModelTransform = _view.transform;
+            ref var resourceProviderComponent = ref _entity.Get<ResourceProviderComponent>();
+            resourceProviderComponent.ResourceProvider = serviceLocator.Get<SceneData>().MainFrameView.ResourceProvider;
             
-            ref var movableComponent = ref _entity.Get<MovableComponent>();
-            movableComponent.Rigidbody2D = _view.GetComponent<Rigidbody2D>();
-            movableComponent.Speed = 5f;
+            ref var experienceComponent = ref _entity.Get<ExperienceComponent>();
+            experienceComponent.Level = 1;
+            experienceComponent.Current = 0;
+            experienceComponent.Limit = serviceLocator.Get<StaticData>().LevelUpConfig.Limit[0];
+            
+            ref var raceViewComponent = ref _entity.Get<RaceComponent>();
+            raceViewComponent.Provider = serviceLocator.Get<SceneData>().MainFrameView.RaceProvider;
+            
+            serviceLocator.Get<RuntimeData>().PlayerActor = _view;
         }
         
         private void GetEvents()
         {
             _entity.Get<ChangeSecondaryResourceEvent>();
             _entity.Get<ChangeRaceEvent>();
+            _entity.Get<ChangeGoldEvent>();
             _entity.Get<ChangeExperienceEvent>();
             _entity.Get<LevelUpEvent>();
         }

@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-//using Builder;
-using Configs;
 using ECS;
 using Services.Factory;
 using UnityEngine;
@@ -46,11 +44,11 @@ namespace Spawner
 
         private void FilledDictionary()
         {
-            _entityReferences.Add(UnitType.None, null);
-            _entityReferences.Add(UnitType.Player, _entityConfig.player);
-            _entityReferences.Add(UnitType.Projectile, _entityConfig.projectile);
-            _entityReferences.Add(UnitType.EnemyMile, _entityConfig.enemyMile);
-            _entityReferences.Add(UnitType.EnemyRange, _entityConfig.enemyRange);
+            // _entityReferences.Add(UnitType.None, null);
+            // _entityReferences.Add(UnitType.Player, _entityConfig.player);
+            // _entityReferences.Add(UnitType.Projectile, _entityConfig.projectile);
+            // _entityReferences.Add(UnitType.EnemyMile, _entityConfig.enemyMile);
+            // _entityReferences.Add(UnitType.EnemyRange, _entityConfig.enemyRange);
             
             //_builders.Add(UnitType.None, null);
             //_builders.Add(UnitType.Player, _playerBuilder);

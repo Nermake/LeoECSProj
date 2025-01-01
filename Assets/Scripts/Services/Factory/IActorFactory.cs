@@ -1,5 +1,4 @@
 ﻿using Leopotam.Ecs;
-using Services.Factory.Builders;
 using UnityEngine;
 
 namespace Services.Factory

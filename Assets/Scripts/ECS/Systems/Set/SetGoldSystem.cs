@@ -3,6 +3,7 @@ using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
 using Services.Locator;
+using UnityEngine;
 using View;
 
 namespace ECS.Systems
@@ -41,10 +42,19 @@ namespace ECS.Systems
                 
                 ref var goldComponent = ref _removeGoldFilter.Get1(i);
                 ref var removeGoldEvent = ref _removeGoldFilter.Get2(i);
-                
-                goldComponent.Amount -= removeGoldEvent.Amount;
-                
-                entity.Get<ChangeGoldEvent>().Amount = goldComponent.Amount;
+
+                if (goldComponent.Amount < removeGoldEvent.Amount)
+                {
+                    Debug.LogError($"[{nameof(SetGoldSystem)}] : attempt to subtract more than possible \n" +
+                                   $"|>===> now: {goldComponent.Amount}\n" +
+                                   $"|>===> remove: {removeGoldEvent.Amount}\n");
+                }
+                else
+                {
+                    goldComponent.Amount -= removeGoldEvent.Amount;
+                                    
+                    entity.Get<ChangeGoldEvent>().Amount = goldComponent.Amount;
+                }
                 entity.Del<RemoveGoldEvent>();
             }
 
