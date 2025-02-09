@@ -2,6 +2,7 @@
 using Leopotam.Ecs;
 using Services.Factory;
 using UnityEngine;
+using View;
 
 namespace Services.Locator
 {
@@ -15,10 +16,10 @@ namespace Services.Locator
         private RuntimeData _runtimeData;
         private InputController _inputController;
         
-        public void Init(EcsWorld world, RuntimeData runtimeData)
+        public void Init(EcsWorld world)
         {
             _actorFactory = new ActorFactory(world);
-            _runtimeData = runtimeData;
+            _runtimeData = new RuntimeData();
             _inputController = new InputController();
             
             RegisterServices();

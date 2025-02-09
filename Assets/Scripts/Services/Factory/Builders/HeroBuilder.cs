@@ -36,7 +36,7 @@ namespace Services.Factory
             actorViewComponent.ActorView = _view;
             
             ref var resourceViewComponent = ref _entity.Get<ResourceComponent>();
-            resourceViewComponent.ResourcePanelView = _view.ResourcePanel;
+            resourceViewComponent.ResourcePlateView = _view.ResourcePlate;
             resourceViewComponent.SecondaryResourcesType = _config.SecondaryResource;
         }
 
@@ -54,7 +54,8 @@ namespace Services.Factory
             } 
             
             ref var resourceProviderComponent = ref _entity.Get<ResourceProviderComponent>();
-            resourceProviderComponent.ResourceProvider = serviceLocator.Get<SceneData>().MainFrameView.ResourceProvider;
+            resourceProviderComponent.HealthBarView = serviceLocator.Get<SceneData>().MainFrameView.HealthBarView;
+            resourceProviderComponent.SecondaryResourceBarView = serviceLocator.Get<SceneData>().MainFrameView.SecondaryResourceBarView;
             
             ref var experienceComponent = ref _entity.Get<ExperienceComponent>();
             experienceComponent.Level = 1;
@@ -62,7 +63,7 @@ namespace Services.Factory
             experienceComponent.Limit = serviceLocator.Get<StaticData>().LevelUpConfig.Limit[0];
             
             ref var raceViewComponent = ref _entity.Get<RaceComponent>();
-            raceViewComponent.Provider = serviceLocator.Get<SceneData>().MainFrameView.RaceProvider;
+            raceViewComponent.View = serviceLocator.Get<SceneData>().MainFrameView.RaceView;
             
             serviceLocator.Get<RuntimeData>().PlayerActor = _view;
         }

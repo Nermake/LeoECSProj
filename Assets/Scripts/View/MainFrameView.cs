@@ -4,8 +4,10 @@ namespace View
 {
     public class MainFrameView : MonoBehaviour
     {
-        [field: SerializeField] public RaceProvider RaceProvider { get; private set; }
-        [field: SerializeField] public LevelProvider LevelProvider { get; private set; }
-        [field: SerializeField] public ResourceProvider ResourceProvider { get; private set; }
+        [field: SerializeField] public RaceView RaceView { get; private set; }
+        [field: SerializeField] public LevelView LevelView { get; private set; }
+        [field: SerializeField] public ResourceBarView HealthBarView { get; private set; }
+        [field: SerializeField] public ResourceBarView SecondaryResourceBarView { get; private set; }
+        [field: SerializeField] public AbilityPanelView AbilityPanelView { get; private set; }
     }
 }

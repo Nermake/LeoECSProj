@@ -37,7 +37,7 @@ namespace ECS.Systems
                     {
                         if (changeRaceEvent.NewRace == current.Race)
                         {
-                            raceViewComponent.Provider.Image.sprite = current.Sprite;
+                            raceViewComponent.View.SetSprite(current.Sprite);
                         }
                     }
                 }

@@ -1,6 +1,6 @@
 ﻿namespace Game.Types
 {
-    public enum Team : byte
+    public enum Team : sbyte
     {
         None,
         Player,

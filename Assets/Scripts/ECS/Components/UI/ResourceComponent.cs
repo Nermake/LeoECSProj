@@ -5,7 +5,7 @@ namespace ECS.Components
 {
     public struct ResourceComponent
     {
-        public ResourcePanelView ResourcePanelView;
+        public ResourcePlateView ResourcePlateView;
         public UnitResourcesType SecondaryResourcesType;
     }
 }

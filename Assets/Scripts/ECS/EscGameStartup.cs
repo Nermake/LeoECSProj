@@ -1,4 +1,3 @@
-using ECS.Data;
 using ECS.Events;
 using ECS.Systems;
 using Leopotam.Ecs;
@@ -10,21 +9,19 @@ namespace ECS
 {
     public class EscGameStartup : MonoBehaviour
     {
-        [SerializeField] private GameServices _gameServices; // todo
+        [SerializeField] private GameServices _gameServices;
         
         private EcsWorld _world;
         private EcsSystems _systems;
         private EcsSystems _systemsForFixedUpdate;
-        
-        private RuntimeData _runtimeData;
 
         private void Awake()
         {
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
             _systemsForFixedUpdate = new EcsSystems(_world);
-            _runtimeData = new RuntimeData();
-            _gameServices.Init(_world, _runtimeData);
+            
+            _gameServices.Init(_world);
 
             _systems.ConvertScene();
 
@@ -99,8 +96,6 @@ namespace ECS
         {
             if (_systems == null) return;
             if (_systemsForFixedUpdate == null) return;
-
-            _runtimeData = null;
             
             _systems.Destroy();
             _systems = null;

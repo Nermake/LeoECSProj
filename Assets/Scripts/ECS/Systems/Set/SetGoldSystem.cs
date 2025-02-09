@@ -14,11 +14,11 @@ namespace ECS.Systems
         private readonly EcsFilter<GoldComponent, RemoveGoldEvent> _removeGoldFilter;
         private readonly EcsFilter<ChangeGoldEvent> _changeGoldFilter;
 
-        private GoldProvider _goldProvider;
+        private GoldPanelView _goldPanelView;
         
         public void Init()
         {
-            _goldProvider = ServiceLocator.Current.Get<SceneData>().GoldProvider;
+            _goldPanelView = ServiceLocator.Current.Get<SceneData>().GoldPanelView;
         }
         
         public void Run()
@@ -62,7 +62,7 @@ namespace ECS.Systems
             {
                 ref var changeGoldEvent = ref _changeGoldFilter.Get1(i);
                 
-                _goldProvider.Counter.text = changeGoldEvent.Amount.ToString();
+                _goldPanelView.SetGoldAmount(changeGoldEvent.Amount);
                 _changeGoldFilter.GetEntity(i).Del<ChangeGoldEvent>();
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace Game.Types
 {
-    public enum ClassType : byte
+    public enum ClassType : sbyte
     {
         Druid,
         Hunter,

@@ -22,6 +22,6 @@ namespace ECS.Data
         
         [field: Space, Header("Test")]
         [field: SerializeField] public MainFrameView MainFrameView { get; private set; }
-        [field: SerializeField] public GoldProvider GoldProvider { get; private set; }
+        [field: SerializeField] public GoldPanelView GoldPanelView { get; private set; }
     }
 }

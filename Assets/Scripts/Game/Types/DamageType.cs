@@ -1,6 +1,6 @@
 ﻿namespace Game.Types
 {
-    public enum DamageType : byte
+    public enum DamageType : sbyte
     {
         Physic,
         Magic,

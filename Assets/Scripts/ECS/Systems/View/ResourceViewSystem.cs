@@ -17,7 +17,7 @@ namespace ECS.Systems
                 ref var healthComponent = ref _resourceFilter.Get1(i);
                 ref var resourceViewComponent = ref _resourceFilter.Get2(i);
 
-                ref var view = ref resourceViewComponent.ResourcePanelView;
+                ref var view = ref resourceViewComponent.ResourcePlateView;
                 var secondaryResource = resourceViewComponent.SecondaryResourcesType;
                 
                 var healthBar = view.Health;

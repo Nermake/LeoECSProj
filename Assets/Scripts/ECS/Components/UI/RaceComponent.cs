@@ -4,6 +4,6 @@ namespace ECS.Components
 {
     public struct RaceComponent
     {
-        public RaceProvider Provider;
+        public RaceView View;
     }
 }

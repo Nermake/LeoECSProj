@@ -12,11 +12,11 @@ namespace ECS.Systems
         private readonly EcsFilter<ChangeExperienceEvent> _changeExperienceFilter;
         private readonly EcsFilter<LevelUpEvent> _levelUpFilter;
         
-        private LevelProvider _levelProvider;
+        private LevelView _levelView;
         
         public void Init()
         {
-            _levelProvider = ServiceLocator.Current.Get<SceneData>().MainFrameView.LevelProvider;
+            _levelView = ServiceLocator.Current.Get<SceneData>().MainFrameView.LevelView;
         }
 
         public void Run()
@@ -26,7 +26,7 @@ namespace ECS.Systems
                 ref var entity = ref _changeExperienceFilter.GetEntity(i);
                 ref var experienceComponent = ref entity.Get<ExperienceComponent>();
                 
-                _levelProvider.Image.fillAmount = experienceComponent.Current / experienceComponent.Limit;
+                _levelView.SetPercent(experienceComponent.Current / experienceComponent.Limit);
                 
                 entity.Del<ChangeExperienceEvent>();
             }
@@ -35,7 +35,7 @@ namespace ECS.Systems
             {
                 ref var entity = ref _changeExperienceFilter.GetEntity(i);
                 
-                _levelProvider.Counter.text = $"{entity.Get<ExperienceComponent>().Level}";
+                _levelView.SetLevel(entity.Get<ExperienceComponent>().Level);
                 
                 entity.Del<LevelUpEvent>();
             }

@@ -35,9 +35,9 @@ namespace ECS.Systems
             foreach (var i in _resourceFilter)
             {
                 ref var resourceViewComponent = ref _resourceFilter.Get1(i);
-                resourceViewComponent.ResourcePanelView.Health.color = _healthColor;
+                resourceViewComponent.ResourcePlateView.Health.color = _healthColor;
                 
-                var secondaryResource = resourceViewComponent.ResourcePanelView.SecondaryResource;
+                var secondaryResource = resourceViewComponent.ResourcePlateView.SecondaryResource;
 
                 switch (resourceViewComponent.SecondaryResourcesType)
                 {

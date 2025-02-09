@@ -4,6 +4,7 @@ namespace ECS.Components
 {
     public struct ResourceProviderComponent
     {
-        public ResourceProvider ResourceProvider;
+        public ResourceBarView HealthBarView;
+        public ResourceBarView SecondaryResourceBarView;
     }
 }
