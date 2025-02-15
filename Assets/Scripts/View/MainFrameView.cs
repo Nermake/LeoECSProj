@@ -9,5 +9,8 @@ namespace View
         [field: SerializeField] public ResourceBarView HealthBarView { get; private set; }
         [field: SerializeField] public ResourceBarView SecondaryResourceBarView { get; private set; }
         [field: SerializeField] public AbilityPanelView AbilityPanelView { get; private set; }
+        
+        public void Show() => gameObject.SetActive(true);
+        public void Hide() => gameObject.SetActive(false);
     }
 }

@@ -1609,6 +1609,7 @@ MonoBehaviour:
   <LevelView>k__BackingField: {fileID: 9060381430986944322}
   <HealthBarView>k__BackingField: {fileID: 3612049108236491720}
   <SecondaryResourceBarView>k__BackingField: {fileID: 2659522312466134768}
+  <AbilityPanelView>k__BackingField: {fileID: 8966360125657891829}
 --- !u!1 &5712580912786428751
 GameObject:
   m_ObjectHideFlags: 0

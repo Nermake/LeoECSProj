@@ -19,10 +19,10 @@ namespace ECS.Systems
         
         public void Init()
         {
-            ColorUtility.TryParseHtmlString(StringConstants.PROGRESS_BAR_COLLOR_HEALTH, out var health);
-            ColorUtility.TryParseHtmlString(StringConstants.PROGRESS_BAR_COLLOR_MANA, out var mana);
-            ColorUtility.TryParseHtmlString(StringConstants.PROGRESS_BAR_COLLOR_ENERGY, out var energy);
-            ColorUtility.TryParseHtmlString(StringConstants.PROGRESS_BAR_COLLOR_RAGE, out var rage);
+            ColorUtility.TryParseHtmlString(StringConstants.RESOURCE_COLLOR_HEALTH, out var health);
+            ColorUtility.TryParseHtmlString(StringConstants.RESOURCE_COLLOR_MANA, out var mana);
+            ColorUtility.TryParseHtmlString(StringConstants.RESOURCE_COLLOR_ENERGY, out var energy);
+            ColorUtility.TryParseHtmlString(StringConstants.RESOURCE_COLLOR_RAGE, out var rage);
             
             _healthColor = health;
             _manaColor = mana;

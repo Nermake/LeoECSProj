@@ -12,13 +12,13 @@ namespace Services.Locator
         [SerializeField] private SceneData _sceneData;
         [SerializeField] private StaticData _staticData;
         
-        private ActorFactory _actorFactory;
+        private EntityFactory _entityFactory;
         private RuntimeData _runtimeData;
         private InputController _inputController;
         
         public void Init(EcsWorld world)
         {
-            _actorFactory = new ActorFactory(world);
+            _entityFactory = new EntityFactory(world);
             _runtimeData = new RuntimeData();
             _inputController = new InputController();
             
@@ -31,7 +31,7 @@ namespace Services.Locator
             ServiceLocator.Initialize();
             
             ServiceLocator.Current.Register(_runtimeData);
-            ServiceLocator.Current.Register(_actorFactory);
+            ServiceLocator.Current.Register(_entityFactory);
             ServiceLocator.Current.Register(_inputController);
             ServiceLocator.Current.Register(_destroyer);
             ServiceLocator.Current.Register(_staticData);

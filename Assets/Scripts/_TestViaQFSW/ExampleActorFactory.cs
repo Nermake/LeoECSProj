@@ -16,20 +16,20 @@ namespace _TestViaQFSW
         [SerializeField] private HeroConfig _heroConfig;
         [SerializeField] Transform _spawnPoint;
         
-        private IActorFactory _actorFactory; // todo
+        private IEntityFactory _entityFactory; // todo
         private ActorView _view;
         private EcsEntity _entity;
 
         private void Start()
         {
-            _actorFactory = ServiceLocator.Current.Get<ActorFactory>();
-            _actorFactory = new ActorFactory(WorldHandler.GetWorld());
+            _entityFactory = ServiceLocator.Current.Get<EntityFactory>();
+            _entityFactory = new EntityFactory(WorldHandler.GetWorld());
         }
         
         [Command]
         private void af_ch()
         {
-            ref var entity =  ref _actorFactory.CreateEntity(_heroConfig, _spawnPoint.position);
+            ref var entity =  ref _entityFactory.CreateUnitEntity(_heroConfig, _spawnPoint.position);
             _entity = entity;
         }
 

@@ -14,7 +14,7 @@ namespace ECS.Systems
         //private readonly EntityFactory _entityFactory; // todo refactor on actorfactory 
 
         //private PoolMono<EntityReference> _poolMono; todo реализуй пул под данную задачу
-        private IActorFactory _actorFactory;
+        private IEntityFactory _entityFactory;
         private StaticData _staticData;
         private RuntimeData _runtimeData;
         //private BaseEntityBuilder _builder;
@@ -23,7 +23,7 @@ namespace ECS.Systems
         public void Init()
         {
             //_poolMono = new PoolMono<EntityReference>(_staticData.config.entity, 5, true);
-            _actorFactory = ServiceLocator.Current.Get<ActorFactory>();
+            _entityFactory = ServiceLocator.Current.Get<EntityFactory>();
             _staticData = ServiceLocator.Current.Get<StaticData>();
             _runtimeData = ServiceLocator.Current.Get<RuntimeData>();
             
