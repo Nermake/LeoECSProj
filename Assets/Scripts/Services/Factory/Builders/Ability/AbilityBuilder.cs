@@ -38,7 +38,7 @@ namespace Services.Factory
             abilityComponent.Title = _config.Title;
             abilityComponent.Description = _config.Description;
             abilityComponent.Icon = _config.Icon;
-
+            
             ref var abilityStateComponent = ref _entity.Get<AbilityStateComponent>();
             
             if (_config.CooldownTime != 0)
@@ -62,14 +62,14 @@ namespace Services.Factory
                 abilityCastComponent.CastTime = _config.CastTime;
                 abilityCastComponent.CastTimer = 0;
             }
-
+            
+            _owner.Get<AbilityOwnerComponent>().Abilities.Add(_config.ID, _entity);
+            
             _view.Init(_owner, _entity);
             _view.SetAbilityImage(_config.Icon);
             _view.SetLevel(1);
             _view.SetResourceCost(Mathf.RoundToInt(_config.ResourceCost));
             
-            _owner.Get<AbilityOwnerComponent>().Abilities.Add(_config.ID, _entity);
-
             switch (_config.ResourcesType)
             {
                 case UnitResourcesType.Health:
@@ -99,6 +99,13 @@ namespace Services.Factory
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            
+            SetAbilityApplyState(AbilityApplyState.Normal);
+        }
+
+        protected void SetAbilityApplyState(AbilityApplyState state)
+        {
+            _entity.Get<AbilityApplyStateComponent>().State = state;
         }
 
         public void NewEffect(in EcsEntity entity)

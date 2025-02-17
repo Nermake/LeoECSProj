@@ -1,5 +1,4 @@
-﻿using Ability;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ECS.Components
 {

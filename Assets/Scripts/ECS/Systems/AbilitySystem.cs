@@ -14,6 +14,7 @@ namespace ECS.Systems
         private readonly EcsFilter<AbilityCooldownComponent>.Exclude<AbilityNoCooldownFlag> _cooldownFilter;
         private readonly EcsFilter<AbilityCastComponent, AbilityStartCastEvent>.Exclude<AbilityNoCastFlag> _castFilter; //todo возможно фильтр надо будет переработать
         private readonly EcsFilter<BuffHeal> _buffHealFilter;
+        private readonly EcsFilter<AbilityApplyEvent> _abilityApplyFilter;
         
         private EntityFactory _entityFactory;
         
@@ -27,31 +28,38 @@ namespace ECS.Systems
             foreach (var i in _cooldownFilter)
             {
                 ref var entity = ref _cooldownFilter.GetEntity(i);
-                ref var abilityView = ref entity.Get<AbilityViewComponent>().AbilityView;
-                ref var abilityCooldownComponent = ref _cooldownFilter.Get1(i);
                 
-                abilityCooldownComponent.CooldownTimer -= Time.deltaTime;
-                //abilityView.SetCooldownTimer(); todo
-
-                if (abilityCooldownComponent.CooldownTimer >= abilityCooldownComponent.CooldownTime)
+                if (entity.Get<AbilityStateComponent>().State == AbilityState.Cooldown)
                 {
-                    entity.Get<AbilityReadyEvent>();
-                    entity.Get<AbilityStateComponent>().State = AbilityState.Ready;
+                    ref var abilityView = ref entity.Get<AbilityViewComponent>().AbilityView;
+                    ref var abilityCooldownComponent = ref _cooldownFilter.Get1(i);
+                
+                    abilityCooldownComponent.CooldownTimer -= Time.deltaTime;
+                    
+                    abilityView.SetCooldownTimer(abilityCooldownComponent.CooldownTimer < 60
+                        ? $"{Mathf.RoundToInt(abilityCooldownComponent.CooldownTimer)}s"
+                        : $"{Mathf.RoundToInt(abilityCooldownComponent.CooldownTimer / 60)}m");
+
+                    if (abilityCooldownComponent.CooldownTimer <= 0)
+                    {
+                        abilityView.SetCooldownTimer(string.Empty);
+                        
+                        entity.Get<AbilityReadyEvent>();
+                        entity.Get<AbilityStateComponent>().State = AbilityState.Ready;
+
+                        abilityCooldownComponent.CooldownTimer = abilityCooldownComponent.CooldownTime;
+                    }
                 }
             }
 
             foreach (var i in _castFilter)
             {
                 ref var entity = ref _castFilter.GetEntity(i);
-                ref var abilityCastComponent = ref _castFilter.Get1(i);
 
-                if (entity.Has<AbilityFreeCastEvent>())
-                {
-                    entity.Get<AbilityFinishCastEvent>();
-                    entity.Del<AbilityStartCastEvent>();
-                    
-                    abilityCastComponent.CastTimer = 0;
-                }
+                if (entity.Get<AbilityApplyStateComponent>().State == AbilityApplyState.Free
+                    || entity.Get<AbilityApplyStateComponent>().State == AbilityApplyState.Instant) continue;
+                
+                ref var abilityCastComponent = ref _castFilter.Get1(i);
                 
                 abilityCastComponent.CastTimer += Time.deltaTime;
 
@@ -70,6 +78,30 @@ namespace ECS.Systems
                 ref var buffHeal = ref _buffHealFilter.Get1(i);
                 
                 
+            }
+
+            foreach (var i in _abilityApplyFilter)
+            {
+                ref var entity = ref _abilityApplyFilter.GetEntity(i);
+                
+                // todo пока неясно как но задумка такая, перебрать все еффекты которые находядся в способности
+                // и добавить им компонент который их обработает
+                // вопрос как прокинуть нужные настройки для каждого из еффектов(цель и что нить ещё)
+                // todo logic of applying the ability
+                
+                entity.Del<AbilityApplyEvent>();
+            }
+        }
+        
+        public string FormatTime(float time)
+        {
+            if (time < 60)
+            {
+                return $"{Mathf.RoundToInt(time)}s";
+            }
+            else
+            {
+                return $"{Mathf.RoundToInt(time / 60)}m";
             }
         }
     }

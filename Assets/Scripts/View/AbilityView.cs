@@ -35,7 +35,7 @@ namespace View
         public void SetCooldownFillAmount(float value) => _cooldownImage.fillAmount = value;
         public void SetReadiness(Sprite sprite) => _readinessImage.sprite = sprite;
         public void SetLevel(sbyte value) => _level.text = $"Lvl. {value}";
-        public void SetCooldownTimer(int value, string liter) => _cooldownTimer.text = $"{value}{liter}.";
+        public void SetCooldownTimer(string time) => _cooldownTimer.text = time;
         public void SetResourceCost(int value) => _resourceCost.text = $"{value}";
         public void SetResourceColor(Color color) => _resourceCost.color = color;
         
