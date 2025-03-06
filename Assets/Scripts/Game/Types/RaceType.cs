@@ -1,6 +1,6 @@
 ﻿namespace Game.Types
 {
-    public enum RaceType : byte
+    public enum RaceType : sbyte
     {
         Orc,
         Troll,

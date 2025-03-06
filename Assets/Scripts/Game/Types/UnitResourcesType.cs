@@ -1,6 +1,6 @@
 ﻿namespace Game.Types
 {
-    public enum UnitResourcesType : byte
+    public enum UnitResourcesType : sbyte
     {
         Health,
         Mana,

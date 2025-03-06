@@ -1,6 +1,6 @@
 ﻿namespace Game.Types
 {
-    public enum MagicType : byte
+    public enum MagicType : sbyte
     {
         None,
         Fire,

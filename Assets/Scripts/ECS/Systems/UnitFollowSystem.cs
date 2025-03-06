@@ -1,4 +1,4 @@
-﻿using ECS.Blocks;
+﻿using ECS.Events;
 using ECS.Components;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -8,7 +8,7 @@ namespace ECS.Systems
     public sealed class UnitFollowSystem : IEcsRunSystem
     {
         private readonly EcsFilter<UnitFollowComponent, MovableComponent>.
-            Exclude<BlockMoveDuration> _followFilter;
+            Exclude<BlockMoveDurationEvent> _followFilter;
         
         public void Run()
         {
@@ -23,7 +23,7 @@ namespace ECS.Systems
                 ref var rigidbody2D = ref movableComponent.Rigidbody2D;
                 ref var speed = ref movableComponent.Speed;
 
-                if (!(distance <= Vector2.Distance(target, rigidbody2D.position))) return;
+                if (!(distance <= Vector2.Distance(target, rigidbody2D.position))) continue;
                 
                 rigidbody2D.MovePosition(rigidbody2D.position + targetDirection.normalized * speed * Time.deltaTime);
             }

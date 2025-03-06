@@ -29,7 +29,7 @@ namespace _TestViaQFSW
         [SerializeField] private ClassUnitData _warrior;
 
         //private readonly HeroEntityFactory _entityFactory = new();
-        private readonly IActorFactory _actorFactory;
+        private readonly IEntityFactory _entityFactory;
 
         [Command()]
         private void create_hero(Race raceType, Class classType)

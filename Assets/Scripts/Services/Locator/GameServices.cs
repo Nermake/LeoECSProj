@@ -1,5 +1,6 @@
 ﻿using ECS.Data;
 using Leopotam.Ecs;
+using Logic;
 using Services.Factory;
 using UnityEngine;
 
@@ -10,15 +11,16 @@ namespace Services.Locator
         [SerializeField] private Destroyer _destroyer;
         [SerializeField] private SceneData _sceneData;
         [SerializeField] private StaticData _staticData;
+        [SerializeField] private CursorTarget _cursorTarget;
         
-        private ActorFactory _actorFactory;
+        private EntityFactory _entityFactory;
         private RuntimeData _runtimeData;
         private InputController _inputController;
         
-        public void Init(EcsWorld world, RuntimeData runtimeData)
+        public void Init(EcsWorld world)
         {
-            _actorFactory = new ActorFactory(world);
-            _runtimeData = runtimeData;
+            _entityFactory = new EntityFactory(world);
+            _runtimeData = new RuntimeData();
             _inputController = new InputController();
             
             RegisterServices();
@@ -30,11 +32,12 @@ namespace Services.Locator
             ServiceLocator.Initialize();
             
             ServiceLocator.Current.Register(_runtimeData);
-            ServiceLocator.Current.Register(_actorFactory);
+            ServiceLocator.Current.Register(_entityFactory);
             ServiceLocator.Current.Register(_inputController);
             ServiceLocator.Current.Register(_destroyer);
             ServiceLocator.Current.Register(_staticData);
             ServiceLocator.Current.Register(_sceneData);
+            ServiceLocator.Current.Register(_cursorTarget);
         }
 
         private void InitServices()

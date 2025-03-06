@@ -5,16 +5,8 @@ namespace View
 {
     public class AbilityPanelView : MonoBehaviour
     {
-        private List<AbilitySlotView> _abilitySlotViews;
-
-        public void AddSlot()
-        {
-            
-        }
-
-        public void RemoveSlot()
-        {
-            
-        }
+        [SerializeField] private List<AbilityView> _abilityViews;
+        
+        public List<AbilityView> GetAbilityViews() => _abilityViews;
     }
 }

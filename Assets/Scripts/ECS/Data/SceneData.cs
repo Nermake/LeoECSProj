@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Services.Locator;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using View;
 
 namespace ECS.Data
 {
@@ -20,13 +18,8 @@ namespace ECS.Data
         [field: SerializeField] public GameObject EnemyPrefab { get; private set; }
         
         [field: Space, Header("Test")]
-        [field: SerializeField] public ExpBar ExpBar { get; private set; }
-    }
-
-    [Serializable]
-    public class ExpBar
-    {
-        public Image Image;
-        public TMP_Text Counter;
+        [field: SerializeField] public MainFrameView MainFrameView { get; private set; }
+        [field: SerializeField] public AbilityCastView AbilityCastView { get; private set; }
+        [field: SerializeField] public GoldPanelView GoldPanelView { get; private set; }
     }
 }

@@ -84,6 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3196419498107474913}
+  - component: {fileID: 722636553840906617}
   m_Layer: 5
   m_Name: GoldPanel
   m_TagString: Untagged
@@ -114,6 +115,19 @@ RectTransform:
   m_AnchoredPosition: {x: 92.3501, y: -30}
   m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &722636553840906617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3734779935011297200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57509794aa074f6b8fb1507006f16e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _counter: {fileID: 3892425566001010844}
 --- !u!1 &3909983544316685182
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +290,7 @@ GameObject:
   - component: {fileID: 896721617499423692}
   - component: {fileID: 3892425566001010844}
   m_Layer: 5
-  m_Name: Amount
+  m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

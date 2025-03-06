@@ -8,5 +8,6 @@ namespace ECS.Data
     public class StaticData : ScriptableObject, IService
     {
         [field: SerializeField] public LevelUpConfig LevelUpConfig { get; private set; }
+        [field: SerializeField] public RaceConfig RaceConfig { get; private set; }
     }
 }

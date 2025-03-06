@@ -1,4 +1,3 @@
-using ECS.Data;
 using ECS.Events;
 using ECS.Systems;
 using Leopotam.Ecs;
@@ -10,21 +9,19 @@ namespace ECS
 {
     public class EscGameStartup : MonoBehaviour
     {
-        [SerializeField] private GameServices _gameServices; // todo
+        [SerializeField] private GameServices _gameServices;
         
         private EcsWorld _world;
         private EcsSystems _systems;
         private EcsSystems _systemsForFixedUpdate;
-        
-        private RuntimeData _runtimeData;
 
         private void Awake()
         {
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
             _systemsForFixedUpdate = new EcsSystems(_world);
-            _runtimeData = new RuntimeData();
-            _gameServices.Init(_world, _runtimeData);
+            
+            _gameServices.Init(_world);
 
             _systems.ConvertScene();
 
@@ -74,13 +71,33 @@ namespace ECS
                 Add(new SetTargetForCameraSystem()).
                 Add(new CameraFollowSystem()).
                 Add(new SetTargetForEnemySystem()).
-                //Add(new SpawnEnemySystem()).
                 Add(new RemovesProhibitionMoveSystem()).
+                
+                Add(new AbilityReadinessSystem()).
+                Add(new AbilityInputSystem()).
+                Add(new AbilityApplySystem()).
+                Add(new AbilityWasteSystem()).
+                Add(new AbilityCooldownSystem()).
+                Add(new AbilityStartCastSystem()).
+                Add(new AbilityRunCastSystem()).
+                Add(new AbilityFinishCastSystem()).
+                
+                Add(new ImplementerSystem()).
+                Add(new EffectPeriodicSystem()).
+                
+                Add(new BuffHealSystem()).
+                
+                Add(new EffectDurationSystem()).
+                Add(new ImplementerDestroySystem()).
+                
                 Add(new GenerateProjectileSystem()).
                 Add(new SetTargetForProjectileSystem()).
                 Add(new RegenerationUnitSystem()).
-                Add(new SetResourceViewSystem()).
-                Add(new ResourceViewSystem()).
+                Add(new SetGoldSystem()).
+                Add(new SetRaceSystem()).
+                Add(new SetColorSecondaryResourceSystem()).
+                Add(new ResourcePlateSystem()).
+                Add(new ResourceFrameSystem()).
                 Add(new UnitLevelSystem()).
                 Add(new UnitLevelViewSystem()).
                 Add(new DeathSystem())
@@ -97,8 +114,6 @@ namespace ECS
         {
             if (_systems == null) return;
             if (_systemsForFixedUpdate == null) return;
-
-            _runtimeData = null;
             
             _systems.Destroy();
             _systems = null;

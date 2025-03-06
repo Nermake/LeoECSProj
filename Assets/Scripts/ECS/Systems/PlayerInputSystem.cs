@@ -8,7 +8,7 @@ namespace ECS.Systems
 {
     public sealed class PlayerInputSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<PlayerTag, DirectionComponent> _directionFilter;
+        private readonly EcsFilter<DirectionComponent, PlayerTag> _directionFilter;
         
         private InputController _inputController;
 
@@ -19,14 +19,17 @@ namespace ECS.Systems
         
         public void Run()
         {
-            var moveDirection = _inputController.Game.Move.ReadValue<Vector2>();
+            ref var entity = ref _directionFilter.GetEntity(0);
+            ref var directionComponent = ref _directionFilter.Get1(0);
             
-            foreach (var entity in _directionFilter)
-            {
-                ref var directionComponent = ref _directionFilter.Get2(entity);
+            var moveDirection = _inputController.Game.Move.ReadValue<Vector2>();
 
-                directionComponent.Direction = moveDirection;
+            if (moveDirection.x != 0 || moveDirection.y != 0)
+            {
+                //entity.Get<AbilityOwnerComponent>();
             }
+            
+            directionComponent.Direction = moveDirection;
         }
     }
 }

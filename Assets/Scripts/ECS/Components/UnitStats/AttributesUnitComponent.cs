@@ -1,5 +1,8 @@
-﻿namespace ECS.Components
+﻿using System;
+
+namespace ECS.Components
 {
+    [Serializable]
     public struct AttributesUnitComponent
     {
         public int Strength;
