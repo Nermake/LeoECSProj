@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Services.Factory
 {
-    [CreateAssetMenu(fileName = "HeroConfig", menuName = "Game/Hero Config")]
+    [CreateAssetMenu(fileName = "HeroConfig", menuName = "Game/Hero Config", order = 0)]
     public sealed class HeroConfig : MovableUnitConfig
     {
         [field: Header("UnitRace")]

@@ -1,6 +1,6 @@
-﻿using Game.Types;
+﻿using System.Collections.Generic;
+using Game.Types;
 using UnityEngine;
-using View;
 
 namespace Services.Factory
 {
@@ -15,13 +15,13 @@ namespace Services.Factory
         [field: SerializeField] public float CastTime { get; private set; }
         [field: SerializeField] public float ResourceCost { get; private set; }
         [field: SerializeField] public UnitResourcesType ResourcesType { get; private set; }
+        [field: SerializeField] public KeyCode KeyCode { get; private set; }
         
         [field: Header("View")]
-        [field: SerializeField] public AbilityView AbilityView { get; private set; }
         [field: SerializeField] public Sprite Icon { get; private set; }
         
         [field: Header("Effects")]
-        [field: SerializeField] public EffectConfig[] EffectConfigs { get; private set; }
+        [field: SerializeField] public List<EffectConfig> EffectConfigs { get; private set; }
 
         public virtual AbilityBuilder GetBuilder()
         {

@@ -29,20 +29,20 @@ namespace Services.Factory
             return ref builder.GetResult();
         }
 
-        public ref EcsEntity CreateAbilityEntity(AbilityConfig config, in EcsEntity owner, AbilityView view)
+        public ref EcsEntity CreateAbilityEntity(AbilityConfig config, EcsEntity owner, AbilityView view)
         {
             var builder = config.GetBuilder();
             
             builder.SetWorld(_world);
-            builder.SetOwner(in owner);
+            builder.SetOwner(owner);
             builder.SetView(view);
             builder.Make();
 
-            if (config.EffectConfigs.Length != 0)
+            if (config.EffectConfigs.Count != 0)
             {
                 foreach (var effectConfig in config.EffectConfigs)
                 {
-                    ref var effect = ref CreateAbilityEffectEntity(effectConfig, in builder.GetResult());
+                    ref var effect = ref CreateAbilityEffectEntity(effectConfig, builder.GetResult());
                     builder.NewEffect(effect);
                 }
             }
@@ -50,12 +50,12 @@ namespace Services.Factory
             return ref builder.GetResult();
         }
 
-        public ref EcsEntity CreateAbilityEffectEntity(EffectConfig config, in EcsEntity owner)
+        public ref EcsEntity CreateAbilityEffectEntity(EffectConfig config, EcsEntity owner)
         {
             var builder = config.GetBuilder();
             
             builder.SetWorld(_world);
-            builder.SetOwner(in owner);
+            //builder.SetOwner(owner);
             builder.Make();
             
             return ref builder.GetResult();

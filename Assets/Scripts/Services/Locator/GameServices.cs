@@ -1,8 +1,8 @@
 ﻿using ECS.Data;
 using Leopotam.Ecs;
+using Logic;
 using Services.Factory;
 using UnityEngine;
-using View;
 
 namespace Services.Locator
 {
@@ -11,6 +11,7 @@ namespace Services.Locator
         [SerializeField] private Destroyer _destroyer;
         [SerializeField] private SceneData _sceneData;
         [SerializeField] private StaticData _staticData;
+        [SerializeField] private CursorTarget _cursorTarget;
         
         private EntityFactory _entityFactory;
         private RuntimeData _runtimeData;
@@ -36,6 +37,7 @@ namespace Services.Locator
             ServiceLocator.Current.Register(_destroyer);
             ServiceLocator.Current.Register(_staticData);
             ServiceLocator.Current.Register(_sceneData);
+            ServiceLocator.Current.Register(_cursorTarget);
         }
 
         private void InitServices()

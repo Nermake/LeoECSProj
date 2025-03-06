@@ -4,6 +4,6 @@ namespace ECS.Events
 {
     public struct AbilityStartCastEvent : IEcsIgnoreInFilter
     {
-        
+
     }
 }

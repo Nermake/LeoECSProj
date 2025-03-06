@@ -8,8 +8,9 @@ namespace Services.Factory
     {
         //ref EcsEntity CreateArtifactEntity(ArtifactConfig config, in EcsEntity owner);
         ref EcsEntity CreateUnitEntity(UnitConfig config, Vector3 location = default);
-        ref EcsEntity CreateAbilityEntity(AbilityConfig config, in EcsEntity owner, AbilityView view);
-        ref EcsEntity CreateAbilityEffectEntity(EffectConfig config, in EcsEntity owner);
+        ref EcsEntity CreateAbilityEntity(AbilityConfig config, EcsEntity owner, AbilityView view);
+        //ref EcsEntity CreateAbilityEntity(AbilityConfig config, AbilityView view);
+        ref EcsEntity CreateAbilityEffectEntity(EffectConfig config, EcsEntity owner);
         //ref EcsEntity CreateProjectileEntity(ProjectileConfig config, in EcsEntity owner, Transform socket);
         //ref EcsEntity CreateWeaponEntity(WeaponConfig config, in EcsEntity owner, Transform socket);
     }

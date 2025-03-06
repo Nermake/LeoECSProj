@@ -9,12 +9,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Services.Locator;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
-using IDisposable = System.IDisposable;
 
 public partial class @InputController: IInputActionCollection2, IDisposable, IService
 {
@@ -30,12 +30,75 @@ public partial class @InputController: IInputActionCollection2, IDisposable, ISe
             ""actions"": [
                 {
                     ""name"": ""Move"",
-                    ""Type"": ""Value"",
+                    ""type"": ""Value"",
                     ""id"": ""37ac9f61-2e7a-48b4-834b-7702bf9e7e97"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Ability 1"",
+                    ""type"": ""Button"",
+                    ""id"": ""dc7b2c35-e671-4a3b-9bdf-5897e55b850f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability 2"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5723c00-0fd8-466f-b82b-a10df6bb7504"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability 3"",
+                    ""type"": ""Button"",
+                    ""id"": ""8d0427a3-4b3b-4ddf-8f52-017e943310b8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability 4"",
+                    ""type"": ""Button"",
+                    ""id"": ""da10e68c-9677-45d0-937c-b9f641021364"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability 5"",
+                    ""type"": ""Button"",
+                    ""id"": ""08642505-9952-4656-8f9d-20f182544ec0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability 6"",
+                    ""type"": ""Button"",
+                    ""id"": ""e33b5b67-b7b0-4423-8225-f7618aebfb18"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""959325a6-2044-44d0-acc2-dd7eccac6cc0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -93,6 +156,83 @@ public partial class @InputController: IInputActionCollection2, IDisposable, ISe
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d16bdeba-d152-4b5f-a09d-8770bf3bd2ff"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability 1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ce5a477-92fe-44f2-b97a-4bddeaf09d69"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability 2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48f07f6d-d2f9-441a-b77e-40cdc97d607d"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability 3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ccccf8df-bff3-4e63-b6d2-ff42e4b63de6"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability 4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cea6de89-8247-43e1-90ed-3d7084fee0b6"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability 5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7436d32-d8b4-47f4-8b3d-bca50c930240"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability 6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""deb18bcd-0d88-44cc-9530-cc9e6f296559"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -102,6 +242,13 @@ public partial class @InputController: IInputActionCollection2, IDisposable, ISe
         // Game
         m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
         m_Game_Move = m_Game.FindAction("Move", throwIfNotFound: true);
+        m_Game_Ability1 = m_Game.FindAction("Ability 1", throwIfNotFound: true);
+        m_Game_Ability2 = m_Game.FindAction("Ability 2", throwIfNotFound: true);
+        m_Game_Ability3 = m_Game.FindAction("Ability 3", throwIfNotFound: true);
+        m_Game_Ability4 = m_Game.FindAction("Ability 4", throwIfNotFound: true);
+        m_Game_Ability5 = m_Game.FindAction("Ability 5", throwIfNotFound: true);
+        m_Game_Ability6 = m_Game.FindAction("Ability 6", throwIfNotFound: true);
+        m_Game_Escape = m_Game.FindAction("Escape", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -164,11 +311,25 @@ public partial class @InputController: IInputActionCollection2, IDisposable, ISe
     private readonly InputActionMap m_Game;
     private List<IGameActions> m_GameActionsCallbackInterfaces = new List<IGameActions>();
     private readonly InputAction m_Game_Move;
+    private readonly InputAction m_Game_Ability1;
+    private readonly InputAction m_Game_Ability2;
+    private readonly InputAction m_Game_Ability3;
+    private readonly InputAction m_Game_Ability4;
+    private readonly InputAction m_Game_Ability5;
+    private readonly InputAction m_Game_Ability6;
+    private readonly InputAction m_Game_Escape;
     public struct GameActions
     {
         private @InputController m_Wrapper;
         public GameActions(@InputController wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Game_Move;
+        public InputAction @Ability1 => m_Wrapper.m_Game_Ability1;
+        public InputAction @Ability2 => m_Wrapper.m_Game_Ability2;
+        public InputAction @Ability3 => m_Wrapper.m_Game_Ability3;
+        public InputAction @Ability4 => m_Wrapper.m_Game_Ability4;
+        public InputAction @Ability5 => m_Wrapper.m_Game_Ability5;
+        public InputAction @Ability6 => m_Wrapper.m_Game_Ability6;
+        public InputAction @Escape => m_Wrapper.m_Game_Escape;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -181,6 +342,27 @@ public partial class @InputController: IInputActionCollection2, IDisposable, ISe
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Ability1.started += instance.OnAbility1;
+            @Ability1.performed += instance.OnAbility1;
+            @Ability1.canceled += instance.OnAbility1;
+            @Ability2.started += instance.OnAbility2;
+            @Ability2.performed += instance.OnAbility2;
+            @Ability2.canceled += instance.OnAbility2;
+            @Ability3.started += instance.OnAbility3;
+            @Ability3.performed += instance.OnAbility3;
+            @Ability3.canceled += instance.OnAbility3;
+            @Ability4.started += instance.OnAbility4;
+            @Ability4.performed += instance.OnAbility4;
+            @Ability4.canceled += instance.OnAbility4;
+            @Ability5.started += instance.OnAbility5;
+            @Ability5.performed += instance.OnAbility5;
+            @Ability5.canceled += instance.OnAbility5;
+            @Ability6.started += instance.OnAbility6;
+            @Ability6.performed += instance.OnAbility6;
+            @Ability6.canceled += instance.OnAbility6;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
         private void UnregisterCallbacks(IGameActions instance)
@@ -188,6 +370,27 @@ public partial class @InputController: IInputActionCollection2, IDisposable, ISe
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Ability1.started -= instance.OnAbility1;
+            @Ability1.performed -= instance.OnAbility1;
+            @Ability1.canceled -= instance.OnAbility1;
+            @Ability2.started -= instance.OnAbility2;
+            @Ability2.performed -= instance.OnAbility2;
+            @Ability2.canceled -= instance.OnAbility2;
+            @Ability3.started -= instance.OnAbility3;
+            @Ability3.performed -= instance.OnAbility3;
+            @Ability3.canceled -= instance.OnAbility3;
+            @Ability4.started -= instance.OnAbility4;
+            @Ability4.performed -= instance.OnAbility4;
+            @Ability4.canceled -= instance.OnAbility4;
+            @Ability5.started -= instance.OnAbility5;
+            @Ability5.performed -= instance.OnAbility5;
+            @Ability5.canceled -= instance.OnAbility5;
+            @Ability6.started -= instance.OnAbility6;
+            @Ability6.performed -= instance.OnAbility6;
+            @Ability6.canceled -= instance.OnAbility6;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
         public void RemoveCallbacks(IGameActions instance)
@@ -208,5 +411,12 @@ public partial class @InputController: IInputActionCollection2, IDisposable, ISe
     public interface IGameActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnAbility1(InputAction.CallbackContext context);
+        void OnAbility2(InputAction.CallbackContext context);
+        void OnAbility3(InputAction.CallbackContext context);
+        void OnAbility4(InputAction.CallbackContext context);
+        void OnAbility5(InputAction.CallbackContext context);
+        void OnAbility6(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
 }

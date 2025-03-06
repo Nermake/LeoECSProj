@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Services.Locator;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using View;
 
 namespace ECS.Data
@@ -22,6 +19,7 @@ namespace ECS.Data
         
         [field: Space, Header("Test")]
         [field: SerializeField] public MainFrameView MainFrameView { get; private set; }
+        [field: SerializeField] public AbilityCastView AbilityCastView { get; private set; }
         [field: SerializeField] public GoldPanelView GoldPanelView { get; private set; }
     }
 }

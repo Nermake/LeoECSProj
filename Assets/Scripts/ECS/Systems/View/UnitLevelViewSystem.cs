@@ -26,7 +26,7 @@ namespace ECS.Systems
                 ref var entity = ref _changeExperienceFilter.GetEntity(i);
                 ref var experienceComponent = ref entity.Get<ExperienceComponent>();
                 
-                _levelView.SetPercent(experienceComponent.Current / experienceComponent.Limit);
+                _levelView.SetFillAmount(experienceComponent.Current / experienceComponent.Limit);
                 
                 entity.Del<ChangeExperienceEvent>();
             }

@@ -9,7 +9,7 @@ namespace View
         [SerializeField] private Image _image;
         [SerializeField] public TMP_Text _counter;
 
-        public void SetPercent(float value) => _image.fillAmount = value;
+        public void SetFillAmount(float value) => _image.fillAmount = value;
         public void SetLevel(int value) => _counter.text = $"{value}";
     }
 }

@@ -8,7 +8,7 @@ namespace Logic.View
 {
     public class ActorView : EntityView
     {
-        [field: SerializeField] public ResourcePlateView ResourcePlate { get; private set; }
+        [field: SerializeField] public ResourceBarView Health { get; private set; }
         
         public virtual void ApplyDamage(Damage damage)
         {

@@ -1,18 +1,20 @@
-﻿using ECS.Components;
+﻿using System.Collections.Generic;
+using ECS.Components;
 using ECS.Data;
 using ECS.Events;
 using ECS.Mark;
 using ECS.Tags;
-using Game.Types;
 using Leopotam.Ecs;
 using Services.Locator;
-using View;
+using StaticString;
+using UnityEngine;
 
 namespace Services.Factory
 {
     public class HeroBuilder : MovableUnitBuilder
     {
         private readonly HeroConfig _config;
+        private Color _healthColor;
         
         public HeroBuilder(HeroConfig config) : base(config) => _config = config;
 
@@ -20,12 +22,14 @@ namespace Services.Factory
         {
             base.Make();
             
+            ColorUtility.TryParseHtmlString(StringConstants.RESOURCE_COLLOR_HEALTH, out var health);
+            _healthColor = health;
+            
             GetServices();
             GetEvents();
             GetMark();
             
             _entity.Get<PlayerTag>();
-            _entity.Get<AbilityOwnerComponent>();
             _entity.Get<AttackCharacteristicComponent>();
             _entity.Get<DefenseStatUnitComponent>();
             
@@ -35,9 +39,15 @@ namespace Services.Factory
             ref var actorViewComponent = ref _entity.Get<ActorViewComponent>();
             actorViewComponent.ActorView = _view;
             
-            ref var resourceViewComponent = ref _entity.Get<ResourceComponent>();
-            resourceViewComponent.ResourcePlateView = _view.ResourcePlate;
-            resourceViewComponent.SecondaryResourcesType = _config.SecondaryResource;
+            ref var resourceViewComponent = ref _entity.Get<HealthPlateComponent>();
+            resourceViewComponent.HealthPlate = _view.Health;
+            resourceViewComponent.HealthPlate.SetColor(_healthColor);
+            
+            ref var secondaryResourceComponent = ref _entity.Get<SecondaryResourceComponent>();
+            secondaryResourceComponent.Type = _config.SecondaryResource;
+            
+            ref var abilityContainerComponent = ref _entity.Get<AbilityContainerComponent>();
+            abilityContainerComponent.Abilities = new Dictionary<string, EcsEntity>();
         }
 
         private void GetServices() // todo передалать, создай тут команду на отправку в какой нить ViewController
@@ -53,9 +63,10 @@ namespace Services.Factory
                 }
             } 
             
-            ref var resourceProviderComponent = ref _entity.Get<ResourceProviderComponent>();
-            resourceProviderComponent.HealthBarView = serviceLocator.Get<SceneData>().MainFrameView.HealthBarView;
-            resourceProviderComponent.SecondaryResourceBarView = serviceLocator.Get<SceneData>().MainFrameView.SecondaryResourceBarView;
+            ref var resourceProviderComponent = ref _entity.Get<ResourceFrameComponent>();
+            resourceProviderComponent.HealthFrame = serviceLocator.Get<SceneData>().MainFrameView.HealthBarView;
+            resourceProviderComponent.HealthFrame.SetColor(_healthColor);
+            resourceProviderComponent.SecondaryResourceFrame = serviceLocator.Get<SceneData>().MainFrameView.SecondaryResourceBarView;
             
             ref var experienceComponent = ref _entity.Get<ExperienceComponent>();
             experienceComponent.Level = 1;

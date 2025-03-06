@@ -10,8 +10,9 @@ namespace View
         [SerializeField] private TMP_Text _current;
         [SerializeField] private TMP_Text _regeneration;
 
-        public void SetPercent(float value) => _image.fillAmount = value;
-        public void SetCurrentHealth(float value) => _current.text = $"{value}";
+        public void SetFillAmount(float value) => _image.fillAmount = value;
+        public void SetCurrent(float value) => _current.text = $"{value:f0}";
         public void SetRegeneration(float value) => _regeneration.text = $"{value}";
+        public void SetColor(Color color) => _image.color = color;
     }
 }

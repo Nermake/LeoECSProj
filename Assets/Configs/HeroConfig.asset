@@ -13,30 +13,29 @@ MonoBehaviour:
   m_Name: HeroConfig
   m_EditorClassIdentifier: 
   <UnitResources>k__BackingField:
-  - max: 100
-    current: 100
-    regeneration: 1.5
+  - max: 300
+    current: 1
+    regeneration: 1.2
     type: 0
-  - max: 75
-    current: 75
-    regeneration: 2.5
+  - max: 85
+    current: 85
+    regeneration: 1
     type: 1
   - max: 100
-    current: 0
-    regeneration: 2.5
+    current: 100
+    regeneration: 15
     type: 2
   - max: 100
-    current: 0
-    regeneration: 1
+    current: 100
+    regeneration: 0
     type: 3
-  <SecondaryResource>k__BackingField: 0
+  <SecondaryResource>k__BackingField: 1
   <ActorView>k__BackingField: {fileID: 8451109971592554728, guid: 5ed77c49f88df4d45b72ec18469272d3, type: 3}
-  <Team>k__BackingField: 1
   <Speed>k__BackingField: 5
   <RaceType>k__BackingField: 0
   <ClassAttributes>k__BackingField:
-    Strength: 0
-    Agility: 0
-    Intelligence: 0
+    Strength: 8
+    Agility: 6
+    Intelligence: 7
   <ClassType>k__BackingField: 0
   <Gold>k__BackingField: 0

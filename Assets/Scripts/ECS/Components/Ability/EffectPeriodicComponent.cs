@@ -3,5 +3,6 @@
     public struct EffectPeriodicComponent
     {
         public float TickInterval;
+        public float Timer;
     }
 }
