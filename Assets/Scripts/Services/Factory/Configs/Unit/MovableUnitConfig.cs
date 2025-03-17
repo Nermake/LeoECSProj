@@ -2,7 +2,7 @@
 
 namespace Services.Factory
 {
-    public class MovableUnitConfig : UnitConfig
+    public abstract class MovableUnitConfig : UnitConfig
     {
         [field: Header("UnitMovable")]
         [field: SerializeField] public float Speed { get; private set; }
