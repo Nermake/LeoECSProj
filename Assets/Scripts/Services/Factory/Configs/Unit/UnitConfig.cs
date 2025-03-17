@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Services.Factory
 {
-    public class UnitConfig : ScriptableObject
+    public abstract class UnitConfig : ScriptableObject
     {
         [field: Header("UnitResource")]
         [field: SerializeField] public List<UnitResource> UnitResources { get; private set; }
