@@ -1,23 +1,25 @@
 ﻿using ECS.Data;
 using Logic.View;
-using Services.Locator;
 using UnityEngine;
+using Zenject;
 
 namespace Services
 {
-    public class CursorTarget : MonoBehaviour, IService
+    public class CursorTarget : ITickable
     {
+        private readonly SceneData _sceneData;
+        
         private Camera _camera;
         private Ray _ray;
-        
+
         public RaycastHit Hit { get; private set; }
-
-        private void Start()
+        
+        public CursorTarget(SceneData sceneData)
         {
-            _camera = ServiceLocator.Current.Get<SceneData>().Camera;
+            _sceneData = sceneData;
         }
-
-        private void Update()
+        
+        public void Tick()
         {
             _ray = _camera.ScreenPointToRay(Input.mousePosition);
 

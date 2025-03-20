@@ -2,9 +2,9 @@
 using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine.InputSystem;
 using View;
+using Zenject;
 
 namespace ECS.Systems
 {
@@ -14,12 +14,16 @@ namespace ECS.Systems
         
         private List<AbilityView> _abilityViews;
         private InputController _inputController;
+
+        [Inject]
+        private void Construct(SceneData sceneData, InputController inputController)
+        {
+            _abilityViews = sceneData.MainFrameView.AbilityPanelView.GetAbilityViews();
+            _inputController = inputController;
+        }
         
         public void Init()
         {
-            _abilityViews = ServiceLocator.Current.Get<SceneData>().MainFrameView.AbilityPanelView.GetAbilityViews();
-            _inputController = ServiceLocator.Current.Get<InputController>();
-
             _inputController.Game.Ability1.started += OnApplyAbility1;
             _inputController.Game.Ability2.started += OnApplyAbility2;
             _inputController.Game.Ability3.started += OnApplyAbility3;

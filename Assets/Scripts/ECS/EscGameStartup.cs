@@ -1,67 +1,49 @@
-using ECS.Events;
+using System;
 using ECS.Systems;
 using Leopotam.Ecs;
-using Services.Locator;
-using UnityEngine;
 using Voody.UniLeo;
+using Zenject;
 
 namespace ECS
 {
-    public class EscGameStartup : MonoBehaviour
+    public sealed class EscGameStartup : IInitializable, ITickable, IFixedTickable, ILateTickable, IDisposable
     {
-        [SerializeField] private GameServices _gameServices;
-        
         private EcsWorld _world;
         private EcsSystems _systems;
-        private EcsSystems _systemsForFixedUpdate;
 
-        private void Awake()
+        public EscGameStartup(EcsWorld world, EcsSystems systems)
         {
-            _world = new EcsWorld();
-            _systems = new EcsSystems(_world);
-            _systemsForFixedUpdate = new EcsSystems(_world);
-            
-            _gameServices.Init(_world);
-
+            _world = world;
+            _systems = systems;
+        }
+        
+        public void Initialize()
+        {
             _systems.ConvertScene();
 
-            AddInjections();
-            AddOneFrames();
-            AddSystems();
+            AddRunSystems();
+            AddFixedRunSystems();
+            AddLateRunSystems();
         
             _systems?.Init();
-            _systemsForFixedUpdate?.Init();
         }
 
-        private void Update()
+        public void Tick()
         {
             _systems?.Run();
         }
 
-        private void FixedUpdate()
+        public void FixedTick()
         {
-            _systemsForFixedUpdate?.Run();
+            //_systems?.FixedRun();
         }
 
-        private void AddInjections()
+        public void LateTick()
         {
-            // _systems.
-            //     Inject().
-            //     Inject()
-            //     ;
-            //
-            // _systemsForFixedUpdate.
-            //     Inject().
-            //     Inject()
-            //     ;
+            //_systems?.LateRun();
         }
     
-        private void AddOneFrames()
-        {
-            _systems.OneFrame<DeathEvent>();
-        }
-    
-        private void AddSystems()
+        private void AddRunSystems()
         {
             _systems.
                 Add(new InitializeEntitySystem()).
@@ -90,7 +72,7 @@ namespace ECS
                 Add(new EffectDurationSystem()).
                 Add(new ImplementerDestroySystem()).
                 
-                Add(new GenerateProjectileSystem()).
+                //Add(new GenerateProjectileSystem()).
                 Add(new SetTargetForProjectileSystem()).
                 Add(new RegenerationUnitSystem()).
                 Add(new SetGoldSystem()).
@@ -102,27 +84,34 @@ namespace ECS
                 Add(new UnitLevelViewSystem()).
                 Add(new DeathSystem())
                 ;
+        }
 
-            _systemsForFixedUpdate.
+        private void AddFixedRunSystems()
+        {
+            _systems.
                 Add(new ProjectileMovementSystem()).
                 Add(new PlayerMovementSystem()).
                 Add(new UnitFollowSystem())
                 ;
         }
-    
-        private void OnDestroy()
-        {
-            if (_systems == null) return;
-            if (_systemsForFixedUpdate == null) return;
-            
-            _systems.Destroy();
-            _systems = null;
 
-            _systemsForFixedUpdate.Destroy();
-            _systemsForFixedUpdate = null;
-        
-            _world.Destroy();
-            _world = null;
+        private void AddLateRunSystems()
+        {
+            
+        }
+    
+        public void Dispose()
+        {
+            if (_systems != null)
+            {
+                _systems.Destroy();
+                _systems = null;
+            }
+            if (_world != null)
+            {
+                _world.Destroy();
+                _world = null;
+            }
         }
     }
 }

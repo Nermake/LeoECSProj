@@ -2,21 +2,22 @@
 using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
-using Services.Locator;
 using View;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class UnitLevelViewSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class UnitLevelViewSystem : IEcsRunSystem
     {
         private readonly EcsFilter<ChangeExperienceEvent> _changeExperienceFilter;
         private readonly EcsFilter<LevelUpEvent> _levelUpFilter;
         
         private LevelView _levelView;
         
-        public void Init()
+        [Inject]
+        public void Construct(SceneData sceneData)
         {
-            _levelView = ServiceLocator.Current.Get<SceneData>().MainFrameView.LevelView;
+            _levelView = sceneData.MainFrameView.LevelView;
         }
 
         public void Run()

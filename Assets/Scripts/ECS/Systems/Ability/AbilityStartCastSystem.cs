@@ -3,20 +3,21 @@ using ECS.Data;
 using ECS.Events;
 using Game.Types;
 using Leopotam.Ecs;
-using Services.Locator;
 using View;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class AbilityStartCastSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class AbilityStartCastSystem : IEcsRunSystem
     {
         private readonly EcsFilter<AbilityStartCastEvent> _startCsatFilter;
         
         private AbilityCastView _view;
 
-        public void Init()
+        [Inject]
+        private void Construct(SceneData sceneData)
         {
-            _view = ServiceLocator.Current.Get<SceneData>().AbilityCastView;
+            _view = sceneData.AbilityCastView;
         }
         
         public void Run()

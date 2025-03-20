@@ -4,21 +4,17 @@ using ECS.Tags;
 using Leopotam.Ecs;
 using Logic.View;
 using Services;
-using Services.Locator;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class CursorTargetSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class CursorTargetSystem : IEcsRunSystem
     {
         private readonly EcsFilter<AbilityTargetComponent, PlayerTag> _filter;
         
-        private CursorTarget _cursorTarget;
-        private ActorView _last;
+        [Inject] private readonly CursorTarget _cursorTarget;
         
-        public void Init()
-        {
-            _cursorTarget = ServiceLocator.Current.Get<CursorTarget>();
-        }
+        private ActorView _last;
 
         public void Run()
         {

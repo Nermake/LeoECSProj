@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class PlayerMovementSystem : IEcsRunSystem
+    public sealed class PlayerMovementSystem : IEcsFixedRunSystem
     {
         private readonly EcsFilter<MovableComponent, DirectionComponent> _movableFilter;
         
-        public void Run()
+        public void FixedRun()
         {
             foreach (var entity in _movableFilter)
             {

@@ -1,10 +1,12 @@
 ﻿using Leopotam.Ecs;
-using Services.Locator;
+using Zenject;
 
 namespace ECS.Systems
 {
     public sealed class InitializeInputControllerSystem : IEcsInitSystem
     {
-        public void Init() => ServiceLocator.Current.Get<InputController>().Game.Enable();
+        [Inject] private readonly InputController _inputController;
+        
+        public void Init() => _inputController.Game.Enable();
     }
 }

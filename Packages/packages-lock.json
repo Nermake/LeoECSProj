@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.leopotam.ecs": {
-      "version": "https://github.com/Leopotam/ecs.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "1213c31c9ef8325d48e74a52b345c4db242d038b"
-    },
     "com.leopotam.ecs-ui": {
       "version": "https://github.com/Leopotam/ecs-ui.git",
       "depth": 0,

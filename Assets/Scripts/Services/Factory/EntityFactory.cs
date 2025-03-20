@@ -1,11 +1,10 @@
 ﻿using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine;
 using View;
 
 namespace Services.Factory
 {
-    public class EntityFactory : IEntityFactory, IService
+    public class EntityFactory : IEntityFactory
     {
         private readonly EcsWorld _world;
 

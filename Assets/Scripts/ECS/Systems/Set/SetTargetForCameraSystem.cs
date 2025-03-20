@@ -1,19 +1,15 @@
 ﻿using ECS.Components;
 using ECS.Data;
 using Leopotam.Ecs;
-using Services.Locator;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class SetTargetForCameraSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class SetTargetForCameraSystem : IEcsRunSystem
     {
         private readonly EcsFilter<CameraFollowComponent> _cameraFilter = null;
-        private RuntimeData _runtimeData;
         
-        public void Init()
-        {
-            _runtimeData = ServiceLocator.Current.Get<RuntimeData>();
-        }
+        [Inject] private readonly RuntimeData _runtimeData;
         
         public void Run()
         {

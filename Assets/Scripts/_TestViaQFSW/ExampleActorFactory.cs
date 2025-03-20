@@ -2,12 +2,10 @@
 using ECS.Events;
 using Game.Types;
 using Leopotam.Ecs;
-using Logic.View;
 using QFSW.QC;
 using Services.Factory;
-using Services.Locator;
 using UnityEngine;
-using Voody.UniLeo;
+using Zenject;
 
 namespace _TestViaQFSW
 {
@@ -16,15 +14,8 @@ namespace _TestViaQFSW
         [SerializeField] private HeroConfig _config;
         [SerializeField] Transform _spawnPoint;
 
-        private IEntityFactory _entityFactory; // todo
-        private ActorView _view;
+        [Inject] private EntityFactory _entityFactory; // todo
         private EcsEntity _entity;
-
-        private void Start()
-        {
-            _entityFactory = ServiceLocator.Current.Get<EntityFactory>();
-            _entityFactory = new EntityFactory(WorldHandler.GetWorld());
-        }
 
         [Command]
         private void af_ch()

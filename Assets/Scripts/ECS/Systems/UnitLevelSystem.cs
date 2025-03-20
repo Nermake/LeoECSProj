@@ -1,23 +1,17 @@
-﻿using ECS.Components;
-using ECS.Data;
+﻿using Configs;
+using ECS.Components;
 using ECS.Events;
 using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class UnitLevelSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class UnitLevelSystem : IEcsRunSystem
     {
         private readonly EcsFilter<ExperienceComponent, AddExperienceEvent> _addExperienceFilter = null;
-
-        private StaticData _staticData;
-        private SceneData _sceneData;
         
-        public void Init()
-        {
-            _staticData = ServiceLocator.Current.Get<StaticData>();
-        }
+        [Inject] private readonly LevelUpConfig _levelUpConfig;
         
         public void Run()
         {
@@ -36,8 +30,7 @@ namespace ECS.Systems
                 {
                     experienceComponent.Level++;
                     experienceComponent.Current = 0;
-                    experienceComponent.Limit =
-                        _staticData.LevelUpConfig.Limit[experienceComponent.Level - 1];
+                    experienceComponent.Limit = _levelUpConfig.Limit[experienceComponent.Level - 1];
                     
                     entity.Get<LevelUpEvent>();
                 }

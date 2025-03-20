@@ -3,19 +3,18 @@ using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
 using Services.Factory;
-using Services.Locator;
 using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class GenerateProjectileSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class GenerateProjectileSystem// : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<ShootPointComponent> _shootFilter;
+        /*private readonly EcsFilter<ShootPointComponent> _shootFilter;
         //private readonly EntityFactory _entityFactory; // todo refactor on actorfactory 
 
         //private PoolMono<EntityReference> _poolMono; todo реализуй пул под данную задачу
         private IEntityFactory _entityFactory;
-        private StaticData _staticData;
+        private StaticDataInstaller _staticDataInstaller;
         private RuntimeData _runtimeData;
         //private BaseEntityBuilder _builder;
         private GameObject _projectile;
@@ -24,7 +23,7 @@ namespace ECS.Systems
         {
             //_poolMono = new PoolMono<EntityReference>(_staticData.config.entity, 5, true);
             _entityFactory = ServiceLocator.Current.Get<EntityFactory>();
-            _staticData = ServiceLocator.Current.Get<StaticData>();
+            _staticDataInstaller = ServiceLocator.Current.Get<StaticDataInstaller>();
             _runtimeData = ServiceLocator.Current.Get<RuntimeData>();
             
             //_builder = _runtimeData.BuilderData.ProjectileBuilder;
@@ -61,6 +60,6 @@ namespace ECS.Systems
                     //shootPointComponent.Timer = 0;
                 }
             }
-        }
+        }*/
     }
 }

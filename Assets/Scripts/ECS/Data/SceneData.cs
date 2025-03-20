@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using Services.Locator;
 using UnityEngine;
 using View;
 
 namespace ECS.Data
 {
-    public class SceneData : MonoBehaviour, IService
+    public class SceneData : MonoBehaviour
     {
         [field: Header("Camera")]
         [field: SerializeField] public Camera Camera { get; private set; }

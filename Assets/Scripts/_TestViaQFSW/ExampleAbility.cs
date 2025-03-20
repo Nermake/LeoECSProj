@@ -1,14 +1,9 @@
-﻿using System;
-using ECS.Data;
-using Game.Types;
-using Leopotam.Ecs;
+﻿using ECS.Data;
 using QFSW.QC;
 using Services.Factory;
-using Services.Locator;
-using StaticString;
 using UnityEngine;
-using UnityEngine.Serialization;
 using View;
+using Zenject;
 
 namespace _TestViaQFSW
 {
@@ -33,14 +28,8 @@ namespace _TestViaQFSW
         [SerializeField] private AbilityView _view6;
         [SerializeField] private AbilityConfig _config6;
 
-        private EntityFactory _entityFactory;
-        private RuntimeData _runtimeData;
-        
-        private void Start()
-        {
-            _entityFactory = ServiceLocator.Current.Get<EntityFactory>();
-            _runtimeData = ServiceLocator.Current.Get<RuntimeData>();
-        }
+        [Inject] private readonly EntityFactory _entityFactory;
+        [Inject] private readonly RuntimeData _runtimeData;
 
         [Command]
         private void create_ability()

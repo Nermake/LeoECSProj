@@ -1,24 +1,17 @@
 ﻿using Configs;
 using ECS.Components;
-using ECS.Data;
 using ECS.Events;
 using ECS.Mark;
 using Leopotam.Ecs;
-using Services.Locator;
-using View;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class SetRaceSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class SetRaceSystem : IEcsRunSystem
     {
         private readonly EcsFilter<HeroRaceMark, ChangeRaceEvent> _filter;
         
-        private RaceConfig _raceConfig;
-        
-        public void Init()
-        {
-            _raceConfig = ServiceLocator.Current.Get<StaticData>().RaceConfig;
-        }
+        [Inject] private readonly RaceConfig _raceConfig;
         
         public void Run()
         {

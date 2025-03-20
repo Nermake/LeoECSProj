@@ -6,21 +6,15 @@ using ECS.Events;
 using Game.Types;
 using Leopotam.Ecs;
 using QFSW.QC;
-using Services.Locator;
 using UnityEngine;
+using Zenject;
 
 namespace _TestViaQFSW
 {
     public class ExampleLevelUp : MonoBehaviour
     {
-        private RuntimeData _runtimeData;
-        private LevelUpConfig _levelUpConfig;
-
-        private void Start()
-        {
-            _levelUpConfig = ServiceLocator.Current.Get<StaticData>().LevelUpConfig;
-            _runtimeData = ServiceLocator.Current.Get<RuntimeData>();
-        }
+        [Inject] private readonly RuntimeData _runtimeData;
+        [Inject] private readonly LevelUpConfig _levelUpConfig;
 
         [Command]
         private void lvlup_add(EXP command, int amount = default)

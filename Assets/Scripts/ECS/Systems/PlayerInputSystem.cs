@@ -1,21 +1,16 @@
 ﻿using ECS.Components;
 using ECS.Tags;
 using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class PlayerInputSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class PlayerInputSystem : IEcsRunSystem
     {
         private readonly EcsFilter<DirectionComponent, PlayerTag> _directionFilter;
         
-        private InputController _inputController;
-
-        public void Init()
-        {
-            _inputController = ServiceLocator.Current.Get<InputController>();
-        }
+        [Inject] private InputController _inputController;
         
         public void Run()
         {
