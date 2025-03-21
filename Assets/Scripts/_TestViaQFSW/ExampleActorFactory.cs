@@ -26,14 +26,7 @@ namespace _TestViaQFSW
         }
 
         [Command]
-        private void af_get_hp()
-        {
-            Debug.Log(
-                $" Max: {_entity.Get<HealthComponent>().Max} \n Current: {_entity.Get<HealthComponent>().Current}");
-        }
-
-        [Command]
-        private void af_set_hp(float value)// todo dont work for plate
+        private void af_reduce_hp(float value)
         {
             _entity.Get<HealthComponent>().Current -= value;
             Debug.Log(
@@ -41,9 +34,25 @@ namespace _TestViaQFSW
         }
         
         [Command]
-        private void af_set_mana(float value)// todo dont work for plate
+        private void af_add_hp(float value)
+        {
+            _entity.Get<HealthComponent>().Current += value;
+            Debug.Log(
+                $" HealthComponent Set: {value} \n Max: {_entity.Get<HealthComponent>().Max} \n Current: {_entity.Get<HealthComponent>().Current}");
+        }
+        
+        [Command]
+        private void af_reduce_mana(float value)
         {
             _entity.Get<ManaComponent>().Current -= value;
+            Debug.Log(
+                $"ManaComponent Set: {value} \n Max: {_entity.Get<ManaComponent>().Max} \n Current: {_entity.Get<ManaComponent>().Current}");
+        }
+        
+        [Command]
+        private void af_add_mana(float value)
+        {
+            _entity.Get<ManaComponent>().Current += value;
             Debug.Log(
                 $"ManaComponent Set: {value} \n Max: {_entity.Get<ManaComponent>().Max} \n Current: {_entity.Get<ManaComponent>().Current}");
         }
@@ -54,15 +63,6 @@ namespace _TestViaQFSW
         {
             _entity.Get<SecondaryResourceComponent>().Type = type;
             _entity.Get<ChangeSecondaryResourceEvent>();
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha0))
-            {
-                Debug.Log("1");
-                af_ch();
-            }
         }
     }
 }
