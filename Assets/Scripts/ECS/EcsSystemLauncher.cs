@@ -32,12 +32,12 @@ namespace ECS
 
         public void FixedTick()
         {
-            //_systems?.FixedRun();
+            _systems?.FixedRun();
         }
 
         public void LateTick()
         {
-            //_systems?.LateRun();
+            _systems?.LateRun();
         }
     
         private void AddRunSystems()
