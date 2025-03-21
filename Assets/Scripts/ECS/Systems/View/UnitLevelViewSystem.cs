@@ -12,12 +12,11 @@ namespace ECS.Systems
         private readonly EcsFilter<ChangeExperienceEvent> _changeExperienceFilter;
         private readonly EcsFilter<LevelUpEvent> _levelUpFilter;
         
-        private LevelView _levelView;
-        
-        [Inject]
-        public void Construct(SceneData sceneData)
+        private readonly LevelView _levelView;
+
+        public UnitLevelViewSystem(DiContainer container)
         {
-            _levelView = sceneData.MainFrameView.LevelView;
+            _levelView = container.Resolve<SceneData>().MainFrameView.LevelView;
         }
 
         public void Run()

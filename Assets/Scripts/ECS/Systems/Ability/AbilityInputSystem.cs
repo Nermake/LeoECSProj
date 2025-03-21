@@ -12,14 +12,13 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<AbilityRunCastEvent> _filter;
         
-        private List<AbilityView> _abilityViews;
-        private InputController _inputController;
+        private readonly List<AbilityView> _abilityViews;
+        private readonly InputController _inputController;
 
-        [Inject]
-        private void Construct(SceneData sceneData, InputController inputController)
+        public AbilityInputSystem(DiContainer container)
         {
-            _abilityViews = sceneData.MainFrameView.AbilityPanelView.GetAbilityViews();
-            _inputController = inputController;
+            _abilityViews = container.Resolve<SceneData>().MainFrameView.AbilityPanelView.GetAbilityViews();
+            _inputController = container.Resolve<InputController>();
         }
         
         public void Init()

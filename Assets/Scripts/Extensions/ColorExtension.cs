@@ -2,7 +2,7 @@
 
 namespace Extensions
 {
-    public static class Extension
+    public static class ColorExtension
     {
         public static Color SetRGBA(this Color color, float r, float g, float b, float a)
         {

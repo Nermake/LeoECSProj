@@ -11,7 +11,7 @@ namespace Installers
         public override void InstallBindings()
         {
             Container
-                .BindInterfacesTo<EscGameStartup>()
+                .BindInterfacesTo<EcsSystemLauncher>()
                 .AsSingle()
                 .NonLazy();
 

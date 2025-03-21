@@ -23,89 +23,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd681d53-6bd3-4c72-a426-0a8ef2bdd33b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Configs/Installers/EcsData.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Configs/Installers/EcsData.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/LICENSE.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/Leopotam.Ecs.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/Leopotam.Ecs.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/README.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/package.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsEntity.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsFilter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsHelpers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsHelpers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsWorld.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsWorld.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/EcsInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/EcsInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GameServicesInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GameServicesInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/StaticDataInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/SystemInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/SystemInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/_Test/Example.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/_Test/Example/PracticalAssigmentAmdal.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/_Test/Example/PracticalAssigmentAmdal.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_13x13_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_13x13_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_17x17_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_17x17_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_55x55_25_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_55x55_25_mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_55x55_25_st7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Icon/Rectangle_55x55_25_st7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MainFrame_v1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MainFrame_v1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MainFrame_v2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MainFrame_v2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/StringExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/StringExtension.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/_Test/T_tt.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/_Test/T_tt.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LeoECSProj/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/EcsData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/EcsData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputController.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputController.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_blink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_blink.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_heal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_heal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_hp_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_hp_up.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_over_heal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icon/test_over_heal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/ecs-master/src/EcsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Wiht_Providers.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Wiht_Providers.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_With_Providers.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_With_Providers.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TT.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TT.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/RuntimeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/SceneData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Data/StaticData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/StaticDataInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/EscGameStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/EscGameStartup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/EscGameStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/EcsSystemLauncher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/EscGameStartup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/EcsSystemLauncher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/DirectionProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/DirectionProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/EnemyTagProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/EnemyTagProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/FollowProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/FollowProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/InitializeEntityProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/InitializeEntityProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/MovableProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/MovableProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/PlayerTadProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/PlayerTadProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/TestEventProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/TestEventProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/TransformProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Providers/TransformProvider.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityFinishCastSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityFinishCastSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityInputSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityRunCastSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityRunCastSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityStartCastSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Ability/AbilityStartCastSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/CameraFollowSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/CameraFollowSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/CursorTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/CursorTargetSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DamageSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DeathSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/DeathSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/GenerateProjectileSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/GenerateProjectileSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Initialize/InitializeCameraSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Initialize/InitializeCameraSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Initialize/InitializeInputControllerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Initialize/InitializeInputControllerSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerInputSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/PlayerMovementSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/ProjectileMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/ProjectileMovementSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetGoldSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetGoldSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetRaceSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetRaceSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetTargetForCameraSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetTargetForCameraSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetTargetForEnemySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/Set/SetTargetForEnemySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UnitFollowSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UnitFollowSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UnitLevelSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/UnitLevelSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/View/UnitLevelViewSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Systems/View/UnitLevelViewSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Logic/Displaying/DamageIndicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/Displaying/DamageIndicator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Extensions/Extension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/ColorExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Extensions/Extension.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/ColorExtension.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/SystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/SystemInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/Builders/Ability/AbilityBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/Builders/Ability/AbilityBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/Builders/Unit/HeroBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/Builders/Unit/HeroBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/Builders/Unit/UnitBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/Builders/Unit/UnitBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/EntityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Installers.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator/GameServices.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator/GameServices.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator/IService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator/IService.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator/ServiceLocator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator/ServiceLocator.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Other/CursorTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Other/CursorTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Other/Destroer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Other/Destroer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/_Test/EcsTestFixLate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_Test/EcsTestFixLate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleActorFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleActorFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleLevelUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_TestViaQFSW/ExampleLevelUp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
@@ -121,51 +117,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/011CCACB-5878-4A80-AC4B-48B4C50EE0B7/6c/996779ca/020002E2.il" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/D4241FFD-72E2-4444-A015-9DAC42B431EC/c2/df4199f6/02000010.il" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/2f50f9c5ffc042e6a580d612941d728bbc00/fb/8052681a/02000027pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/78/b579b4a6/020009B8.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5ce9a267350640f3a3c5a439c3a5e552be00/09/848f7eff/0200002Bpdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5ce9a267350640f3a3c5a439c3a5e552be00/10/43eb8834/02000029pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5ce9a267350640f3a3c5a439c3a5e552be00/2e/bc58afd9/02000026pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5ce9a267350640f3a3c5a439c3a5e552be00/b0/04784421/02000027pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5ce9a267350640f3a3c5a439c3a5e552be00/e7/961da24f/0200002Apdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5ce9a267350640f3a3c5a439c3a5e552be00/f0/c7f64ea0/02000025pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/38/a2ea85ea/0200000Cpdb1.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/3c/13b62685/02000025pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/3c/9c4b31ee/02000024pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/64/5fc47dad/0200001Fpdb4.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/65/0cc8be42/02000016pdb2.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/90/cfc4c0f3/02000018pdb3.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/a3/d80a4960/0200002Cpdb6.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/ac/a4a7e8f1/02000020pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/c4/dd9b40e6/02000029pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/c7/447883a9/02000026pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/da/5c8a22ba/0200002Apdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/e4/f215a0cc/0200002Bpdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/72a78ae652d246f2a12bc0fe94f28de1be00/fe/49886b3d/02000027pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/7ea97e077681428cbf10c313a4195524c600/7d/9c10486c/02000029pdb5.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/dd6fa2e243184a61b3ff6189ca14d9345000/a1/19bf3536/02000006pdb27.il" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011CCACB-5878-4A80-AC4B-48B4C50EE0B7/ba/90e9ed8b/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011ccacb58784a80ac4b48b4c50ee0b7176400/04/ac5e1317/Component.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011ccacb58784a80ac4b48b4c50ee0b7176400/06/c158a412/Object.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011ccacb58784a80ac4b48b4c50ee0b7176400/09/ee4c91e6/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011ccacb58784a80ac4b48b4c50ee0b7176400/3f/558f2c18/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011ccacb58784a80ac4b48b4c50ee0b7176400/51/3e47dadc/ColorUtility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011ccacb58784a80ac4b48b4c50ee0b7176400/71/2b46c726/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/011ccacb58784a80ac4b48b4c50ee0b7176400/85/260c36ea/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/37/deb1e11e/AttributeTargets.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/89/6cf5633b/ValueType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/a3/81c37956/FlagsAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/d1/3c7ec63c/Queue`1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ac1a2c68096490080e19faa445d86436000/00/3776385b/RequiredByNativeCodeAttribute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D4241FFD-72E2-4444-A015-9DAC42B431EC/bb/55a041cc/EcsComponentPool.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D4241FFD-72E2-4444-A015-9DAC42B431EC/d0/300cb5b6/IEcsComponentPool.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/75/d1ad9741/InjectAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b1/6b073c34/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/f6/f81c2272/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Archive/Assets/Mori/Patterns/StructuralPatterns/Decorator/Example/MainScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/Components/Ability/AbilityComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/Components/DamageableComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/GameServicesInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Logic/View/ActorView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Logic/View/EntityView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Logic/View/PlayerView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -173,18 +130,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/MainScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/PoolMono.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ObjectPool/Unit.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs-ui@8c8148b306/Editor/Widgets/EcsUiNonVisualWidgetInspector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs-ui@8c8148b306/Runtime/Helpers/EcsSystemsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs-ui@8c8148b306/Runtime/Systems/EcsUiEmitter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Mask.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/BaseMonoProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/IConvertToEntity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.voody.unileo@bbaed2aec8/Runtime/MonoHelpers/MonoProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -265,7 +216,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "settings.editor.selected.configurable": "RiderCSharpLiveTemplatesSettingsId",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -363,6 +314,7 @@
       <workItem from="1740813668997" duration="4792000" />
       <workItem from="1741001055035" duration="22930000" />
       <workItem from="1742219690183" duration="391000" />
+      <workItem from="1742494611614" duration="15398000" />
     </task>
     <servers />
   </component>

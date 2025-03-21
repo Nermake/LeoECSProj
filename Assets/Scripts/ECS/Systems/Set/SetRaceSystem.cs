@@ -1,5 +1,6 @@
 ﻿using Configs;
 using ECS.Components;
+using ECS.Data;
 using ECS.Events;
 using ECS.Mark;
 using Leopotam.Ecs;
@@ -11,7 +12,12 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<HeroRaceMark, ChangeRaceEvent> _filter;
         
-        [Inject] private readonly RaceConfig _raceConfig;
+        private readonly RaceConfig _raceConfig;
+
+        public SetRaceSystem(DiContainer container)
+        {
+            _raceConfig = container.Resolve<RaceConfig>();
+        }
         
         public void Run()
         {

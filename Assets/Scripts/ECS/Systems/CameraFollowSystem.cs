@@ -10,7 +10,12 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<CameraFollowComponent, CameraComponent> _cameraFilter;
         
-        [Inject] private readonly RuntimeData _runtimeData;
+        private readonly RuntimeData _runtimeData;
+
+        public CameraFollowSystem(DiContainer container)
+        {
+            _runtimeData = container.Resolve<RuntimeData>();
+        }
         
         public void Run()
         {

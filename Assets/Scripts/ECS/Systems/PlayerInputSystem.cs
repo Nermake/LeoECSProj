@@ -6,11 +6,16 @@ using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class PlayerInputSystem : IEcsRunSystem
+    public class PlayerInputSystem : IEcsRunSystem
     {
         private readonly EcsFilter<DirectionComponent, PlayerTag> _directionFilter;
         
-        [Inject] private InputController _inputController;
+        private readonly InputController _inputController;
+        
+        public PlayerInputSystem(DiContainer container)
+        {
+            _inputController = container.Resolve<InputController>();
+        }
         
         public void Run()
         {

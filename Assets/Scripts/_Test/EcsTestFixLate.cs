@@ -1,6 +1,5 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
-using Voody.UniLeo;
 
 namespace _Test
 {
@@ -14,8 +13,6 @@ namespace _Test
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
 
-            _systems.ConvertScene();
-
             AddSystems();
         
             _systems?.Init();
@@ -28,12 +25,12 @@ namespace _Test
 
         private void FixedUpdate()
         {
-            _systems.FixedRun();
+            _systems?.FixedRun();
         }
 
         private void LateUpdate()
         {
-            _systems.LateRun();
+            _systems?.LateRun();
         }
 
         private void AddSystems()

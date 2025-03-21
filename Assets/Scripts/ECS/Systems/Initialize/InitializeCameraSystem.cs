@@ -9,7 +9,12 @@ namespace ECS.Systems
     {
         private readonly EcsWorld _world;
         
-        [Inject] private readonly SceneData _sceneData;
+        private readonly SceneData _sceneData;
+
+        public InitializeCameraSystem(DiContainer container)
+        {
+            _sceneData = container.Resolve<SceneData>();
+        }
         
         public void Init()
         {

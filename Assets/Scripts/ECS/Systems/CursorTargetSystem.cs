@@ -12,9 +12,14 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<AbilityTargetComponent, PlayerTag> _filter;
         
-        [Inject] private readonly CursorTarget _cursorTarget;
+        private readonly CursorTarget _cursorTarget;
         
         private ActorView _last;
+        
+        public CursorTargetSystem(DiContainer container)
+        {
+            _cursorTarget = container.Resolve<CursorTarget>();
+        }
 
         public void Run()
         {

@@ -7,8 +7,6 @@ namespace Services
 {
     public class CursorTarget : ITickable
     {
-        private readonly SceneData _sceneData;
-        
         private Camera _camera;
         private Ray _ray;
 
@@ -16,7 +14,7 @@ namespace Services
         
         public CursorTarget(SceneData sceneData)
         {
-            _sceneData = sceneData;
+            _camera = sceneData.Camera;
         }
         
         public void Tick()

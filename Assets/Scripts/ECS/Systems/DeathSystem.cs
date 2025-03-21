@@ -11,7 +11,12 @@ namespace ECS.Systems
         private readonly EcsFilter<HealthComponent> _resources;
         private readonly EcsFilter<DeathEvent> _deaths;
         
-        [Inject] private readonly Destroyer _destroyer;
+        private readonly Destroyer _destroyer;
+
+        public DeathSystem(DiContainer container)
+        {
+            _destroyer = container.Resolve<Destroyer>();
+        }
         
         public void Run()
         {

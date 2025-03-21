@@ -10,7 +10,12 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<MovableComponent, ProjectileTargetComponent> _filter;
         
-        [Inject] private readonly RuntimeData _runtimeData;
+        private readonly RuntimeData _runtimeData;
+
+        public ProjectileMovementSystem(DiContainer container)
+        {
+            _runtimeData = container.Resolve<RuntimeData>();
+        }
         
         public void FixedRun()
         {

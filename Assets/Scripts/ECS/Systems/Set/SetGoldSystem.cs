@@ -14,12 +14,11 @@ namespace ECS.Systems
         private readonly EcsFilter<GoldComponent, RemoveGoldEvent> _removeGoldFilter;
         private readonly EcsFilter<ChangeGoldEvent> _changeGoldFilter;
 
-        private GoldPanelView _goldPanelView;
+        private readonly GoldPanelView _goldPanelView;
         
-        [Inject]
-        private void Construct(SceneData sceneData)
+        public SetGoldSystem(DiContainer container)
         {
-            _goldPanelView = sceneData.GoldPanelView;
+            _goldPanelView = container.Resolve<SceneData>().GoldPanelView;
         }
         
         public void Run()

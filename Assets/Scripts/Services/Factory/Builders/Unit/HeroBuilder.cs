@@ -14,15 +14,23 @@ namespace Services.Factory
 {
     public class HeroBuilder : MovableUnitBuilder
     {
-        [Inject] private readonly RaceConfig _raceConfig;
-        [Inject] private readonly LevelUpConfig _levelUpConfig;
-        [Inject] private readonly SceneData _sceneData;
-        [Inject] private readonly RuntimeData _runtimeData;
-        
         private readonly HeroConfig _config;
+        
+        private RaceConfig _raceConfig;
+        private LevelUpConfig _levelUpConfig;
+        private SceneData _sceneData;
+        private RuntimeData _runtimeData;
         private Color _healthColor;
         
         public HeroBuilder(HeroConfig config) : base(config) => _config = config;
+
+        public override void Construct(DiContainer container)
+        {
+            _raceConfig = container.Resolve<RaceConfig>();
+            _levelUpConfig = container.Resolve<LevelUpConfig>();
+            _sceneData = container.Resolve<SceneData>();
+            _runtimeData = container.Resolve<RuntimeData>();
+        }
 
         public override void Make()
         {

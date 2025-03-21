@@ -1,26 +1,23 @@
 using System;
 using ECS.Systems;
 using Leopotam.Ecs;
-using Voody.UniLeo;
 using Zenject;
 
 namespace ECS
 {
-    public sealed class EscGameStartup : IInitializable, ITickable, IFixedTickable, ILateTickable, IDisposable
+    public class EcsSystemLauncher : IInitializable, ITickable, IFixedTickable, ILateTickable, IDisposable
     {
-        private EcsWorld _world;
+        private readonly DiContainer _container;
         private EcsSystems _systems;
-
-        public EscGameStartup(EcsWorld world, EcsSystems systems)
+        
+        public EcsSystemLauncher(EcsSystems systems, DiContainer container)
         {
-            _world = world;
             _systems = systems;
+            _container = container;
         }
         
         public void Initialize()
         {
-            _systems.ConvertScene();
-
             AddRunSystems();
             AddFixedRunSystems();
             AddLateRunSystems();
@@ -47,22 +44,22 @@ namespace ECS
         {
             _systems.
                 Add(new InitializeEntitySystem()).
-                Add(new InitializeCameraSystem()).
-                Add(new InitializeInputControllerSystem()).
-                Add(new PlayerInputSystem()).
-                Add(new SetTargetForCameraSystem()).
-                Add(new CameraFollowSystem()).
-                Add(new SetTargetForEnemySystem()).
+                Add(new InitializeCameraSystem(_container)).
+                Add(new InitializeInputControllerSystem(_container)).
+                Add(new PlayerInputSystem(_container)).
+                Add(new SetTargetForCameraSystem(_container)).
+                Add(new CameraFollowSystem(_container)).
+                Add(new SetTargetForEnemySystem(_container)).
                 Add(new RemovesProhibitionMoveSystem()).
                 
                 Add(new AbilityReadinessSystem()).
-                Add(new AbilityInputSystem()).
+                Add(new AbilityInputSystem(_container)).
                 Add(new AbilityApplySystem()).
                 Add(new AbilityWasteSystem()).
                 Add(new AbilityCooldownSystem()).
-                Add(new AbilityStartCastSystem()).
-                Add(new AbilityRunCastSystem()).
-                Add(new AbilityFinishCastSystem()).
+                Add(new AbilityStartCastSystem(_container)).
+                Add(new AbilityRunCastSystem(_container)).
+                Add(new AbilityFinishCastSystem(_container)).
                 
                 Add(new ImplementerSystem()).
                 Add(new EffectPeriodicSystem()).
@@ -75,21 +72,21 @@ namespace ECS
                 //Add(new GenerateProjectileSystem()).
                 Add(new SetTargetForProjectileSystem()).
                 Add(new RegenerationUnitSystem()).
-                Add(new SetGoldSystem()).
-                Add(new SetRaceSystem()).
+                Add(new SetGoldSystem(_container)).
+                Add(new SetRaceSystem(_container)).
                 Add(new SetColorSecondaryResourceSystem()).
                 Add(new ResourcePlateSystem()).
                 Add(new ResourceFrameSystem()).
-                Add(new UnitLevelSystem()).
-                Add(new UnitLevelViewSystem()).
-                Add(new DeathSystem())
+                Add(new UnitLevelSystem(_container)).
+                Add(new UnitLevelViewSystem(_container)).
+                Add(new DeathSystem(_container))
                 ;
         }
 
         private void AddFixedRunSystems()
         {
             _systems.
-                Add(new ProjectileMovementSystem()).
+                Add(new ProjectileMovementSystem(_container)).
                 Add(new PlayerMovementSystem()).
                 Add(new UnitFollowSystem())
                 ;
@@ -106,11 +103,6 @@ namespace ECS
             {
                 _systems.Destroy();
                 _systems = null;
-            }
-            if (_world != null)
-            {
-                _world.Destroy();
-                _world = null;
             }
         }
     }

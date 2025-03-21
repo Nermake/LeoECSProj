@@ -9,7 +9,12 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<UnitFollowComponent, TransformComponent> _enemyFilter;
         
-        [Inject] private readonly RuntimeData _runtimeData;
+        private readonly RuntimeData _runtimeData;
+
+        public SetTargetForEnemySystem(DiContainer container)
+        {
+            _runtimeData = container.Resolve<RuntimeData>();
+        }
 
         public void Run()
         {

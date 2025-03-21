@@ -11,7 +11,12 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<ExperienceComponent, AddExperienceEvent> _addExperienceFilter = null;
         
-        [Inject] private readonly LevelUpConfig _levelUpConfig;
+        private readonly LevelUpConfig _levelUpConfig;
+
+        public UnitLevelSystem(DiContainer container)
+        {
+            _levelUpConfig = container.Resolve<LevelUpConfig>();
+        }
         
         public void Run()
         {

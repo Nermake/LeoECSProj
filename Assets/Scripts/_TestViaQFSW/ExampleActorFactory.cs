@@ -1,4 +1,5 @@
-﻿using ECS.Components;
+﻿using System;
+using ECS.Components;
 using ECS.Events;
 using Game.Types;
 using Leopotam.Ecs;
@@ -53,6 +54,15 @@ namespace _TestViaQFSW
         {
             _entity.Get<SecondaryResourceComponent>().Type = type;
             _entity.Get<ChangeSecondaryResourceEvent>();
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                Debug.Log("1");
+                af_ch();
+            }
         }
     }
 }

@@ -4,6 +4,7 @@ using Game.Types;
 using Leopotam.Ecs;
 using Logic.View;
 using UnityEngine;
+using Zenject;
 using Object = UnityEngine.Object;
 
 namespace Services.Factory
@@ -19,10 +20,10 @@ namespace Services.Factory
         private readonly UnitConfig _config;
 
         public UnitBuilder(UnitConfig config) => _config = config;
-
         public void SetWorld(EcsWorld world) => _world = world;
         public void SetLocation(Vector3 location) => _spawnLocation = location;
 
+        public virtual void Construct(DiContainer container) {}
         public virtual void Make()
         {
             _entity = _world.NewEntity();

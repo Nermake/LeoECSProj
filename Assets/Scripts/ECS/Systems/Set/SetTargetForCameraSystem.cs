@@ -8,8 +8,13 @@ namespace ECS.Systems
     public sealed class SetTargetForCameraSystem : IEcsRunSystem
     {
         private readonly EcsFilter<CameraFollowComponent> _cameraFilter = null;
-        
-        [Inject] private readonly RuntimeData _runtimeData;
+
+        private readonly RuntimeData _runtimeData;
+
+        public SetTargetForCameraSystem(DiContainer container)
+        {
+            _runtimeData = container.Resolve<RuntimeData>();
+        }
         
         public void Run()
         {

@@ -77,8 +77,8 @@ namespace Leopotam.Ecs {
         public readonly EcsWorld World;
         readonly EcsGrowList<IEcsSystem> _allSystems = new (64);
         readonly EcsGrowList<EcsSystemsRunItem> _runSystems = new (64);
-        readonly EcsGrowList<EcsSystemsFixedRunItem> _runFixedSystems = new (64);
-        readonly EcsGrowList<EcsSystemsLateRunItem> _runLateSystems = new (64);
+        readonly EcsGrowList<EcsSystemsFixedRunItem> _fixedRunSystems = new (64);
+        readonly EcsGrowList<EcsSystemsLateRunItem> _lateRunSystems = new (64);
         readonly Dictionary<int, int> _namedRunSystems = new (64);
         readonly Dictionary<int, int> _namedFixedRunSystems = new (64);
         readonly Dictionary<int, int> _namedLateRunSystems = new (64);
@@ -128,7 +128,11 @@ namespace Leopotam.Ecs {
             if (system == null) { throw new Exception ("System is null."); }
             if (_initialized) { throw new Exception ("Cant add system after initialization."); }
             if (_destroyed) { throw new Exception ("Cant touch after destroy."); }
-            if (!string.IsNullOrEmpty (namedRunSystem) && !(system is IEcsRunSystem)) { throw new Exception ("Cant name non-IEcsRunSystem."); }
+
+            if (!string.IsNullOrEmpty(namedRunSystem) && system is not (IEcsRunSystem or IEcsFixedRunSystem or IEcsLateRunSystem))
+            {
+                throw new Exception ("Cant name non-IEcsRunSystem.");
+            }
 #endif
             _allSystems.Add (system);
             if (system is IEcsRunSystem) {
@@ -156,9 +160,9 @@ namespace Leopotam.Ecs {
                         throw new Exception ($"Cant add named system - \"{namedRunSystem}\" name already exists.");
                     }
 #endif
-                    _namedFixedRunSystems[namedRunSystem.GetHashCode ()] = _runFixedSystems.Count;
+                    _namedFixedRunSystems[namedRunSystem.GetHashCode ()] = _fixedRunSystems.Count;
                 }
-                _runFixedSystems.Add (new EcsSystemsFixedRunItem { Active = true, System = (IEcsFixedRunSystem) system });
+                _fixedRunSystems.Add (new EcsSystemsFixedRunItem { Active = true, System = (IEcsFixedRunSystem) system });
             }
             
             if (system is IEcsLateRunSystem) {
@@ -171,9 +175,9 @@ namespace Leopotam.Ecs {
                         throw new Exception ($"Cant add named system - \"{namedRunSystem}\" name already exists.");
                     }
 #endif
-                    _namedLateRunSystems[namedRunSystem.GetHashCode ()] = _runLateSystems.Count;
+                    _namedLateRunSystems[namedRunSystem.GetHashCode ()] = _lateRunSystems.Count;
                 }
-                _runLateSystems.Add (new EcsSystemsLateRunItem { Active = true, System = (IEcsLateRunSystem) system });
+                _lateRunSystems.Add (new EcsSystemsLateRunItem { Active = true, System = (IEcsLateRunSystem) system });
             }
             return this;
         }
@@ -204,16 +208,16 @@ namespace Leopotam.Ecs {
         
         public void SetFixedRunSystemState (int idx, bool state) {
 #if DEBUG
-            if (idx < 0 || idx >= _runFixedSystems.Count) { throw new Exception ("Invalid index"); }
+            if (idx < 0 || idx >= _fixedRunSystems.Count) { throw new Exception ("Invalid index"); }
 #endif
-            _runFixedSystems.Items[idx].Active = state;
+            _fixedRunSystems.Items[idx].Active = state;
         }
         
         public void SetLateRunSystemState (int idx, bool state) {
 #if DEBUG
-            if (idx < 0 || idx >= _runSystems.Count) { throw new Exception ("Invalid index"); }
+            if (idx < 0 || idx >= _lateRunSystems.Count) { throw new Exception ("Invalid index"); }
 #endif
-            _runLateSystems.Items[idx].Active = state;
+            _lateRunSystems.Items[idx].Active = state;
         }
 
         /// <summary>
@@ -229,16 +233,16 @@ namespace Leopotam.Ecs {
         
         public bool GetFixedRunSystemState (int idx) {
 #if DEBUG
-            if (idx < 0 || idx >= _runSystems.Count) { throw new Exception ("Invalid index"); }
+            if (idx < 0 || idx >= _fixedRunSystems.Count) { throw new Exception ("Invalid index"); }
 #endif
-            return _runFixedSystems.Items[idx].Active;
+            return _fixedRunSystems.Items[idx].Active;
         }
         
         public bool GetLateRunSystemState (int idx) {
 #if DEBUG
-            if (idx < 0 || idx >= _runSystems.Count) { throw new Exception ("Invalid index"); }
+            if (idx < 0 || idx >= _lateRunSystems.Count) { throw new Exception ("Invalid index"); }
 #endif
-            return _runLateSystems.Items[idx].Active;
+            return _lateRunSystems.Items[idx].Active;
         }
 
         /// <summary>
@@ -256,11 +260,11 @@ namespace Leopotam.Ecs {
         }
         
         public EcsGrowList<EcsSystemsFixedRunItem> GetFixedRunSystems () {
-            return _runFixedSystems;
+            return _fixedRunSystems;
         }
         
         public EcsGrowList<EcsSystemsLateRunItem> GetLateRunSystems () {
-            return _runLateSystems;
+            return _lateRunSystems;
         }
 
         /// <summary>
@@ -352,7 +356,7 @@ namespace Leopotam.Ecs {
         /// </summary>
         public void Run () {
 #if DEBUG
-            if (_initialized) { throw new Exception ($"[{Name ?? "NONAME"}] EcsSystems should be initialized before."); }
+            if (!_initialized) { throw new Exception ($"[{Name ?? "NONAME"}] EcsSystems should be initialized before."); }
             if (_destroyed) { throw new Exception ("Cant touch after destroy."); }
 #endif
             for (int i = 0, iMax = _runSystems.Count; i < iMax; i++) {
@@ -370,17 +374,17 @@ namespace Leopotam.Ecs {
         
         public void FixedRun () {
 #if DEBUG
-            if (_initialized) { throw new Exception ($"[{Name ?? "NONAME"}] EcsSystems should be initialized before."); }
+            if (!_initialized) { throw new Exception ($"[{Name ?? "NONAME"}] EcsSystems should be initialized before."); }
             if (_destroyed) { throw new Exception ("Cant touch after destroy."); }
 #endif
-            for (int i = 0, iMax = _runFixedSystems.Count; i < iMax; i++) {
-                var runItem = _runFixedSystems.Items[i];
+            for (int i = 0, iMax = _fixedRunSystems.Count; i < iMax; i++) {
+                var runItem = _fixedRunSystems.Items[i];
                 if (runItem.Active) {
                     runItem.System.FixedRun ();
                 }
 #if DEBUG
                 if (World.CheckForLeakedEntities (null)) {
-                    throw new Exception ($"Empty entity detected, possible memory leak in {_runFixedSystems.Items[i].GetType ().Name}.Run ()");
+                    throw new Exception ($"Empty entity detected, possible memory leak in {_fixedRunSystems.Items[i].GetType ().Name}.Run ()");
                 }
 #endif
             }
@@ -388,17 +392,17 @@ namespace Leopotam.Ecs {
         
         public void LateRun () {
 #if DEBUG
-            if (_initialized) { throw new Exception ($"[{Name ?? "NONAME"}] EcsSystems should be initialized before."); }
+            if (!_initialized) { throw new Exception ($"[{Name ?? "NONAME"}] EcsSystems should be initialized before."); }
             if (_destroyed) { throw new Exception ("Cant touch after destroy."); }
 #endif
-            for (int i = 0, iMax = _runLateSystems.Count; i < iMax; i++) {
-                var runItem = _runLateSystems.Items[i];
+            for (int i = 0, iMax = _lateRunSystems.Count; i < iMax; i++) {
+                var runItem = _lateRunSystems.Items[i];
                 if (runItem.Active) {
                     runItem.System.LateRun ();
                 }
 #if DEBUG
                 if (World.CheckForLeakedEntities (null)) {
-                    throw new Exception ($"Empty entity detected, possible memory leak in {_runLateSystems.Items[i].GetType ().Name}.Run ()");
+                    throw new Exception ($"Empty entity detected, possible memory leak in {_lateRunSystems.Items[i].GetType ().Name}.Run ()");
                 }
 #endif
             }

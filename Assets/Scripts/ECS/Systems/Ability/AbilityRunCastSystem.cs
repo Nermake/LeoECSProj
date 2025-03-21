@@ -12,13 +12,12 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<AbilityRunCastEvent> _runCastFilter;
         
-        private AbilityCastView _view;
+        private readonly AbilityCastView _view;
 
-        [Inject]
-        public void Construct(SceneData sceneData)
+        public AbilityRunCastSystem(DiContainer container)
         {
-            _view = sceneData.AbilityCastView;
-        }
+            _view = container.Resolve<SceneData>().AbilityCastView;
+        }                                           
         
         public void Run()
         {
