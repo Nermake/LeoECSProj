@@ -2,22 +2,21 @@
 using ECS.Data;
 using ECS.Events;
 using ECS.Flags;
-using ECS.Mark;
 using Leopotam.Ecs;
-using Services.Locator;
 using View;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class AbilityFinishCastSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class AbilityFinishCastSystem : IEcsRunSystem
     {
         private readonly EcsFilter<AbilityFinishCastEvent> _finishCastFilter;
         
-        private AbilityCastView _view;
+        private readonly AbilityCastView _view;
 
-        public void Init()
+        public AbilityFinishCastSystem(DiContainer container)
         {
-            _view = ServiceLocator.Current.Get<SceneData>().AbilityCastView;
+            _view = container.Resolve<SceneData>().AbilityCastView;
         }
         
         public void Run()

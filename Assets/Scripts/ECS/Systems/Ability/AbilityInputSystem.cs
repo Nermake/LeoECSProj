@@ -2,9 +2,9 @@
 using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine.InputSystem;
 using View;
+using Zenject;
 
 namespace ECS.Systems
 {
@@ -12,14 +12,17 @@ namespace ECS.Systems
     {
         private readonly EcsFilter<AbilityRunCastEvent> _filter;
         
-        private List<AbilityView> _abilityViews;
-        private InputController _inputController;
+        private readonly List<AbilityView> _abilityViews;
+        private readonly InputController _inputController;
+
+        public AbilityInputSystem(DiContainer container)
+        {
+            _abilityViews = container.Resolve<SceneData>().MainFrameView.AbilityPanelView.GetAbilityViews();
+            _inputController = container.Resolve<InputController>();
+        }
         
         public void Init()
         {
-            _abilityViews = ServiceLocator.Current.Get<SceneData>().MainFrameView.AbilityPanelView.GetAbilityViews();
-            _inputController = ServiceLocator.Current.Get<InputController>();
-
             _inputController.Game.Ability1.started += OnApplyAbility1;
             _inputController.Game.Ability2.started += OnApplyAbility2;
             _inputController.Game.Ability3.started += OnApplyAbility3;

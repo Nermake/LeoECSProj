@@ -1,18 +1,19 @@
 ﻿using ECS.Components;
 using ECS.Data;
 using Leopotam.Ecs;
-using Services.Locator;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class SetTargetForEnemySystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class SetTargetForEnemySystem : IEcsRunSystem
     {
         private readonly EcsFilter<UnitFollowComponent, TransformComponent> _enemyFilter;
-        private RuntimeData _runtimeData;
         
-        public void Init()
+        private readonly RuntimeData _runtimeData;
+
+        public SetTargetForEnemySystem(DiContainer container)
         {
-            _runtimeData = ServiceLocator.Current.Get<RuntimeData>();
+            _runtimeData = container.Resolve<RuntimeData>();
         }
 
         public void Run()

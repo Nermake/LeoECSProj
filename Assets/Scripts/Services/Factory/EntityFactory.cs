@@ -1,25 +1,28 @@
 ﻿using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine;
 using View;
+using Zenject;
 
 namespace Services.Factory
 {
-    public class EntityFactory : IEntityFactory, IService
+    public class EntityFactory : IEntityFactory
     {
         private readonly EcsWorld _world;
+        private readonly DiContainer _container;
 
-        public EntityFactory(EcsWorld world)
+        public EntityFactory(EcsWorld world, DiContainer container)
         {
             _world = world;
+            _container = container;
         }
 
         public ref EcsEntity CreateUnitEntity(UnitConfig config, Vector3 location = default)
         {
             var builder = config.GetBuilder();
-
+            
             builder.SetWorld(_world);
             builder.SetLocation(location);
+            builder.Construct(_container);
             builder.Make();
             
             //ActorView entityView = builder.GetView();

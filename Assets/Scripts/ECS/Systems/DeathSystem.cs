@@ -2,20 +2,20 @@
 using ECS.Events;
 using Leopotam.Ecs;
 using Services;
-using Services.Locator;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class DeathSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class DeathSystem : IEcsRunSystem
     {
         private readonly EcsFilter<HealthComponent> _resources;
         private readonly EcsFilter<DeathEvent> _deaths;
         
-        private Destroyer _destroyer;
+        private readonly Destroyer _destroyer;
 
-        public void Init()
+        public DeathSystem(DiContainer container)
         {
-            _destroyer = ServiceLocator.Current.Get<Destroyer>();
+            _destroyer = container.Resolve<Destroyer>();
         }
         
         public void Run()

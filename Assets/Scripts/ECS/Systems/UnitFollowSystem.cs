@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace ECS.Systems
 {
-    public sealed class UnitFollowSystem : IEcsRunSystem
+    public sealed class UnitFollowSystem : IEcsFixedRunSystem
     {
         private readonly EcsFilter<UnitFollowComponent, MovableComponent>.
             Exclude<BlockMoveDurationEvent> _followFilter;
         
-        public void Run()
+        public void FixedRun()
         {
             foreach (var entity in _followFilter)
             {

@@ -1,7 +1,7 @@
 ﻿using ECS.Components;
 using ECS.Data;
 using Leopotam.Ecs;
-using Services.Locator;
+using Zenject;
 
 namespace ECS.Systems
 {
@@ -9,12 +9,15 @@ namespace ECS.Systems
     {
         private readonly EcsWorld _world;
         
-        private SceneData _sceneData;
+        private readonly SceneData _sceneData;
+
+        public InitializeCameraSystem(DiContainer container)
+        {
+            _sceneData = container.Resolve<SceneData>();
+        }
         
         public void Init()
         {
-            _sceneData = ServiceLocator.Current.Get<SceneData>();
-            
             var entity = _world.NewEntity();
             entity.Get<CameraComponent>().Camera = _sceneData.Camera;
             

@@ -4,17 +4,12 @@ using Logics.Displaying;
 
 namespace ECS.Systems
 {
-    public class DamageSystem : IEcsInitSystem, IEcsRunSystem
+    public class DamageSystem : IEcsRunSystem
     {
         private readonly DamageIndicator _damageIndicator;
 
         private EcsFilter<DamageableComponent> _damageableFilter;
-
-        public void Init()
-        {
-            
-        }
-
+        
         public void Run()
         {
             foreach (var i in _damageableFilter)

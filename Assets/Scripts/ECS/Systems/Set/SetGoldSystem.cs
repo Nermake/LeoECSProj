@@ -2,23 +2,23 @@
 using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine;
 using View;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class SetGoldSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class SetGoldSystem : IEcsRunSystem
     {
         private readonly EcsFilter<GoldComponent, AddGoldEvent> _addGoldFilter;
         private readonly EcsFilter<GoldComponent, RemoveGoldEvent> _removeGoldFilter;
         private readonly EcsFilter<ChangeGoldEvent> _changeGoldFilter;
 
-        private GoldPanelView _goldPanelView;
+        private readonly GoldPanelView _goldPanelView;
         
-        public void Init()
+        public SetGoldSystem(DiContainer container)
         {
-            _goldPanelView = ServiceLocator.Current.Get<SceneData>().GoldPanelView;
+            _goldPanelView = container.Resolve<SceneData>().GoldPanelView;
         }
         
         public void Run()

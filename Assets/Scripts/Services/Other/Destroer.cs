@@ -1,9 +1,8 @@
-﻿using Services.Locator;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Services
 {
-    public class Destroyer : MonoBehaviour, IService
+    public class Destroyer : MonoBehaviour
     {
         public void DestroyUnit(GameObject unit) => Destroy(unit);
     }

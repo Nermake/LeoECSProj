@@ -2,22 +2,22 @@
 using ECS.Data;
 using ECS.Events;
 using Leopotam.Ecs;
-using Services.Locator;
 using UnityEngine;
 using View;
+using Zenject;
 
 namespace ECS.Systems
 {
-    public sealed class AbilityRunCastSystem : IEcsInitSystem, IEcsRunSystem
+    public sealed class AbilityRunCastSystem : IEcsRunSystem
     {
         private readonly EcsFilter<AbilityRunCastEvent> _runCastFilter;
         
-        private AbilityCastView _view;
+        private readonly AbilityCastView _view;
 
-        public void Init()
+        public AbilityRunCastSystem(DiContainer container)
         {
-            _view = ServiceLocator.Current.Get<SceneData>().AbilityCastView;
-        }
+            _view = container.Resolve<SceneData>().AbilityCastView;
+        }                                           
         
         public void Run()
         {

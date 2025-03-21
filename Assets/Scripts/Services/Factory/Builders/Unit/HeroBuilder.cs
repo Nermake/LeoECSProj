@@ -1,22 +1,36 @@
 ﻿using System.Collections.Generic;
+using Configs;
 using ECS.Components;
 using ECS.Data;
 using ECS.Events;
 using ECS.Mark;
 using ECS.Tags;
 using Leopotam.Ecs;
-using Services.Locator;
 using StaticString;
 using UnityEngine;
+using Zenject;
 
 namespace Services.Factory
 {
     public class HeroBuilder : MovableUnitBuilder
     {
         private readonly HeroConfig _config;
+        
+        private RaceConfig _raceConfig;
+        private LevelUpConfig _levelUpConfig;
+        private SceneData _sceneData;
+        private RuntimeData _runtimeData;
         private Color _healthColor;
         
         public HeroBuilder(HeroConfig config) : base(config) => _config = config;
+
+        public override void Construct(DiContainer container)
+        {
+            _raceConfig = container.Resolve<RaceConfig>();
+            _levelUpConfig = container.Resolve<LevelUpConfig>();
+            _sceneData = container.Resolve<SceneData>();
+            _runtimeData = container.Resolve<RuntimeData>();
+        }
 
         public override void Make()
         {
@@ -26,8 +40,8 @@ namespace Services.Factory
             _healthColor = health;
             
             GetServices();
-            GetEvents();
-            GetMark();
+            AddEvents();
+            AddMark();
             
             _entity.Get<PlayerTag>();
             _entity.Get<AttackCharacteristicComponent>();
@@ -52,10 +66,7 @@ namespace Services.Factory
 
         private void GetServices() // todo передалать, создай тут команду на отправку в какой нить ViewController
         {
-            var serviceLocator = ServiceLocator.Current;
-            
-            var raceDats = serviceLocator.Get<StaticData>().RaceConfig.RaceDats;
-            foreach (var raceData in raceDats)
+            foreach (var raceData in _raceConfig.RaceDats)
             {
                 if (raceData.Race == _config.RaceType)
                 {
@@ -64,22 +75,22 @@ namespace Services.Factory
             } 
             
             ref var resourceProviderComponent = ref _entity.Get<ResourceFrameComponent>();
-            resourceProviderComponent.HealthFrame = serviceLocator.Get<SceneData>().MainFrameView.HealthBarView;
+            resourceProviderComponent.HealthFrame = _sceneData.MainFrameView.HealthBarView;
             resourceProviderComponent.HealthFrame.SetColor(_healthColor);
-            resourceProviderComponent.SecondaryResourceFrame = serviceLocator.Get<SceneData>().MainFrameView.SecondaryResourceBarView;
+            resourceProviderComponent.SecondaryResourceFrame = _sceneData.MainFrameView.SecondaryResourceBarView;
             
             ref var experienceComponent = ref _entity.Get<ExperienceComponent>();
             experienceComponent.Level = 1;
             experienceComponent.Current = 0;
-            experienceComponent.Limit = serviceLocator.Get<StaticData>().LevelUpConfig.Limit[0];
+            experienceComponent.Limit = _levelUpConfig.Limit[0];
             
             ref var raceViewComponent = ref _entity.Get<RaceComponent>();
-            raceViewComponent.View = serviceLocator.Get<SceneData>().MainFrameView.RaceView;
+            raceViewComponent.View = _sceneData.MainFrameView.RaceView;
             
-            serviceLocator.Get<RuntimeData>().PlayerActor = _view;
+            _runtimeData.PlayerActor = _view;
         }
         
-        private void GetEvents()
+        private void AddEvents()
         {
             _entity.Get<ChangeSecondaryResourceEvent>();
             _entity.Get<ChangeRaceEvent>();
@@ -88,7 +99,7 @@ namespace Services.Factory
             _entity.Get<LevelUpEvent>();
         }
 
-        private void GetMark()
+        private void AddMark()
         {
             ref var heroRaceMark = ref _entity.Get<HeroRaceMark>();
             heroRaceMark.RaceType = _config.RaceType;
