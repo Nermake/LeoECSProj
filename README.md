@@ -4,7 +4,7 @@
 
 ## Info
 
-A `Demo Project` in which only a part of a full-fledged game is implemented. The main point: to show the way to use the `LeoEcs` framework.
+A `Demo Project` in which only a part of a full-fledged game is implemented. The main point: to show the way to use the `LeoEcs` & `Zenject` framework.
 
 ---
 
